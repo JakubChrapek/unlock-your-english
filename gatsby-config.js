@@ -24,19 +24,15 @@ module.exports = {
         web: [
           //examples
           {
-            name: "Poppins",
-            file: "https://fonts.googleapis.com/css2?family=Poppins",
+            name: "Oswald",
+            file: "https://fonts.googleapis.com/css2?family=Oswald",
           },
           {
-            name: "Libre Baskerville",
-            file: "https://fonts.googleapis.com/css2?family=Libre+Baskerville",
-          },
-          {
-            name: "JetBrains Mono",
-            file: "https://fonts.googleapis.com/css2?family=JetBrains+Mono",
+            name: "Raleway",
+            file: "https://fonts.googleapis.com/css2?family=Raleway",
           },
         ],
       },
     },
   ],
-};
+}

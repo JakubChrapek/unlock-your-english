@@ -1,11 +1,13 @@
-import React from "react";
+import React from "react"
+
+import HomeHeroSection from "../components/organisms/HomeHeroSection/HomeHeroSection"
 
 const IndexPage = () => {
   return (
     <>
-      <h1>no elo</h1>
+      <HomeHeroSection />
     </>
-  );
-};
+  )
+}
 
-export default IndexPage;
+export default IndexPage
