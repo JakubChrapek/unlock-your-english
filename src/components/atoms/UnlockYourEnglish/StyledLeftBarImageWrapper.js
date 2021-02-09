@@ -1,18 +1,18 @@
 import styled from "styled-components"
-import { motion } from "framer-motion"
 
-export const StyledButton = styled(motion.button)`
+export const StyledLeftBarImageWrapper = styled.div`
+  width: ${({ hasdeclaredwidth }) =>
+    hasdeclaredwidth ? hasdeclaredwidth : "0"};
+  height: ${({ hasdeclaredheight }) =>
+    hasdeclaredheight ? hasdeclaredheight : "0"};
   padding: ${({ hasdeclaredpadding }) =>
     hasdeclaredpadding ? hasdeclaredpadding : "0"};
   margin: ${({ hasdeclaredmargin }) =>
     hasdeclaredmargin ? hasdeclaredmargin : "0"};
-  font-family: ${({ hasdeclaredfontfamily }) =>
-    hasdeclaredfontfamily ? hasdeclaredfontfamily : "Releway, sans-serif;"};
-  color: ${({ hasdeclaredfontcolor }) =>
-    hasdeclaredfontcolor ? hasdeclaredfontcolor : "var(--black)"};
+
   background-color: ${({ hasdeclaredbgcolor }) =>
     hasdeclaredbgcolor ? hasdeclaredbgcolor : "var(--white)"};
-
+  transform: ${({ hasdeclaredtransform }) =>
+    hasdeclaredtransform ? hasdeclaredtransform : "none"};
   border-radius: 25px;
-  border: none;
 `

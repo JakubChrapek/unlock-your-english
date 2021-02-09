@@ -14,7 +14,8 @@ const Navigation = () => {
           hasdeclaredfontsize="14px "
           activeClassName="active"
           hasdeclaredpadding="4px 8px"
-          hasdeclaredmargin="0 49px 0 0"
+          hasdeclaredmargin="0 79px 0 0"
+          headerLink={true}
         >
           O mnie
         </StyledLink>
@@ -28,7 +29,8 @@ const Navigation = () => {
           hasdeclaredfontsize="14px "
           activeClassName="active"
           hasdeclaredpadding="4px 8px"
-          hasdeclaredmargin="0 49px 0 0"
+          hasdeclaredmargin="0 79px 0 0"
+          headerLink={true}
         >
           Oferta
         </StyledLink>
@@ -42,6 +44,7 @@ const Navigation = () => {
           hasdeclaredfontsize="14px "
           activeClassName="active"
           hasdeclaredpadding="4px 8px"
+          headerLink={true}
         >
           Kontakt
         </StyledLink>

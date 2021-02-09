@@ -30,4 +30,7 @@ export const StyledText = styled(motion.p)`
     hasdeclaredmargin ? hasdeclaredmargin : "0"};
   max-width: ${({ hasdeclaredmaxwidth }) =>
     hasdeclaredmaxwidth ? hasdeclaredmaxwidth : "none"};
+  height: ${({ hasdeclaredheight }) =>
+    hasdeclaredheight ? hasdeclaredheight : "auto"};
+  overflow: ${({ hasoverflow }) => (hasoverflow ? hasoverflow : "none")};
 `

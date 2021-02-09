@@ -4,7 +4,6 @@ import { Link } from "gatsby"
 export const StyledLogo = styled(Link)`
   width: 166px;
   height: 43px;
-  background-color: red;
   display: block;
   cursor: pointer;
 

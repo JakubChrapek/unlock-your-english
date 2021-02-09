@@ -31,7 +31,10 @@ export const StyledLink = styled(Link)`
   max-width: ${({ hasdeclaredmaxwidth }) =>
     hasdeclaredmaxwidth ? hasdeclaredmaxwidth : "none"};
   position: relative;
-
+  cursor: pointer;
+  @media only screen and (min-width: 1920px) {
+    font-size: ${({ headerLink }) => (headerLink ? "22px" : "16px")};
+  }
   &:after {
     content: "";
     position: absolute;
