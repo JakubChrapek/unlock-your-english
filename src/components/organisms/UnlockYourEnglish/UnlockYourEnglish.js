@@ -9,6 +9,8 @@ import { StyledText } from "../../atoms/Text/StyledText"
 import { StyledSpiral } from "../../atoms/UnlockYourEnglish/StyledSpiral"
 import { StyledLeftBarImageWrapper } from "../../atoms/UnlockYourEnglish/StyledLeftBarImageWrapper"
 import spiral from "../../../images/spiral.svg"
+import useWindowSize from "../../../utils/getWindowSize"
+
 const UnlockYourEnglish = () => {
   const unlockImagesQuery = useStaticQuery(graphql`
     query unlockImages {
@@ -31,7 +33,7 @@ const UnlockYourEnglish = () => {
       }
     }
   `)
-
+  const width = useWindowSize()
   const image = unlockImagesQuery.datoCmsUnlockYourImage
   return (
     <StyledUnlockYourEnglishSection>
@@ -56,7 +58,7 @@ const UnlockYourEnglish = () => {
           <StyledLeftBarImageWrapper
             hasdeclaredwidth="248px"
             hasdeclaredheight="305px"
-            hasdeclaredtransform="translate(-39px, -120px)"
+            hasdeclaredtransform="translate(-19px, -120px)"
           >
             <StyledEnglishImage fluid={image.bus.fluid} />
           </StyledLeftBarImageWrapper>
@@ -67,6 +69,7 @@ const UnlockYourEnglish = () => {
             hasdeclaredfontcolor="var(--blue)"
             hasdeclaredfontweight="bold"
             hasdeclaredpadding="0 0 17px 0"
+            as="h2"
           >
             Unlock Your English!
           </StyledText>
@@ -76,6 +79,8 @@ const UnlockYourEnglish = () => {
             hasdeclaredfontweight="medium"
             hasdeclaredfontfamily="Raleway"
             hasdeclaredlineheight="1.32em"
+            hasdeclaredfontweight="medium"
+            as="h3"
           >
             Mobilna pracownia językowa „Unlock Your English” to całoroczna
             działalność edukacyjna, zajmującą się przede wszystkim nauką języka

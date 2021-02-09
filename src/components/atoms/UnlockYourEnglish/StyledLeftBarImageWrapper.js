@@ -14,5 +14,5 @@ export const StyledLeftBarImageWrapper = styled.div`
     hasdeclaredbgcolor ? hasdeclaredbgcolor : "var(--white)"};
   transform: ${({ hasdeclaredtransform }) =>
     hasdeclaredtransform ? hasdeclaredtransform : "none"};
-  border-radius: 25px;
+  border-radius: 15px;
 `

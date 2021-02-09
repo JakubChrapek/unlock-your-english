@@ -6,6 +6,9 @@ export const StyledSpiral = styled.div`
   position: absolute;
   bottom: -35px;
   left: -15px;
+  @media only screen and (max-width: 767px) {
+    display: none;
+  }
   img {
     width: 100%;
     height: 100%;

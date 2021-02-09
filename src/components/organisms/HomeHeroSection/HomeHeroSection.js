@@ -6,10 +6,8 @@ import { StyledHomeHeroSection } from "../../atoms/HomeHeroSection/StyledHomeHer
 import { StyledText } from "../../atoms/Text/StyledText"
 import { StyledHeroTextWrapper } from "../../atoms/HomeHeroSection/StyledHeroTextWrapper"
 import { StyledButton } from "../../atoms/Button/StyledButton"
-import useWindowSize from "../../../utils/getWindowSize"
 
 const HomeHeroSection = () => {
-  const width = useWindowSize()
   const data = useStaticQuery(graphql`
     query heroImage {
       datoCmsPageHome {
