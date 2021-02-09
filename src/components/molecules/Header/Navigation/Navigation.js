@@ -2,9 +2,9 @@ import React from "react"
 import { StyledNavigationList } from "../../../atoms/Navigation/StyledNavigationList"
 import { StyledLink } from "../../../atoms/Link/StyledLink"
 
-const Navigation = () => {
+const Navigation = ({ showNav }) => {
   return (
-    <StyledNavigationList>
+    <StyledNavigationList showNav={showNav}>
       <li>
         <StyledLink
           to="/about"
@@ -14,8 +14,8 @@ const Navigation = () => {
           hasdeclaredfontsize="14px "
           activeClassName="active"
           hasdeclaredpadding="4px 8px"
-          hasdeclaredmargin="0 79px 0 0"
           headerLink={true}
+          mobileMenuLink={true}
         >
           O mnie
         </StyledLink>
@@ -29,8 +29,8 @@ const Navigation = () => {
           hasdeclaredfontsize="14px "
           activeClassName="active"
           hasdeclaredpadding="4px 8px"
-          hasdeclaredmargin="0 79px 0 0"
           headerLink={true}
+          mobileMenuLink={true}
         >
           Oferta
         </StyledLink>
@@ -45,6 +45,7 @@ const Navigation = () => {
           activeClassName="active"
           hasdeclaredpadding="4px 8px"
           headerLink={true}
+          mobileMenuLink={true}
         >
           Kontakt
         </StyledLink>

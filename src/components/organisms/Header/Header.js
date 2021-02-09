@@ -24,9 +24,7 @@ const Header = () => {
             dispatch({ type: actions.TOGGLE_MENU })
           }}
           showNav={show}
-        >
-          button
-        </StyledHamburgerButton>
+        />
       </StyledHeaderWrapper>
     </StyledHeader>
   )

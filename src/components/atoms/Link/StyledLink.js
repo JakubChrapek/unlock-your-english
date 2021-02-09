@@ -35,6 +35,10 @@ export const StyledLink = styled(Link)`
   @media only screen and (min-width: 1920px) {
     font-size: ${({ headerLink }) => (headerLink ? "22px" : "16px")};
   }
+  @media only screen and (max-width: 767px) {
+    color: ${({ mobileMenuLink }) =>
+      mobileMenuLink ? "var(--black)" : "var(--white)"};
+  }
   &:after {
     content: "";
     position: absolute;

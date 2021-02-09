@@ -6,8 +6,10 @@ import { StyledHomeHeroSection } from "../../atoms/HomeHeroSection/StyledHomeHer
 import { StyledText } from "../../atoms/Text/StyledText"
 import { StyledHeroTextWrapper } from "../../atoms/HomeHeroSection/StyledHeroTextWrapper"
 import { StyledButton } from "../../atoms/Button/StyledButton"
+import useWindowSize from "../../../utils/getWindowSize"
 
 const HomeHeroSection = () => {
+  const width = useWindowSize()
   const data = useStaticQuery(graphql`
     query heroImage {
       datoCmsPageHome {
@@ -28,6 +30,7 @@ const HomeHeroSection = () => {
           hasdeclaredfontsize="72px"
           hasdeclaredfontcolor="var(--white)"
           hasdeclaredpadding="0 0 27px 0"
+          as="h1"
         >
           Unlock Your English
         </StyledText>
@@ -40,6 +43,8 @@ const HomeHeroSection = () => {
           hasdeclaredpadding="0 0 44px 0"
           hasdeclaredfontfamily="Raleway"
           hasdeclaredlineheight="1.32em"
+          hasdeclaredfontweight="normal"
+          as="h2"
         >
           Mobilna pracownia językowa „Unlock Your English” to całoroczna
           działalność edukacyjna, zajmującą się przede wszystkim nauką języka
