@@ -8,6 +8,10 @@ export const StyledLeftBar = styled.div`
   @media only screen and (max-width: 767px) {
     width: 340px;
   }
+  @media only screen and (max-width: 369px) {
+    width: 320px;
+    padding-left: 20px;
+  }
   > div {
     &:first-child {
       @media only screen and (max-width: 1094px) {
@@ -25,6 +29,10 @@ export const StyledLeftBar = styled.div`
       @media only screen and (max-width: 911px) {
         width: 190px;
         height: 225px;
+      }
+      @media only screen and (max-width: 369px) {
+        width: 170px;
+        height: 205px;
       }
     }
     &:nth-child(2) {
@@ -46,6 +54,10 @@ export const StyledLeftBar = styled.div`
         height: 178px;
         transform: translate(-20px, 40px);
       }
+      @media only screen and (max-width: 369px) {
+        width: 126px;
+        height: 193px;
+      }
     }
     &:nth-child(3) {
       @media only screen and (max-width: 1094px) {
@@ -65,6 +77,10 @@ export const StyledLeftBar = styled.div`
         width: 150px;
         height: 185px;
         transform: translate(0, -70px);
+      }
+      @media only screen and (max-width: 369px) {
+        width: 130px;
+        height: 165px;
       }
     }
   }

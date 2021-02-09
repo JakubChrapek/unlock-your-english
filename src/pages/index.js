@@ -13,8 +13,8 @@ const IndexPage = () => {
       <HomeHeroSection />
       <UnlockYourEnglish />
       <MyOffer />
-      {/* <HiAboutMe />
-      <WhatSayAboutMe />
+      <HiAboutMe />
+      {/* <WhatSayAboutMe />
       <SignUpHomeSection /> */}
     </>
   )

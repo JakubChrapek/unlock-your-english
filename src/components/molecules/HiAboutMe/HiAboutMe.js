@@ -31,10 +31,10 @@ const HiAboutMe = () => {
     <StyledHiAboutMeSection>
       <StyledHiAboutMeWrapper>
         <StyledLeftBar>
-          <StyledHiAboutMeImage
+          {/* <StyledHiAboutMeImage
             fluid={getCamilaData.datoCmsHiImCamila.camilaPhoto.fluid}
             alt={getCamilaData.datoCmsHiImCamila.camilaPhoto.alt}
-          />
+          /> */}
         </StyledLeftBar>
         <StyledRightBar>
           <StyledText
@@ -42,6 +42,7 @@ const HiAboutMe = () => {
             hasdeclaredfontweight="bold"
             hasdeclaredfontcolor="var(--red)"
             hasdeclaredlineheight="1.35em"
+            as="h2"
           >
             Hi, jestem Kamila
           </StyledText>
@@ -50,6 +51,7 @@ const HiAboutMe = () => {
             hasdeclaredfontweight="bold"
             hasdeclaredfontcolor="var(--blue)"
             hasdeclaredpadding="0 0 40px 0"
+            as="h3"
           >
             poznaj mnie lepiej
           </StyledText>
