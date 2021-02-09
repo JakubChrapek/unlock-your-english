@@ -7,6 +7,7 @@ const Logo = () => {
     query logo {
       datoCmsHeader {
         headerLogo {
+          alt
           fluid {
             ...GatsbyDatoCmsFluid
           }
@@ -16,7 +17,10 @@ const Logo = () => {
   `)
   return (
     <StyledLogo>
-      <Img fluid={logoImage.datoCmsHeader.headerLogo.fluid} />
+      <Img
+        fluid={logoImage.datoCmsHeader.headerLogo.fluid}
+        alt={logoImage.datoCmsHeader.alt}
+      />
     </StyledLogo>
   )
 }
