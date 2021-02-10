@@ -16,6 +16,7 @@ const SignUpHomeSection = () => {
           hasdeclaredlineheight="1.85em"
           hasdeclaredtextalign="center"
           hasdeclaredfontcolor="var(--white)"
+          as="h2"
         >
           Zapisz się na próbną lekcję
         </StyledText>
@@ -25,8 +26,9 @@ const SignUpHomeSection = () => {
           hasdeclaredlineheight="1.32em"
           hasdeclaredfontfamily="Raleway"
           hasdeclaredtextalign="center"
-          hasdeclaredpadding="0 0 42px 0"
+          hasdeclaredpadding="42px 0 42px 0"
           hasdeclaredfontcolor="var(--white)"
+          as="p"
         >
           Zobacz jak prowadzę lekcję, na co zwracam uwagę, co tydzien organizuję
           pokazowe lekcje dla zebranych chętnych, zostaw swój email, a wyślę Ci
@@ -81,6 +83,7 @@ const SignUpHomeSection = () => {
                     hasdeclaredlineheight="1.32em"
                     hasdeclaredpadding="5px 0 3px 0"
                     hasdeclaredfontalign="center"
+                    as="p"
                   >
                     zgoda na przetwarzanie twoich danych osobowych
                   </StyledText>

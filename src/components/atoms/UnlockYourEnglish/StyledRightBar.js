@@ -10,6 +10,9 @@ export const StyledRightBar = styled.div`
   @media only screen and (max-width: 1222px) {
     padding-left: 0;
   }
+  @media only screen and (max-width: 600px) {
+    padding: 0 20px;
+  }
   @media only screen and (max-width: 1186px) {
     h2 {
       font-size: 36px;

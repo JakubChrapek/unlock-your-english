@@ -9,6 +9,8 @@ import { StyledText } from "../../atoms/Text/StyledText"
 import { StyledLeftBar } from "../../atoms/HiAboutMe/StyledLeftBar"
 import { StyledRightBar } from "../../atoms/HiAboutMe/StyledRightBar"
 import { StyledButton } from "../../atoms/Button/StyledButton"
+import { StyledAboutMeSpiral } from "../../atoms/WhatSayAboutMe/StyledAboutMeSpiral"
+import aboutspiral from "../../../images/aboutspiral.png"
 
 const HiAboutMe = () => {
   const getCamilaData = useStaticQuery(graphql`
@@ -80,6 +82,9 @@ const HiAboutMe = () => {
           </StyledButton>
         </StyledRightBar>
       </StyledHiAboutMeWrapper>
+      {/* <StyledAboutMeSpiral>
+        <img src={aboutspiral} alt="spiral" />
+      </StyledAboutMeSpiral> */}
     </StyledHiAboutMeSection>
   )
 }

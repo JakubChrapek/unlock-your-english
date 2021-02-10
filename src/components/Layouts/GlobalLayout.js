@@ -10,7 +10,7 @@ const GlobalLayout = ({ children }) => {
       <GlobalStyle />
       <Header />
       {children}
-      {/* <Footer /> */}
+      <Footer />
     </MenuProvider>
   )
 }

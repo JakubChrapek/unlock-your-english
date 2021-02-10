@@ -7,4 +7,20 @@ export const StyledFooterWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media only screen and (max-width: 1044px) {
+    padding: 128px 78px;
+  }
+  @media only screen and (max-width: 954px) {
+    padding: 128px 56px;
+  }
+  @media only screen and (max-width: 838px) {
+    padding: 128px 36px;
+  }
+  @media only screen and (max-width: 826px) {
+    padding: 128px 20px;
+  }
+  @media only screen and (max-width: 767px) {
+    flex-direction: column;
+    padding: 58px 20px;
+  }
 `

@@ -43,7 +43,7 @@ const Footer = () => {
               <StyledLink
                 to="/about"
                 hasdeclaredfontsize="14px"
-                hasdedclaredfontweight="bold"
+                hasdeclaredfontweight="bold"
                 hasdeclaredmargin="0 80px 0 0"
                 hasdeclaredpadding="4px 0"
               >
@@ -54,7 +54,7 @@ const Footer = () => {
               <StyledLink
                 to="/offer"
                 hasdeclaredfontsize="14px"
-                hasdedclaredfontweight="bold"
+                hasdeclaredfontweight="bold"
                 hasdeclaredmargin="0 80px 0 0"
                 hasdeclaredpadding="4px 0"
               >
@@ -65,7 +65,7 @@ const Footer = () => {
               <StyledLink
                 to="/contact"
                 hasdeclaredfontsize="14px"
-                hasdedclaredfontweight="bold"
+                hasdeclaredfontweight="bold"
                 hasdeclaredmargin="0 80px 0 0"
                 hasdeclaredpadding="4px 0"
               >
@@ -76,7 +76,7 @@ const Footer = () => {
               <StyledLink
                 to="/privacy-policy"
                 hasdeclaredfontsize="14px"
-                hasdedclaredfontweight="bold"
+                hasdeclaredfontweight="bold"
                 hasdeclaredpadding="4px 0"
               >
                 Polityka prywatności

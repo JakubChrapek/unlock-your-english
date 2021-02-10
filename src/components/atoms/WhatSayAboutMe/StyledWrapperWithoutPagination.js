@@ -1,11 +1,13 @@
 import styled from "styled-components"
 
 export const StyledWrapperWithoutPagination = styled.div`
-  width: 100%;
-  height: 160px;
-  overflow: hidden;
-  position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  > p {
+    @media only screen and (max-width: 767px) {
+      font-size: 14px;
+      line-height: 1.85em;
+    }
+  }
 `

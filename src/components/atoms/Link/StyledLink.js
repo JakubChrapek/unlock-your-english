@@ -33,11 +33,11 @@ export const StyledLink = styled(Link)`
   position: relative;
   cursor: pointer;
   @media only screen and (min-width: 1920px) {
-    font-size: ${({ headerLink }) => (headerLink ? "22px" : "16px")};
+    font-size: ${({ headerlink }) => (headerlink ? "22px" : "16px")};
   }
   @media only screen and (max-width: 767px) {
-    color: ${({ mobileMenuLink }) =>
-      mobileMenuLink ? "var(--black)" : "var(--white)"};
+    color: ${({ mobilemenulink }) =>
+      mobilemenulink ? "var(--black)" : "var(--white)"};
   }
   &:after {
     content: "";

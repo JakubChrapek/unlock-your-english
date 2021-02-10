@@ -26,6 +26,12 @@ export const StyledCheckboxWrapper = styled.div`
       opacity: 0;
       transition: opacity 250ms ease-in-out;
     }
+    > p {
+      @media only screen and (max-width: 480px) {
+        max-width: 200px;
+        text-align: center;
+      }
+    }
   }
   input[type="checkbox"]:checked + label > svg {
     opacity: 0.5;

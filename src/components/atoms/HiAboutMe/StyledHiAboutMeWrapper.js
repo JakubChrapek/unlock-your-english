@@ -22,7 +22,7 @@ export const StyledHiAboutMeWrapper = styled.div`
     padding: 100px 20px;
   }
   @media only screen and (max-width: 767px) {
-    padding: 0 20px;
+    padding: 0 20px 80px 20px;
     flex-direction: column;
     align-items: center;
   }

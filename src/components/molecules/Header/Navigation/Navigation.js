@@ -2,20 +2,22 @@ import React from "react"
 import { StyledNavigationList } from "../../../atoms/Navigation/StyledNavigationList"
 import { StyledLink } from "../../../atoms/Link/StyledLink"
 
-const Navigation = ({ showNav }) => {
+const Navigation = ({ showNav, pathnameColor }) => {
   return (
-    <StyledNavigationList showNav={showNav}>
+    <StyledNavigationList showNav={showNav} pathnameColor={pathnameColor}>
       <li>
         <StyledLink
           to="/about"
           hasdeclaredfontfamily="Oswald"
           hasdeclaredfontweight="medium"
-          hasdeclaredfontcolor="var(--white)"
+          hasdeclaredfontcolor={
+            pathnameColor === "/" ? "var(--white)" : "var(--black)"
+          }
           hasdeclaredfontsize="14px "
           activeClassName="active"
           hasdeclaredpadding="4px 8px"
-          headerLink={true}
-          mobileMenuLink={true}
+          headerlink="true"
+          mobilemenulink="true"
         >
           O mnie
         </StyledLink>
@@ -25,12 +27,14 @@ const Navigation = ({ showNav }) => {
           to="/offer"
           hasdeclaredfontfamily="Oswald"
           hasdeclaredfontweight="medium"
-          hasdeclaredfontcolor="var(--white)"
+          hasdeclaredfontcolor={
+            pathnameColor === "/" ? "var(--white)" : "var(--black)"
+          }
           hasdeclaredfontsize="14px "
           activeClassName="active"
           hasdeclaredpadding="4px 8px"
-          headerLink={true}
-          mobileMenuLink={true}
+          headerlink="true"
+          mobilemenulink="true"
         >
           Oferta
         </StyledLink>
@@ -40,12 +44,14 @@ const Navigation = ({ showNav }) => {
           to="/contact"
           hasdeclaredfontfamily="Oswald"
           hasdeclaredfontweight="medium"
-          hasdeclaredfontcolor="var(--white)"
+          hhasdeclaredfontcolor={
+            pathnameColor === "/" ? "var(--white)" : "var(--black)"
+          }
           hasdeclaredfontsize="14px "
           activeClassName="active"
           hasdeclaredpadding="4px 8px"
-          headerLink={true}
-          mobileMenuLink={true}
+          headerlink="true"
+          mobilemenulink="true"
         >
           Kontakt
         </StyledLink>
