@@ -19,10 +19,12 @@ import { StyledUserImage } from "../../atoms/WhatSayAboutMe/StyledUserImage"
 
 import { StyledWrapperWithoutPagination } from "../../atoms/WhatSayAboutMe/StyledWrapperWithoutPagination"
 import { StyledSpanPagination } from "../../atoms/WhatSayAboutMe/StyledSpanPagination"
-import { StyledSliderTextWrapper } from "../../atoms/WhatSayAboutMe/StyledSliderTextWrapper"
 import { StyledButtonPagination } from "../../atoms/MyOffer/StyledButtonPagination"
 import { IoIosArrowForward } from "react-icons/io"
 import { IoIosArrowBack } from "react-icons/io"
+
+import { StyledMyOfferSpiral } from "../../atoms/MyOffer/StyledMyOfferSpiral"
+import aboutSpiral from "../../../images/aboutspiral.svg"
 
 const WhatSayAboutMe = () => {
   const whatSayAboutMeContent = useStaticQuery(graphql`
@@ -49,6 +51,9 @@ const WhatSayAboutMe = () => {
   }
   return (
     <StyledWhatSayAboutMeSection>
+      <StyledMyOfferSpiral>
+        <img src={aboutSpiral} alt="spiral" />
+      </StyledMyOfferSpiral>
       <StyledWhatSayAboutMeWrapper>
         <StyledSliderWrapper>
           <StyledText
@@ -66,16 +71,21 @@ const WhatSayAboutMe = () => {
               .filter((_, iterator) => iterator === slideIndex)
               .map(slideItem => (
                 <StyledSlide
-                  key={slide}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
                   transition={{
                     type: "spring",
                     duration: 0.8,
                   }}
                 >
-                  <StyledWrapperWithoutPagination>
+                  <StyledWrapperWithoutPagination
+                    key={`${slide}-wrapper`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{
+                      type: "spring",
+                      duration: 0.8,
+                    }}
+                  >
                     <StyledLeftArrow>
                       <StyledButtonPagination
                         whileHover={{
@@ -112,7 +122,17 @@ const WhatSayAboutMe = () => {
                       </StyledButtonPagination>
                     </StyledRightArrow>
                   </StyledWrapperWithoutPagination>
-                  <StyledUserWrapper>
+                  <StyledUserWrapper
+                    key={`${slide}-user`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{
+                      type: "spring",
+                      duration: 0.8,
+                      delay: 0.1,
+                    }}
+                  >
                     <StyledUserImage>
                       <StyledUserImageImg
                         fluid={slideItem.customerPhoto.fluid}

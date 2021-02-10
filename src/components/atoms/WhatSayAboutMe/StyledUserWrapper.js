@@ -1,6 +1,6 @@
 import styled from "styled-components"
-
-export const StyledUserWrapper = styled.div`
+import { motion } from "framer-motion"
+export const StyledUserWrapper = styled(motion.div)`
   display: flex;
   width: 100%;
   justify-content: center;

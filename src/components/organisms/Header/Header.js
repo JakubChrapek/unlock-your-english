@@ -20,8 +20,7 @@ const Header = () => {
   return (
     <StyledHeader>
       <StyledHeaderWrapper>
-        <Logo pathnameColor={pathname} />
-        <Navigation showNav={mobile} pathnameColor={pathname} />
+        <Logo showNav={mobile} pathnameColor={pathname} />
         <StyledHamburgerButton
           onClick={() => {
             setShow(!show)
@@ -39,6 +38,7 @@ const Header = () => {
           />
         </StyledHamburgerButton>
       </StyledHeaderWrapper>
+      <Navigation showNav={mobile} pathnameColor={pathname} />
     </StyledHeader>
   )
 }

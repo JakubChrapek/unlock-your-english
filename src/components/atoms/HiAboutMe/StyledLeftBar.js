@@ -5,7 +5,6 @@ export const StyledLeftBar = styled.div`
   height: 500px;
   margin-left: 48px;
   border-radius: 25px;
-  background-color: red;
   @media only screen and (max-width: 1155px) {
     width: 382px;
     height: 460px;

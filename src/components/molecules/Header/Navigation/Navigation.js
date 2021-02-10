@@ -44,7 +44,7 @@ const Navigation = ({ showNav, pathnameColor }) => {
           to="/contact"
           hasdeclaredfontfamily="Oswald"
           hasdeclaredfontweight="medium"
-          hhasdeclaredfontcolor={
+          hasdeclaredfontcolor={
             pathnameColor === "/" ? "var(--white)" : "var(--black)"
           }
           hasdeclaredfontsize="14px "

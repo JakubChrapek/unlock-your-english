@@ -12,7 +12,7 @@ export const StyledAboutMeHeroSection = styled.section`
     height: auto;
   }
   @media only screen and (max-width: 440px) {
-    padding: 60px 0 160px 0;
+    padding: 60px 0 80px 0;
   }
   @media only screen and (max-width: 375px) {
     padding-top: 90px;

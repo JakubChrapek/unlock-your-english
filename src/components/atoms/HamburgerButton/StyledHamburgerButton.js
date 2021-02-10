@@ -13,5 +13,6 @@ export const StyledHamburgerButton = styled(motion.button)`
     align-items: flex-end;
     flex-direction: column;
     justify-content: center;
+    z-index: 2;
   }
 `

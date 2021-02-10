@@ -18,6 +18,7 @@ export const StyledCheckboxWrapper = styled.div`
       background-color: var(--white);
       left: -44px;
       top: 0;
+      box-shadow: 5px 5px 14px -4px rgba(0, 0, 0, 0.2);
     }
     > svg {
       position: absolute;
@@ -33,6 +34,7 @@ export const StyledCheckboxWrapper = styled.div`
       }
     }
   }
+
   input[type="checkbox"]:checked + label > svg {
     opacity: 0.5;
     color: #2e3a59;

@@ -7,7 +7,7 @@ export const StyledLogo = styled(Link)`
   display: block;
   cursor: pointer;
   @media only screen and (max-width: 767px) {
-    z-index: -2;
+    z-index: 2;
     position: relative;
   }
   img {

@@ -12,7 +12,8 @@ export const StyledButton = styled(motion.button)`
     hasdeclaredfontcolor ? hasdeclaredfontcolor : "var(--black)"};
   background-color: ${({ hasdeclaredbgcolor }) =>
     hasdeclaredbgcolor ? hasdeclaredbgcolor : "var(--white)"};
-
+  font-size: ${({ hasdeclaredfontsize }) =>
+    hasdeclaredfontsize ? hasdeclaredfontsize : "14px"};
   border-radius: 25px;
   border: none;
 `

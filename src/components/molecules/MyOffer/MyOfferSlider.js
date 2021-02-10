@@ -12,6 +12,7 @@ import { StyledOfferSlider } from "../../atoms/MyOffer/StyledOfferSlider"
 import { StyledText } from "../../atoms/Text/StyledText"
 import { StyledOfferLink } from "../../atoms/MyOffer/StyledOfferLink"
 import { StyledButtonPagination } from "../../atoms/MyOffer/StyledButtonPagination"
+
 const MyOfferSlider = () => {
   const slides = useStaticQuery(graphql`
     query getSlides {
