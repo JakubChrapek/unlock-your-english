@@ -6,6 +6,8 @@ import { StyledSignUpForm } from "../../molecules/SignUpHomeSection/StyledSignUp
 import { StyledCheckboxWrapper } from "../../molecules/SignUpHomeSection/StyledCheckboxWrapper"
 import { StyledText } from "../../atoms/Text/StyledText"
 import { GoCheck } from "react-icons/go"
+import { StyledButton } from "../../atoms/Button/StyledButton"
+import { StyledError } from "../../atoms/Error/StyledError"
 const SignUpHomeSection = () => {
   return (
     <StyledSignUpSection>
@@ -64,36 +66,54 @@ const SignUpHomeSection = () => {
             isSubmitting,
           }) => (
             <StyledSignUpForm onSubmit={handleSubmit}>
-              <input
-                type="email"
-                name="email"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.email}
-                placeholder="A tu wpisz swój email"
-              />
-              <StyledCheckboxWrapper>
-                <input type="checkbox" id="accept-newsletter" />
-                <label for="accept-newsletter">
-                  <StyledText
-                    hasdeclaredfontsize="13px"
-                    hasdeclaredfontcolor="var(--white)"
-                    hasdeclaredfontfamily="Raleway"
-                    hasdeclaredfontweight="medium"
-                    hasdeclaredlineheight="1.32em"
-                    hasdeclaredpadding="5px 0 3px 0"
-                    hasdeclaredfontalign="center"
-                    as="p"
-                  >
-                    zgoda na przetwarzanie twoich danych osobowych
-                  </StyledText>
-                  <GoCheck size="24px" />
-                </label>
-              </StyledCheckboxWrapper>
-              {errors.email && touched.email && errors.email}
-              {/* <button type="submit" disabled={isSubmitting}>
-                Submit
-              </button> */}
+              <StyledError>
+                <StyledText
+                  hasdeclaredfontfamily="Raleway"
+                  hasdeclaredfontsize="18px"
+                  hasdeclaredpadding="7px 45px"
+                  hasdeclaredfontcolor="var(--red)"
+                >
+                  {errors.email && touched.email && errors.email}
+                </StyledText>
+              </StyledError>
+              <div>
+                <input
+                  type="email"
+                  name="email"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.email}
+                  placeholder="A tu wpisz swój email"
+                />
+                <StyledButton
+                  hasdeclaredbgcolor="var(--gray)"
+                  hasdeclaredfontcolor="var(--white)"
+                  hasdeclaredfontfamily="Raleway"
+                  hasdeclaredfontsize="18px"
+                  type="submit"
+                  disabled={isSubmitting}
+                >
+                  Zapisz
+                </StyledButton>
+                <StyledCheckboxWrapper>
+                  <input type="checkbox" id="accept-newsletter" />
+                  <label for="accept-newsletter">
+                    <StyledText
+                      hasdeclaredfontsize="13px"
+                      hasdeclaredfontcolor="var(--white)"
+                      hasdeclaredfontfamily="Raleway"
+                      hasdeclaredfontweight="medium"
+                      hasdeclaredlineheight="1.32em"
+                      hasdeclaredpadding="5px 0 3px 0"
+                      hasdeclaredfontalign="center"
+                      as="p"
+                    >
+                      zgoda na przetwarzanie twoich danych osobowych
+                    </StyledText>
+                    <GoCheck size="24px" />
+                  </label>
+                </StyledCheckboxWrapper>
+              </div>
             </StyledSignUpForm>
           )}
         </Formik>

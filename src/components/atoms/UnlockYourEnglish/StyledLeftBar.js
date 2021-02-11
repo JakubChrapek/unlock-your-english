@@ -14,7 +14,7 @@ export const StyledLeftBar = styled.div`
   }
   > div {
     &:first-child {
-      @media only screen and (max-width: 1094px) {
+      @media only screen and (max-width: 1400px) {
         width: 263px;
         height: 323px;
       }
@@ -36,7 +36,7 @@ export const StyledLeftBar = styled.div`
       }
     }
     &:nth-child(2) {
-      @media only screen and (max-width: 1094px) {
+      @media only screen and (max-width: 1400px) {
         width: 191px;
         height: 243px;
         transform: translate(-20px, 66px);
@@ -60,7 +60,7 @@ export const StyledLeftBar = styled.div`
       }
     }
     &:nth-child(3) {
-      @media only screen and (max-width: 1094px) {
+      @media only screen and (max-width: 1400px) {
         width: 218px;
         height: 255px;
         transform: translate(0, -100px);

@@ -16,4 +16,12 @@ export const StyledButton = styled(motion.button)`
     hasdeclaredfontsize ? hasdeclaredfontsize : "14px"};
   border-radius: 25px;
   border: none;
+  cursor: pointer;
+  transition: opacity 250ms ease-in-out;
+  &:hover {
+    opacity: 0.7;
+  }
+  &:focus {
+    outline: none;
+  }
 `
