@@ -2,7 +2,12 @@ import React from "react"
 import { StyledNavigationList } from "../../../atoms/Navigation/StyledNavigationList"
 import { StyledLink } from "../../../atoms/Link/StyledLink"
 
+import { useMenuState, useMenuDispatch } from "../../../../context/menuContext"
+import actions from "../../../../context/actions"
 const Navigation = ({ showNav, pathnameColor }) => {
+  const { show } = useMenuState()
+  const dispatch = useMenuDispatch()
+
   return (
     <StyledNavigationList showNav={showNav} pathnameColor={pathnameColor}>
       <li>
@@ -18,6 +23,9 @@ const Navigation = ({ showNav, pathnameColor }) => {
           hasdeclaredpadding="4px 8px"
           headerlink="true"
           mobilemenulink="true"
+          onClick={() =>
+            show === true ? dispatch({ type: actions.TOGGLE_MENU }) : null
+          }
         >
           O mnie
         </StyledLink>
@@ -35,6 +43,9 @@ const Navigation = ({ showNav, pathnameColor }) => {
           hasdeclaredpadding="4px 8px"
           headerlink="true"
           mobilemenulink="true"
+          onClick={() =>
+            show === true ? dispatch({ type: actions.TOGGLE_MENU }) : null
+          }
         >
           Oferta
         </StyledLink>
@@ -52,6 +63,9 @@ const Navigation = ({ showNav, pathnameColor }) => {
           hasdeclaredpadding="4px 8px"
           headerlink="true"
           mobilemenulink="true"
+          onClick={() =>
+            show === true ? dispatch({ type: actions.TOGGLE_MENU }) : null
+          }
         >
           Kontakt
         </StyledLink>

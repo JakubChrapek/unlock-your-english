@@ -9,9 +9,19 @@ export const StyledInputWrapper = styled.div`
     align-items: center;
   }
   > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    &:first-child {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      > div {
+        &:first-child {
+          display: ${({ hidecheckbox }) => (hidecheckbox ? "none" : "block")};
+        }
+      }
+      > input {
+        display: ${({ hidecheckbox }) => (hidecheckbox ? "none" : "block")};
+      }
+    }
   }
   input {
     margin-top: 60px;

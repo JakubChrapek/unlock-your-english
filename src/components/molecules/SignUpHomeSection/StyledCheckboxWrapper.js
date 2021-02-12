@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const StyledCheckboxWrapper = styled.div`
-  display: flex;
+  display: ${({ hidecheckbox }) => (hidecheckbox ? "none" : "flex")};
   align-items: center;
   margin-top: 23px;
   input {

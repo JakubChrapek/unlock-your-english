@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Formik } from "formik"
 import { StyledSignUpSection } from "../../atoms/SignUpHomeSection/StyledSignUpSection"
 import { StyledSignUpWrapper } from "../../atoms/SignUpHomeSection/StyledSignUpWrapper"
@@ -10,7 +10,11 @@ import { StyledButton } from "../../atoms/Button/StyledButton"
 import { StyledError } from "../../atoms/Error/StyledError"
 import { AnimatePresence } from "framer-motion"
 import { StyledInputWrapper } from "../../atoms/SignUpHomeSection/StyledInputWrapper"
+import { StyledSavedCorrectly } from "../../atoms/SignUpHomeSection/StyledSavedCorrectly"
+
 const SignUpHomeSection = () => {
+  const [hideBox, setHideBox] = useState(true)
+
   return (
     <StyledSignUpSection>
       <StyledSignUpWrapper>
@@ -68,7 +72,7 @@ const SignUpHomeSection = () => {
             isSubmitting,
           }) => (
             <StyledSignUpForm onSubmit={handleSubmit}>
-              <StyledInputWrapper>
+              <StyledInputWrapper hidecheckbox={hideBox}>
                 <div>
                   <AnimatePresence initial={false}>
                     <StyledError
@@ -94,7 +98,17 @@ const SignUpHomeSection = () => {
                     onBlur={handleBlur}
                     value={values.email}
                     placeholder="A tu wpisz swój email"
+                    hideInput={true}
                   />
+                  <StyledSavedCorrectly active={hideBox}>
+                    <StyledText
+                      hasdeclaredfontfamily="Raleway"
+                      hasdeclaredfontsize="18px"
+                      hasdeclaredfontcolor="var(--white)"
+                    >
+                      Gratulacje zapisałeś się poprawnie!
+                    </StyledText>
+                  </StyledSavedCorrectly>
                 </div>
                 <StyledButton
                   hasdeclaredbgcolor="var(--gray)"
@@ -106,7 +120,7 @@ const SignUpHomeSection = () => {
                 >
                   Zapisz
                 </StyledButton>
-                <StyledCheckboxWrapper>
+                <StyledCheckboxWrapper hidecheckbox={hideBox}>
                   <input type="checkbox" id="accept-newsletter" />
                   <label for="accept-newsletter">
                     <StyledText

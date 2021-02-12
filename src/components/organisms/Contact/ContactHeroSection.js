@@ -11,10 +11,8 @@ import { StyledImageWrapper } from "../../atoms/Contact/StyledImageWrapper"
 import { StyledText } from "../../atoms/Text/StyledText"
 import { StyledSmallLargeBox } from "../../atoms/Contact/StyledSmallLargeBox"
 import { StyledContactFormWrapper } from "../../atoms/Contact/StyledContactFormWrapper"
-import useWindowSize from "../../../utils/getWindowSize"
 
 const ContactHeroSection = () => {
-  const width = useWindowSize()
   const contactPageData = useStaticQuery(graphql`
     query contactPageData {
       datoCmsContactPageContent {
