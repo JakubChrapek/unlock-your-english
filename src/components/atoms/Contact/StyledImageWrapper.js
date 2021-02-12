@@ -49,8 +49,7 @@ export const StyledImageWrapper = styled.div`
       height: 80%;
     }
     @media only screen and (max-width: 767px) {
-      bottom: -15px;
-      height: 90%;
+      bottom: 37px;
     }
     @media only screen and (max-width: 546px) {
       bottom: -15px;
