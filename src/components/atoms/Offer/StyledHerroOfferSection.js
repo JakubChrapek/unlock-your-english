@@ -5,6 +5,9 @@ export const StyledHerroOfferSection = styled.section`
   height: 423px;
   margin-top: 127px;
   position: relative;
+  @media only screen and (max-width: 767px) {
+    height: 344px;
+  }
   > div {
     &:first-child {
       width: 100%;

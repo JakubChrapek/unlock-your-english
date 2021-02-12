@@ -2,6 +2,8 @@ import React from "react"
 
 import { graphql, useStaticQuery } from "gatsby"
 import OfferSiteItem from "../../molecules/Offer/OfferSiteItem"
+import { StyledOfferItemsSection } from "../../atoms/OfferSiteItem/StyledOfferItemsSection"
+import { StyledOfferItemsWrapper } from "../../atoms/OfferSiteItem/StyledOfferItemsWrapper"
 
 const OfferItemsSection = () => {
   const offerItemsData = useStaticQuery(graphql`
@@ -16,14 +18,16 @@ const OfferItemsSection = () => {
   `)
 
   return (
-    <div>
-      {offerItemsData.allDatoCmsOfferItem.nodes.map(slide => (
-        <OfferSiteItem
-          offerTitle={slide.offerTitle}
-          offerTextContent={slide.offerTextContent}
-        />
-      ))}
-    </div>
+    <StyledOfferItemsSection>
+      <StyledOfferItemsWrapper>
+        {offerItemsData.allDatoCmsOfferItem.nodes.map(slide => (
+          <OfferSiteItem
+            offerTitle={slide.offerTitle}
+            offerTextContent={slide.offerTextContent}
+          />
+        ))}
+      </StyledOfferItemsWrapper>
+    </StyledOfferItemsSection>
   )
 }
 

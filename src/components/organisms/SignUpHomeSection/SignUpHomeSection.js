@@ -8,6 +8,8 @@ import { StyledText } from "../../atoms/Text/StyledText"
 import { GoCheck } from "react-icons/go"
 import { StyledButton } from "../../atoms/Button/StyledButton"
 import { StyledError } from "../../atoms/Error/StyledError"
+import { AnimatePresence } from "framer-motion"
+import { StyledInputWrapper } from "../../atoms/SignUpHomeSection/StyledInputWrapper"
 const SignUpHomeSection = () => {
   return (
     <StyledSignUpSection>
@@ -66,25 +68,34 @@ const SignUpHomeSection = () => {
             isSubmitting,
           }) => (
             <StyledSignUpForm onSubmit={handleSubmit}>
-              <StyledError>
-                <StyledText
-                  hasdeclaredfontfamily="Raleway"
-                  hasdeclaredfontsize="18px"
-                  hasdeclaredpadding="7px 45px"
-                  hasdeclaredfontcolor="var(--red)"
-                >
-                  {errors.email && touched.email && errors.email}
-                </StyledText>
-              </StyledError>
-              <div>
-                <input
-                  type="email"
-                  name="email"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.email}
-                  placeholder="A tu wpisz swój email"
-                />
+              <StyledInputWrapper>
+                <div>
+                  <AnimatePresence initial={false}>
+                    <StyledError
+                      key={errors.email}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                    >
+                      <StyledText
+                        hasdeclaredfontfamily="Raleway"
+                        hasdeclaredfontsize="18px"
+                        hasdeclaredpadding="7px 45px"
+                        hasdeclaredfontcolor="var(--red)"
+                      >
+                        {errors.email && touched.email && errors.email}
+                      </StyledText>
+                    </StyledError>
+                  </AnimatePresence>
+                  <input
+                    type="email"
+                    name="email"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.email}
+                    placeholder="A tu wpisz swój email"
+                  />
+                </div>
                 <StyledButton
                   hasdeclaredbgcolor="var(--gray)"
                   hasdeclaredfontcolor="var(--white)"
@@ -113,7 +124,7 @@ const SignUpHomeSection = () => {
                     <GoCheck size="24px" />
                   </label>
                 </StyledCheckboxWrapper>
-              </div>
+              </StyledInputWrapper>
             </StyledSignUpForm>
           )}
         </Formik>
