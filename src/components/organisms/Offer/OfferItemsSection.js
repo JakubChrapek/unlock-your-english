@@ -12,6 +12,7 @@ const OfferItemsSection = () => {
         nodes {
           offerTitle
           offerTextContent
+          offerPageContentTitle
         }
       }
     }
@@ -24,6 +25,7 @@ const OfferItemsSection = () => {
           <OfferSiteItem
             offerTitle={slide.offerTitle}
             offerTextContent={slide.offerTextContent}
+            offerPageContentTitle={slide.offerPageContentTitle}
           />
         ))}
       </StyledOfferItemsWrapper>

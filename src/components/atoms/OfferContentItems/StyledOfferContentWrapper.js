@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 export const StyledOfferContentWrapper = styled.div`
   width: 100%;
+  padding-bottom: 100px;
   @media only screen and (max-width: 767px) {
     p {
       padding: 30px 0 0 0;

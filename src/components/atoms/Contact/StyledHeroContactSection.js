@@ -4,7 +4,7 @@ export const StyledHeroContactSection = styled.section`
   width: 100%;
   height: 100vh;
   position: relative;
-  z-index: -2;
+  z-index: 0;
   @media only screen and (max-width: 767px) {
     height: auto;
   }

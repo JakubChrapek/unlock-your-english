@@ -4,6 +4,7 @@ import { StyledLink } from "../../../atoms/Link/StyledLink"
 
 import { useMenuState, useMenuDispatch } from "../../../../context/menuContext"
 import actions from "../../../../context/actions"
+
 const Navigation = ({ showNav, pathnameColor }) => {
   const { show } = useMenuState()
   const dispatch = useMenuDispatch()
@@ -23,9 +24,7 @@ const Navigation = ({ showNav, pathnameColor }) => {
           hasdeclaredpadding="4px 8px"
           headerlink="true"
           mobilemenulink="true"
-          onClick={() =>
-            show === true ? dispatch({ type: actions.TOGGLE_MENU }) : null
-          }
+          onClick={() => show && dispatch({ type: actions.TOGGLE_MENU })}
         >
           O mnie
         </StyledLink>
@@ -43,9 +42,7 @@ const Navigation = ({ showNav, pathnameColor }) => {
           hasdeclaredpadding="4px 8px"
           headerlink="true"
           mobilemenulink="true"
-          onClick={() =>
-            show === true ? dispatch({ type: actions.TOGGLE_MENU }) : null
-          }
+          onClick={() => show && dispatch({ type: actions.TOGGLE_MENU })}
         >
           Oferta
         </StyledLink>
@@ -63,9 +60,7 @@ const Navigation = ({ showNav, pathnameColor }) => {
           hasdeclaredpadding="4px 8px"
           headerlink="true"
           mobilemenulink="true"
-          onClick={() =>
-            show === true ? dispatch({ type: actions.TOGGLE_MENU }) : null
-          }
+          onClick={() => show && dispatch({ type: actions.TOGGLE_MENU })}
         >
           Kontakt
         </StyledLink>

@@ -10,6 +10,7 @@ export const StyledAboutMeHeroSection = styled.section`
   @media only screen and (max-width: 767px) {
     padding-right: 0;
     height: auto;
+    margin-bottom: 40px;
   }
   @media only screen and (max-width: 440px) {
     padding: 60px 0 80px 0;

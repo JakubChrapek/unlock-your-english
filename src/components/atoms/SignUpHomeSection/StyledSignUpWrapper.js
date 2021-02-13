@@ -32,7 +32,7 @@ export const StyledSignUpWrapper = styled.div`
         line-height: 1.85em;
       }
       @media only screen and (max-width: 480px) {
-        padding: 32px 0 35px 0;
+        padding: 32px 0 10px 0;
         max-width: 320px;
       }
     }

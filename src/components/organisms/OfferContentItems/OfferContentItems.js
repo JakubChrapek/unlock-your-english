@@ -4,11 +4,13 @@ import { StyledOfferConentItem } from "../../atoms/OfferContentItems/StyledOffer
 import { StyledOfferContentWrapper } from "../../atoms/OfferContentItems/StyledOfferContentWrapper"
 import { StyledText } from "../../atoms/Text/StyledText"
 import { StyledOfferTextWrapper } from "../../atoms/OfferContentItems/StyledOfferTextWrapper"
+
 const OfferContentItems = () => {
   const offerContentItemsData = useStaticQuery(graphql`
     query offerContentItemsData {
       allDatoCmsOfferpagecontent {
         nodes {
+          offerPageContentTitle
           movieTitlesAndDescriptions {
             ... on DatoCmsOfferItemTitleFirstLine {
               firstLine
@@ -30,33 +32,29 @@ const OfferContentItems = () => {
       {offerContentItemsData.allDatoCmsOfferpagecontent.nodes.map(item => (
         <StyledOfferConentItem>
           {item.movieTitlesAndDescriptions.map(itemContent => {
+            console.log(itemContent)
             return (
               <StyledOfferTextWrapper>
-                {/* {console.log(itemContent.firstLine)}
-                {console.log(itemContent.secondLine)}
-                {console.log(itemContent.content)} */}
-                {itemContent.firstLine ? (
+                {itemContent.firstLine && (
                   <StyledText
                     hasdeclaredfontsize="36px"
                     hasdeclaredfontcolor="var(--blue)"
                     hasdeclaredpadding="70px 0 15px 0"
                     hasdeclaredfontweight="bold"
                     as="h2"
-                  >
-                    {itemContent.firstLine}
-                  </StyledText>
-                ) : null}
-                {itemContent.secondLine ? (
+                    dangerouslySetInnerHTML={{ __html: itemContent.firstLine }}
+                  />
+                )}
+                {itemContent.secondLine && (
                   <StyledText
                     hasdeclaredfontsize="24px"
                     hasdeclaredfontcolor="var(--blue)"
                     hasdeclaredpadding="0 0 0 0"
                     hasdeclaredfontweight="bold"
                     as="h3"
-                  >
-                    {itemContent?.secondLine}
-                  </StyledText>
-                ) : null}
+                    dangerouslySetInnerHTML={{ __html: itemContent.secondLine }}
+                  />
+                )}
                 {itemContent.content ? (
                   <StyledText
                     hasdeclaredfontsize="18px"
@@ -66,9 +64,8 @@ const OfferContentItems = () => {
                     hasdeclaredfontfamily="Raleway"
                     hasdeclaredlineheight="1.32em"
                     as="p"
-                  >
-                    {itemContent.content}
-                  </StyledText>
+                    dangerouslySetInnerHTML={{ __html: itemContent.content }}
+                  />
                 ) : null}
               </StyledOfferTextWrapper>
             )

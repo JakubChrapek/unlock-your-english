@@ -7,6 +7,8 @@ import { StyledText } from "../../atoms/Text/StyledText"
 import { GoCheck } from "react-icons/go"
 import { StyledButton } from "../../atoms/Button/StyledButton"
 
+import { AnimateSharedLayout, AnimatePresence } from "framer-motion"
+
 const AboutContactForm = () => {
   return (
     <Formik
@@ -37,7 +39,6 @@ const AboutContactForm = () => {
         handleBlur,
         handleSubmit,
         isSubmitting,
-        /* and other goodies */
       }) => (
         <StyledAboutContactForm onSubmit={handleSubmit}>
           <input
@@ -56,10 +57,12 @@ const AboutContactForm = () => {
             value={values.email}
             placeholder="Email"
           />
+
           <StyledText
-            initial={{ opacity: 0, x: "-10px", height: "0" }}
-            animate={{ opacity: 1, x: 0, height: "100%" }}
-            exit={{ opacity: 0, x: "-10px", height: "0" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ opacity: 2 }}
             hasdeclaredfontcolor="var(--red)"
             hasdeclaredpadding="8px 0 0 18px"
             as="p"

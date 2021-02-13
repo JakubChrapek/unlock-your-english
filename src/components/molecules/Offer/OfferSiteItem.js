@@ -2,7 +2,12 @@ import React from "react"
 import { StyledText } from "../../atoms/Text/StyledText"
 import { StyledLink } from "../../atoms/Link/StyledLink"
 import { StyledOfferSiteItemWrapper } from "../../atoms/OfferSiteItem/StyledOfferSiteItemWrapper"
-const OfferSiteItem = ({ offerTitle, offerTextContent }) => {
+
+const OfferSiteItem = ({
+  offerTitle,
+  offerTextContent,
+  offerPageContentTitle,
+}) => {
   return (
     <StyledOfferSiteItemWrapper>
       <div>
@@ -32,6 +37,8 @@ const OfferSiteItem = ({ offerTitle, offerTextContent }) => {
         hasdeclaredfontsize="18px"
         hasdeclaredfontcolor="var(--red)"
         hasdeclaredfontweight="bold"
+        hasdeclaredpadding="0 0 4px 0"
+        // to={}
       >
         Przeczytaj więcej
       </StyledLink>

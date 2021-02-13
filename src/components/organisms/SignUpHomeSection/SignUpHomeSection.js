@@ -13,7 +13,7 @@ import { StyledInputWrapper } from "../../atoms/SignUpHomeSection/StyledInputWra
 import { StyledSavedCorrectly } from "../../atoms/SignUpHomeSection/StyledSavedCorrectly"
 
 const SignUpHomeSection = () => {
-  const [hideBox, setHideBox] = useState(true)
+  const [hideBox, setHideBox] = useState(false)
 
   return (
     <StyledSignUpSection>
@@ -34,7 +34,7 @@ const SignUpHomeSection = () => {
           hasdeclaredlineheight="1.32em"
           hasdeclaredfontfamily="Raleway"
           hasdeclaredtextalign="center"
-          hasdeclaredpadding="42px 0 42px 0"
+          hasdeclaredpadding="42px 0 26px 0"
           hasdeclaredfontcolor="var(--white)"
           as="p"
         >
@@ -75,21 +75,23 @@ const SignUpHomeSection = () => {
               <StyledInputWrapper hidecheckbox={hideBox}>
                 <div>
                   <AnimatePresence initial={false}>
-                    <StyledError
-                      key={errors.email}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                    >
-                      <StyledText
-                        hasdeclaredfontfamily="Raleway"
-                        hasdeclaredfontsize="18px"
-                        hasdeclaredpadding="7px 45px"
-                        hasdeclaredfontcolor="var(--red)"
+                    {errors.email && touched.email ? (
+                      <StyledError
+                        key={errors.email}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
                       >
-                        {errors.email && touched.email && errors.email}
-                      </StyledText>
-                    </StyledError>
+                        <StyledText
+                          hasdeclaredfontfamily="Raleway"
+                          hasdeclaredfontsize="18px"
+                          hasdeclaredpadding="7px 45px"
+                          hasdeclaredfontcolor="var(--red)"
+                        >
+                          {errors.email && touched.email && errors.email}
+                        </StyledText>
+                      </StyledError>
+                    ) : null}
                   </AnimatePresence>
                   <input
                     type="email"

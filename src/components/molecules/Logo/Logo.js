@@ -23,12 +23,12 @@ const Logo = ({ pathnameColor, showNav }) => {
     }
   `)
   return (
-    <AnimatePresence initial={false} custom={showNav}>
+    <AnimatePresence initial={false} custom={showNav} exitBeforeEnter>
       <motion.div
-        initial={{ opacity: 0, x: "-50px" }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: "-50px" }}
-        duration={{ opacity: 0.1 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.1 }}
         key={showNav}
       >
         <StyledLogo to="/" showNav={`${showNav}--logo`}>

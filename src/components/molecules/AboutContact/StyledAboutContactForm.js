@@ -17,11 +17,15 @@ export const StyledAboutContactForm = styled.form`
     padding: 13px;
     font-family: Raleway;
     font-weight: bold;
+    margin-bottom: 8px;
     @media only screen and (max-width: 767px) {
       width: 100%;
     }
     &::placeholder {
       font-weight: bold;
+    }
+    &:focus {
+      outline: none;
     }
   }
   > textarea {
@@ -37,6 +41,9 @@ export const StyledAboutContactForm = styled.form`
     }
     &::placeholder {
       font-weight: bold;
+    }
+    &:focus {
+      outline: none;
     }
   }
   > button {
