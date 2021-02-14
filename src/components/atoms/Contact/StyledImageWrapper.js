@@ -5,10 +5,10 @@ export const StyledImageWrapper = styled.div`
   height: 685px;
   transform: translateX(-70px);
   position: relative;
-  @media only screen and (max-width: 1347px) {
+  @media only screen and (max-width: 1441px) {
     width: 478px;
-    height: 585px;
-    transform: translateX(-50px);
+    height: 585px;s
+    transform: translateX(-50px);s
   }
   @media only screen and (max-width: 1249px) {
     width: 378px;
@@ -36,7 +36,7 @@ export const StyledImageWrapper = styled.div`
     bottom: -15px;
     right: -15px;
     z-index: -2;
-    @media only screen and (max-width: 1347px) {
+    @media only screen and (max-width: 1441px) {
       bottom: 4px;
       height: 87%;
     }
