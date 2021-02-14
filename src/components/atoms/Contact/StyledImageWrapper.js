@@ -7,8 +7,8 @@ export const StyledImageWrapper = styled.div`
   position: relative;
   @media only screen and (max-width: 1441px) {
     width: 478px;
-    height: 585px;s
-    transform: translateX(-50px);s
+    height: 585px;
+    transform: translateX(-50px);
   }
   @media only screen and (max-width: 1249px) {
     width: 378px;
