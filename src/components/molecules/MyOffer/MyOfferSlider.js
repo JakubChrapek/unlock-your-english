@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react"
 
 import { graphql, useStaticQuery } from "gatsby"
 import useWindowSize from "../../../utils/getWindowSize"
+import { translateXForElement } from "../../../utils/getTranslateXForElement"
 
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai"
 
@@ -13,7 +14,7 @@ import { StyledOfferSlider } from "../../atoms/MyOffer/StyledOfferSlider"
 import { StyledText } from "../../atoms/Text/StyledText"
 import { StyledOfferLink } from "../../atoms/MyOffer/StyledOfferLink"
 import { StyledButtonPagination } from "../../atoms/MyOffer/StyledButtonPagination"
-import { useMotionValue } from "framer-motion"
+import { useAnimation, useDragControls, useMotionValue } from "framer-motion"
 
 const MyOfferSlider = () => {
   const slides = useStaticQuery(graphql`
@@ -31,9 +32,32 @@ const MyOfferSlider = () => {
   const [containerWidth, setContainerWidth] = useState(undefined)
   const [slidesWidth, setSlidesWidth] = useState(undefined)
   const [singleSlideWidth, setSingleSlideWidth] = useState(undefined)
+  const [buttonsDisabledState, setButtonsDisabledState] = useState([
+    false,
+    false,
+  ])
   const containerRef = useRef()
   const width = useWindowSize()
-  const x = useMotionValue(0)
+  const animation = useAnimation()
+
+  const handlePrevClick = () => {
+    const xPos = translateXForElement(containerRef.current)
+    const newXPosition = xPos + singleSlideWidth
+
+    animation.start({
+      x: newXPosition > 0 ? 0 : newXPosition,
+    })
+  }
+
+  const handleNextClick = () => {
+    const xPos = translateXForElement(containerRef.current)
+    const newXPosition = xPos - singleSlideWidth
+    const constraint = containerWidth - slidesWidth
+
+    animation.start({
+      x: newXPosition < constraint ? constraint : newXPosition,
+    })
+  }
 
   useEffect(() => {
     const slider = containerRef.current
@@ -48,6 +72,7 @@ const MyOfferSlider = () => {
     setSlidesWidth(slidesWidth)
     setContainerWidth(slider.clientWidth)
     setSingleSlideWidth(slider.children[0].clientWidth)
+    const constraint = slider.clientWidth - slidesWidth
   }, [width])
 
   return (
@@ -60,17 +85,12 @@ const MyOfferSlider = () => {
             right: -50,
           }}
           ref={containerRef}
-          onDragEnd={(e, { offset, velocity }) => {
-            console.log(
-              "e.offsetX: ",
-              e.offsetX,
-              "e.pageX: ",
-              e.pageX,
-              "e.layerX: ",
-              e.layerX,
-              "e.clientX: ",
-              e.clientX
-            )
+          initial={false}
+          animate={animation}
+          style={{ x: 0 }}
+          dragTransition={{
+            bounceDamping: 90,
+            bounceStiffness: 600,
           }}
         >
           {slides.allDatoCmsOfferItem.nodes.map(slide => (
@@ -109,10 +129,17 @@ const MyOfferSlider = () => {
           ))}
         </StyledSlidesWrapper>
         <StyledSliderArrowWrapper>
-          <StyledButtonPagination hasdeclaredmarginright="42px">
-            <AiOutlineArrowLeft size="28px" color="#11131E" opacity="0.2" />
+          <StyledButtonPagination
+            onClick={handlePrevClick}
+            hasdeclaredmarginright="42px"
+          >
+            <AiOutlineArrowLeft
+              size="28px"
+              color="var(--blue)"
+              // color="rgba(17, 19, 30, 0.2)"
+            />
           </StyledButtonPagination>
-          <StyledButtonPagination>
+          <StyledButtonPagination onClick={handleNextClick}>
             <AiOutlineArrowRight size="28px" color="var(--blue)" />
           </StyledButtonPagination>
         </StyledSliderArrowWrapper>
