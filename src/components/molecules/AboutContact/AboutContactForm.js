@@ -7,21 +7,22 @@ import { StyledText } from "../../atoms/Text/StyledText"
 import { GoCheck } from "react-icons/go"
 import { StyledButton } from "../../atoms/Button/StyledButton"
 
-import { AnimateSharedLayout, AnimatePresence } from "framer-motion"
 
 const AboutContactForm = () => {
   const handleSubmit = (values, { setSubmitting }) => {
     setTimeout(() => {
-      alert(JSON.stringify(values, null, 2))
+      console.log("poszlos")
       setSubmitting(false)
     }, 400)
   }
+  
   const validationSchema = Yup.object({
     email: Yup.string().email('Błędny adres email').required('Email wmagany'),
     name: Yup.string().min(3, "Imię za krótkie!").required('Imię wymagane'),
-    message: Yup.string().min(10, "Wiadomość za krótka").required('Wiadomość wymagana')
+    message: Yup.string().min(10, "Wiadomość za krótka").required('Wiadomość wymagana'),
+    privacy: Yup.boolean().required("Wymagana akceptacja")
   })
-
+  
   return (
     <Formik
       initialValues={{ email: "", message: "", name: "" }}
@@ -37,7 +38,8 @@ const AboutContactForm = () => {
         handleSubmit,
         isSubmitting,
       }) => (
-        <StyledAboutContactForm>
+        <StyledAboutContactForm method="POST" name="Contact Form" data-netlify="true">
+          <input type="hidden" name="form-name" value="Contact Form" />
           <Field
             type="text"
             name="name"
@@ -100,7 +102,7 @@ const AboutContactForm = () => {
           </StyledText>}
           </ErrorMessage>
           <StyledCheckboxWrapper>
-            <Field type="checkbox" id="accept-newsletter" />
+            <input typ="checkbox" id="accept-newsletter" />
             <label for="accept-newsletter">
               <StyledText
                 hasdeclaredfontsize="13px"
@@ -116,6 +118,19 @@ const AboutContactForm = () => {
               </StyledText>
               <GoCheck size="24px" />
             </label>
+            {/* <ErrorMessage name="privacy">
+              {errorMsg => <StyledText
+              // initial={{ opacity: 0 }}
+              // animate={{ opacity: 1 }}
+              // exit={{ opacity: 0 }}
+              // transition={{ opacity: 2 }}
+            hasdeclaredfontcolor="var(--red)"
+            hasdeclaredpadding="8px 0 0 18px"
+            as="p"
+          >
+            {errorMsg}
+          </StyledText>}
+          </ErrorMessage> */}
           </StyledCheckboxWrapper>
           <StyledButton
             type="submit"

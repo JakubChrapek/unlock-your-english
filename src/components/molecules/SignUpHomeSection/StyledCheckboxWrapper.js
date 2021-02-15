@@ -10,6 +10,7 @@ export const StyledCheckboxWrapper = styled.div`
   label {
     position: relative;
     transform: translateX(24px);
+    cursor: pointer;
     &::before {
       content: "";
       position: absolute;
