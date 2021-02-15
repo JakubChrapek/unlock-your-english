@@ -1,6 +1,6 @@
 import styled from "styled-components"
-
-export const StyledAboutContactForm = styled.form`
+import { Form } from "formik"
+export const StyledAboutContactForm = styled(Form)`
   display: flex;
   flex-direction: column;
   @media only screen and (max-width: 767px) {
