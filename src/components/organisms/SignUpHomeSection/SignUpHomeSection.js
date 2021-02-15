@@ -14,7 +14,11 @@ import { StyledSavedCorrectly } from "../../atoms/SignUpHomeSection/StyledSavedC
 
 const SignUpHomeSection = () => {
   const [hideBox, setHideBox] = useState(false)
-
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  }
   return (
     <StyledSignUpSection>
       <StyledSignUpWrapper>
@@ -47,15 +51,33 @@ const SignUpHomeSection = () => {
           validate={values => {
             const errors = {}
             if (!values.email) {
-              errors.email = "Required"
+              errors.email = "Email wymagany"
             } else if (
               !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
             ) {
-              errors.email = "Invalid email address"
+              errors.email = "Błędny adres email"
             }
             return errors
           }}
-          onSubmit={(values, { setSubmitting }) => {
+          
+          onSubmit={(values, actions, { setSubmitting }) => {
+
+            // fetch("/", {
+            //   method: "POST",
+            //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            //   body: encode({ "form-name": "contact-demo", ...values })
+            // })
+            // .then(() => {
+            //   alert('Success');
+            //   actions.resetForm()
+            // })
+            // .catch(() => {
+            //   alert('Error');
+            // })
+            // .finally(() => actions.setSubmitting(false))
+          
+
+
             setTimeout(() => {
               alert(JSON.stringify(values, null, 2))
               setSubmitting(false)

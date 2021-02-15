@@ -1,6 +1,6 @@
 import React from "react"
-import { Formik } from "formik"
-
+import { Formik, Field, ErrorMessage } from "formik"
+import * as Yup from "yup"
 import { StyledAboutContactForm } from "./StyledAboutContactForm"
 import { StyledCheckboxWrapper } from "../../molecules/SignUpHomeSection/StyledCheckboxWrapper"
 import { StyledText } from "../../atoms/Text/StyledText"
@@ -10,26 +10,23 @@ import { StyledButton } from "../../atoms/Button/StyledButton"
 import { AnimateSharedLayout, AnimatePresence } from "framer-motion"
 
 const AboutContactForm = () => {
+  const handleSubmit = (values, { setSubmitting }) => {
+    setTimeout(() => {
+      alert(JSON.stringify(values, null, 2))
+      setSubmitting(false)
+    }, 400)
+  }
+  const validationSchema = Yup.object({
+    email: Yup.string().email('Błędny adres email').required('Email wmagany'),
+    name: Yup.string().min(3, "Imię za krótkie!").required('Imię wymagane'),
+    message: Yup.string().min(10, "Wiadomość za krótka").required('Wiadomość wymagana')
+  })
+
   return (
     <Formik
       initialValues={{ email: "", message: "", name: "" }}
-      validate={values => {
-        const errors = {}
-        if (!values.email) {
-          errors.email = "Email wymagany"
-        } else if (
-          !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-        ) {
-          errors.email = "Błędny adres email"
-        }
-        return errors
-      }}
-      onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2))
-          setSubmitting(false)
-        }, 400)
-      }}
+      validationSchema={validationSchema}
+      onSubmit={handleSubmit}
     >
       {({
         values,
@@ -40,46 +37,70 @@ const AboutContactForm = () => {
         handleSubmit,
         isSubmitting,
       }) => (
-        <StyledAboutContactForm onSubmit={handleSubmit}>
-          <input
+        <StyledAboutContactForm>
+          <Field
             type="text"
             name="name"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.name}
             placeholder="Imię"
           />
-          <input
-            type="email"
-            name="email"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.email}
-            placeholder="Email"
-          />
-
-          <StyledText
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ opacity: 2 }}
+          <ErrorMessage name="name">
+            {errorMsg => <StyledText
+            // initial={{ opacity: 0 }}
+            // animate={{ opacity: 1 }}
+            // exit={{ opacity: 0 }}
+            // transition={{ opacity: 2 }}
             hasdeclaredfontcolor="var(--red)"
             hasdeclaredpadding="8px 0 0 18px"
             as="p"
           >
-            {errors.email && touched.email && errors.email}
-          </StyledText>
+            {errorMsg}
+          </StyledText>}
+          </ErrorMessage>
+          
+          <Field
+            type="email"
+            name="email"
+            
+            placeholder="Email"
+          />
 
-          <textarea
+            <ErrorMessage name="email">
+              {errorMsg => <StyledText
+              // initial={{ opacity: 0 }}
+              // animate={{ opacity: 1 }}
+              // exit={{ opacity: 0 }}
+              // transition={{ opacity: 2 }}
+            hasdeclaredfontcolor="var(--red)"
+            hasdeclaredpadding="8px 0 0 18px"
+            as="p"
+          >
+            {errorMsg}
+          </StyledText>}
+          </ErrorMessage>
+
+          <Field as="textarea"
             name="message"
             onChange={handleChange}
             onBlur={handleBlur}
             value={values.message}
             rows="1"
             placeholder="Wiadomość"
-          ></textarea>
+          />
+          <ErrorMessage name="message">
+            {errorMsg => <StyledText
+            // initial={{ opacity: 0 }}
+            // animate={{ opacity: 1 }}
+            // exit={{ opacity: 0 }}
+            // transition={{ opacity: 2 }}
+            hasdeclaredfontcolor="var(--red)"
+            hasdeclaredpadding="8px 0 0 18px"
+            as="p"
+          >
+            {errorMsg}
+          </StyledText>}
+          </ErrorMessage>
           <StyledCheckboxWrapper>
-            <input type="checkbox" id="accept-newsletter" />
+            <Field type="checkbox" id="accept-newsletter" />
             <label for="accept-newsletter">
               <StyledText
                 hasdeclaredfontsize="13px"
