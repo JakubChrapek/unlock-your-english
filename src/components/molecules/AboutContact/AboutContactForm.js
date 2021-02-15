@@ -42,6 +42,7 @@ const AboutContactForm = () => {
         isSubmitting,
       }) => (
         <StyledAboutContactForm method="POST" action={messageSend} name="Contact Form" data-netlify="true">
+          <input type="hidden" name="form-name" value="Contact Form" />
           <Field
             type="text"
             name="name"
