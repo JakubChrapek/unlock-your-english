@@ -41,7 +41,7 @@ const AboutContactForm = () => {
         handleSubmit,
         isSubmitting,
       }) => (
-        <StyledAboutContactForm method="POST" action={messageSend} 
+        <StyledAboutContactForm method="POST" action="/"
         data-netlify-recaptcha="true" name="Contact Form" data-netlify="true">
           <input type="hidden" name="form-name" value="Contact Form" />
           <Field
