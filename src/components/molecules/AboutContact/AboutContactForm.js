@@ -6,8 +6,8 @@ import { StyledCheckboxWrapper } from "../../molecules/SignUpHomeSection/StyledC
 import { StyledText } from "../../atoms/Text/StyledText"
 import { GoCheck } from "react-icons/go"
 import { StyledButton } from "../../atoms/Button/StyledButton"
-import ReCAPTCHA from "react-google-recaptcha"
-import { AnimateSharedLayout, AnimatePresence } from "framer-motion"
+// import ReCAPTCHA from "react-google-recaptcha"
+// import { AnimateSharedLayout, AnimatePresence } from "framer-motion"
 
 // require("dotenv").config({
 //   path: ".env",
@@ -20,12 +20,13 @@ const AboutContactForm = () => {
       setSubmitting(false)
     }, 400)
   }
+  
   const validationSchema = Yup.object({
     email: Yup.string().email('Błędny adres email').required('Email wmagany'),
     name: Yup.string().min(3, "Imię za krótkie!").required('Imię wymagane'),
     message: Yup.string().min(10, "Wiadomość za krótka").required('Wiadomość wymagana')
   })
-  const messageSend = () => alert("Wiadomość wysłana")
+  
   return (
     <Formik
       initialValues={{ email: "", message: "", name: "" }}
@@ -42,7 +43,8 @@ const AboutContactForm = () => {
         isSubmitting,
       }) => (
         <StyledAboutContactForm method="POST" action="/"
-        data-netlify-recaptcha="true" name="Contact Form" data-netlify="true">
+         name="Contact Form" netlify>
+           {/* data-netlify-recaptcha="true" */}
           <input type="hidden" name="form-name" value="Contact Form" />
           <Field
             type="text"
@@ -106,8 +108,8 @@ const AboutContactForm = () => {
           </StyledText>}
           </ErrorMessage>
           <StyledCheckboxWrapper>
-            <Field type="checkbox" id="accept-newsletter" />
-            <label for="accept-newsletter">
+            <Field typ="checkbox" id="accept-newsletter" />
+            <label htmlFor="accept-newsletter">
               <StyledText
                 hasdeclaredfontsize="13px"
                 hasdeclaredfontcolor="var(--black)"
