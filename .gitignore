@@ -1,8 +1,4 @@
 node_modules/
 .cache/
 public
-<<<<<<< HEAD
-.env-*
-=======
-/.env
->>>>>>> a8c822dc4e47c274b1f05f3b62905325f3fcd20a
+.env
