@@ -6,8 +6,12 @@ import { StyledCheckboxWrapper } from "../../molecules/SignUpHomeSection/StyledC
 import { StyledText } from "../../atoms/Text/StyledText"
 import { GoCheck } from "react-icons/go"
 import { StyledButton } from "../../atoms/Button/StyledButton"
-
+import ReCAPTCHA from "react-google-recaptcha"
 import { AnimateSharedLayout, AnimatePresence } from "framer-motion"
+
+// require("dotenv").config({
+//   path: ".env",
+// })
 
 const AboutContactForm = () => {
   const handleSubmit = (values, { setSubmitting }) => {
@@ -21,7 +25,7 @@ const AboutContactForm = () => {
     name: Yup.string().min(3, "Imię za krótkie!").required('Imię wymagane'),
     message: Yup.string().min(10, "Wiadomość za krótka").required('Wiadomość wymagana')
   })
-
+  const messageSend = () => alert("Wiadomość wysłana")
   return (
     <Formik
       initialValues={{ email: "", message: "", name: "" }}
@@ -37,7 +41,7 @@ const AboutContactForm = () => {
         handleSubmit,
         isSubmitting,
       }) => (
-        <StyledAboutContactForm>
+        <StyledAboutContactForm method="POST" action={messageSend} name="Contact Form" data-netlify="true">
           <Field
             type="text"
             name="name"
@@ -117,6 +121,7 @@ const AboutContactForm = () => {
               <GoCheck size="24px" />
             </label>
           </StyledCheckboxWrapper>
+          {/* <ReCAPTCHA sitekey={process.env.GATSBY_RECAPTCHA_KEY} /> */}
           <StyledButton
             type="submit"
             disabled={isSubmitting}
