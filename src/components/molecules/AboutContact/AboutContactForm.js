@@ -6,12 +6,7 @@ import { StyledCheckboxWrapper } from "../../molecules/SignUpHomeSection/StyledC
 import { StyledText } from "../../atoms/Text/StyledText"
 import { GoCheck } from "react-icons/go"
 import { StyledButton } from "../../atoms/Button/StyledButton"
-// import ReCAPTCHA from "react-google-recaptcha"
-// import { AnimateSharedLayout, AnimatePresence } from "framer-motion"
 
-// require("dotenv").config({
-//   path: ".env",
-// })
 
 const AboutContactForm = () => {
   const handleSubmit = (values, { setSubmitting }) => {
@@ -42,9 +37,7 @@ const AboutContactForm = () => {
         handleSubmit,
         isSubmitting,
       }) => (
-        <StyledAboutContactForm method="POST" action="/"
-         name="Contact Form" netlify>
-           {/* data-netlify-recaptcha="true" */}
+        <StyledAboutContactForm method="POST" name="Contact Form" data-netlify="true">
           <input type="hidden" name="form-name" value="Contact Form" />
           <Field
             type="text"
@@ -125,7 +118,6 @@ const AboutContactForm = () => {
               <GoCheck size="24px" />
             </label>
           </StyledCheckboxWrapper>
-          {/* <ReCAPTCHA sitekey={process.env.GATSBY_RECAPTCHA_KEY} /> */}
           <StyledButton
             type="submit"
             disabled={isSubmitting}
