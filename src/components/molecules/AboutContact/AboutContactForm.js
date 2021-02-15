@@ -16,7 +16,7 @@ import { AnimateSharedLayout, AnimatePresence } from "framer-motion"
 const AboutContactForm = () => {
   const handleSubmit = (values, { setSubmitting }) => {
     setTimeout(() => {
-      alert(JSON.stringify(values, null, 2))
+      console.log("poszlos")
       setSubmitting(false)
     }, 400)
   }
