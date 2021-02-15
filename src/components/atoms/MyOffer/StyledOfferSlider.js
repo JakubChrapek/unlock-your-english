@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 export const StyledOfferSlider = styled.div`
   width: 100%;
-  max-width: 1440px;
   margin: 0 auto;
+  padding: 0 0 0 50px;
+  overflow: hidden;
 `
