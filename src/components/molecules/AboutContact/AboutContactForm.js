@@ -16,12 +16,19 @@ const AboutContactForm = () => {
       validate={values => {
         const errors = {}
         if (!values.email) {
-          errors.email = "Email wymagany"
+          errors.email = "Wymagany email"
         } else if (
           !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
         ) {
           errors.email = "Błędny adres email"
         }
+
+        if(!values.message) errors.message = "Wiadomość wymagana"
+        else if(values.message.length <= 10) errors.message = "Wiadomość musi posiadać minimum 10 znaków"
+        
+        if(!values.name ) errors.name = "Imię wymagane"
+        else if (values.name.length < 3) errors.name = "Musi posiadać z minimum 3 znaki"
+        
         return errors
       }}
       onSubmit={(values, { setSubmitting }) => {
@@ -49,6 +56,18 @@ const AboutContactForm = () => {
             value={values.name}
             placeholder="Imię"
           />
+          
+          <StyledText
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ opacity: 2 }}
+            hasdeclaredfontcolor="var(--red)"
+            hasdeclaredpadding="8px 0 0 18px"
+            as="p"
+          >
+            {errors.name && touched.name && errors.name}
+          </StyledText>
           <input
             type="email"
             name="email"
@@ -78,6 +97,17 @@ const AboutContactForm = () => {
             rows="1"
             placeholder="Wiadomość"
           ></textarea>
+          <StyledText
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ opacity: 2 }}
+            hasdeclaredfontcolor="var(--red)"
+            hasdeclaredpadding="8px 0 0 18px"
+            as="p"
+          >
+            {errors.message && touched.message && errors.message}
+          </StyledText>
           <StyledCheckboxWrapper>
             <input type="checkbox" id="accept-newsletter" />
             <label for="accept-newsletter">
