@@ -6,4 +6,7 @@ export const StyledOfferSlider = styled.div`
   padding: 0 0 0 50px;
   cursor: grab;
   overflow: hidden;
+  @media (max-width: 600px) {
+    padding-left: 30px;
+  }
 `

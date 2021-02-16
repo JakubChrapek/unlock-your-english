@@ -13,7 +13,7 @@ const MyOffer = () => {
           hasdeclaredfontcolor="var(--red)"
           hasdeclaredfontsize="48px"
           hasdeclaredfontweight="bold"
-          hasdeclaredpadding="0 0 88px 0"
+          hasdeclaredpadding="0 0 48px 0"
         >
           Moja oferta
         </StyledText>

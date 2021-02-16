@@ -42,17 +42,17 @@ const MyOfferSlider = () => {
 
   const handlePrevClick = () => {
     const xPos = translateXForElement(containerRef.current)
-    const newXPosition = xPos + singleSlideWidth
-
+    const newXPosition = xPos + singleSlideWidth + 40
+    const constraint = width < 600 ? -40 : -50
     animation.start({
-      x: newXPosition > 0 ? 0 : newXPosition,
+      x: newXPosition > constraint ? constraint : newXPosition,
     })
   }
 
   const handleNextClick = () => {
     const xPos = translateXForElement(containerRef.current)
-    const newXPosition = xPos - singleSlideWidth
-    const constraint = containerWidth - slidesWidth
+    const newXPosition = xPos - singleSlideWidth - 40
+    const constraint = containerWidth - slidesWidth - 40
 
     animation.start({
       x: newXPosition < constraint ? constraint : newXPosition,
@@ -81,8 +81,8 @@ const MyOfferSlider = () => {
         <StyledSlidesWrapper
           drag="x"
           dragConstraints={{
-            left: containerWidth - slidesWidth,
-            right: -50,
+            left: containerWidth - slidesWidth - (width < 600 ? 40 : 50),
+            right: width < 600 ? -40 : -50,
           }}
           ref={containerRef}
           initial={false}
@@ -134,13 +134,13 @@ const MyOfferSlider = () => {
             hasdeclaredmarginright="42px"
           >
             <AiOutlineArrowLeft
-              size="28px"
+              size="32px"
               color="var(--blue)"
               // color="rgba(17, 19, 30, 0.2)"
             />
           </StyledButtonPagination>
           <StyledButtonPagination onClick={handleNextClick}>
-            <AiOutlineArrowRight size="28px" color="var(--blue)" />
+            <AiOutlineArrowRight size="32px" color="var(--blue)" />
           </StyledButtonPagination>
         </StyledSliderArrowWrapper>
       </StyledOfferSlider>

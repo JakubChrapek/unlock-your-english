@@ -12,4 +12,15 @@ export const StyledSlide = styled.div`
   &:last-of-type {
     margin-right: 0;
   }
+  &:first-of-type {
+    margin-left: 50px;
+  }
+
+  @media (max-width: 600px) {
+    min-width: calc(100vw - 80px);
+    padding: 40px 20px 40px 50px;
+    &:first-of-type {
+      margin-left: 40px;
+    }
+  }
 `
