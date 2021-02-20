@@ -10,12 +10,9 @@ import { useLocation } from "@reach/router"
 import { AnimateSharedLayout } from "framer-motion"
 import { StyledAboutContactFormErrorBox } from "../../atoms/AboutContact/StyledAboutContactFormErrorBox"
 
-import Recaptcha from "react-recaptcha"
-
 const AboutContactForm = () => {
   let pathname = useLocation().pathname
   const [message, setMessage] = useState("")
-  const [token, setToken] = useState(null)
 
   const encode = data => {
     return Object.keys(data)
@@ -24,35 +21,29 @@ const AboutContactForm = () => {
   }
 
   const handleSubmit = (values, e) => {
-    console.log(token)
-    if (token !== null) {
-      fetch("/", {
-        url: pathname,
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({
-          "form-name": "ContactForm",
-          ...values,
-          "g-recaptcha-response": token,
-        }),
+    fetch("/", {
+      url: pathname,
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": "ContactForm",
+        ...values,
+      }),
+    })
+      .then(res => {
+        setMessage("Wiadomość została wysłana")
+        e.resetForm({
+          values: {
+            email: "",
+            name: "",
+            message: "",
+            privacy: false,
+          },
+        })
       })
-        .then(res => {
-          setMessage("Wiadomość została wysłana")
-          e.resetForm({
-            values: {
-              email: "",
-              name: "",
-              message: "",
-              privacy: false,
-            },
-          })
-          console.log(res)
-        })
-        .catch(err => {
-          console.log(err)
-          setMessage("Coś poszło nie tak. Spróbuj jeszcze raz.")
-        })
-    }
+      .catch(err => {
+        setMessage("Coś poszło nie tak. Spróbuj jeszcze raz.")
+      })
   }
 
   const validationSchema = Yup.object({
@@ -86,7 +77,6 @@ const AboutContactForm = () => {
             action="/thank-you"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
-            data-netlify-recaptcha="true"
           >
             <input type="hidden" name="form-name" value="ContactForm" />
             <input type="hidden" name="bot-field" />
@@ -180,18 +170,6 @@ const AboutContactForm = () => {
                   </StyledText>
                 )}
               </ErrorMessage>
-            </StyledAboutContactFormErrorBox>
-            <StyledAboutContactFormErrorBox layout>
-              <Recaptcha
-                sitekey={process.env.SITE_RECAPTCHA_KEY}
-                render="explicit"
-                theme="light"
-                verifyCallback={response => {
-                  setToken(response)
-                  console.log(response, token)
-                }}
-              />
-              {console.log(token)}
             </StyledAboutContactFormErrorBox>
             <StyledButton
               type="submit"
