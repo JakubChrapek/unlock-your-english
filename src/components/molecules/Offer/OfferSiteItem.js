@@ -17,10 +17,9 @@ const OfferSiteItem = ({
           hasdeclaredfontcolor="var(--blue)"
           hasdeclaredfontweight="bold"
           hasdeclaredlineheight="1.45em"
-          dangerouslySetInnerHTML={{
-            __html: offerTitle,
-          }}
-        />
+        >
+          {offerTitle}
+        </StyledText>
       </div>
       <StyledText
         hasdeclaredfontsize="18px"
@@ -29,10 +28,9 @@ const OfferSiteItem = ({
         hasdeclaredfontweight="medium"
         hasdeclaredfontfamily="Raleway"
         hasdeclaredlineheight="1.32em"
-        dangerouslySetInnerHTML={{
-          __html: offerTextContent,
-        }}
-      />
+      >
+        {offerTextContent}
+      </StyledText>
       <StyledLink
         hasdeclaredfontsize="18px"
         hasdeclaredfontcolor="var(--red)"

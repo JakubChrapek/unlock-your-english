@@ -29,9 +29,13 @@ export default function useWindowSize() {
       // change width from the state object after 150 milliseconds
       timeoutId = setTimeout(() => setWidth(getWidth()), 150)
     }
+
+    const loadListener = () => {
+      setWidth(getWidth())
+    }
     // set resize listener
     window.addEventListener("resize", resizeListener)
-
+    window.addEventListener("onLoad", loadListener)
     // clean up function
     return () => {
       // remove resize listener

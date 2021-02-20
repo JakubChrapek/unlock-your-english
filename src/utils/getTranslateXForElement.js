@@ -2,7 +2,6 @@
 // Unfortunately framer-motion doesn't provide a possibility to get easily current value of transform
 export const translateXForElement = element => {
   const transform = element.style.transform
-  console.log(transform)
 
   if (!transform || transform.indexOf("translate3d(") < 0) {
     return 0

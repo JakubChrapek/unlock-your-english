@@ -24,30 +24,35 @@ const AboutContactForm = () => {
   }
 
   const handleSubmit = (values, e) => {
-    fetch("/", {
-      url: pathname,
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": "ContactForm",
-        ...values,
-        "g-recaptcha-response": token,
-      }),
-    })
-      .then(() => {
-        setMessage("Wiadomość została wysłana")
-        e.resetForm({
-          values: {
-            email: "",
-            name: "",
-            message: "",
-            privacy: false,
-          },
+    console.log(token)
+    if (token !== null) {
+      fetch("/", {
+        url: pathname,
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": "ContactForm",
+          ...values,
+          "g-recaptcha-response": token,
+        }),
+      })
+        .then(res => {
+          setMessage("Wiadomość została wysłana")
+          e.resetForm({
+            values: {
+              email: "",
+              name: "",
+              message: "",
+              privacy: false,
+            },
+          })
+          console.log(res)
         })
-      })
-      .catch(err => {
-        setMessage("Coś poszło nie tak. Spróbuj jeszcze raz.")
-      })
+        .catch(err => {
+          console.log(err)
+          setMessage("Coś poszło nie tak. Spróbuj jeszcze raz.")
+        })
+    }
   }
 
   const validationSchema = Yup.object({
@@ -183,8 +188,10 @@ const AboutContactForm = () => {
                 theme="light"
                 verifyCallback={response => {
                   setToken(response)
+                  console.log(response, token)
                 }}
               />
+              {console.log(token)}
             </StyledAboutContactFormErrorBox>
             <StyledButton
               type="submit"

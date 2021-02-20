@@ -23,15 +23,22 @@ const OfferItemsSection = () => {
 
   return (
     <StyledOfferItemsSection>
-      {width <= 962 ? <MyOfferSlider offerData={offerItemsData.allDatoCmsOfferItem} offerPage={true}/> : <StyledOfferItemsWrapper>
-        {offerItemsData.allDatoCmsOfferItem.nodes.map(slide => (
-          <OfferSiteItem
-            offerTitle={slide.offerTitle}
-            offerTextContent={slide.offerTextContent}
-            offerPageContentTitle={slide.offerPageContentTitle}
-          />
-        ))}
-      </StyledOfferItemsWrapper>}
+      {width <= 962 ? (
+        <MyOfferSlider
+          offerData={offerItemsData.allDatoCmsOfferItem}
+          offerPage={true}
+        />
+      ) : (
+        <StyledOfferItemsWrapper>
+          {offerItemsData.allDatoCmsOfferItem.nodes.map(slide => (
+            <OfferSiteItem
+              offerTitle={slide.offerTitle}
+              offerTextContent={slide.offerTextContent}
+              offerPageContentTitle={slide.offerPageContentTitle}
+            />
+          ))}
+        </StyledOfferItemsWrapper>
+      )}
     </StyledOfferItemsSection>
   )
 }

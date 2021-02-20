@@ -32,7 +32,6 @@ const OfferContentItems = () => {
       {offerContentItemsData.allDatoCmsOfferpagecontent.nodes.map(item => (
         <StyledOfferConentItem>
           {item.movieTitlesAndDescriptions.map(itemContent => {
-            console.log(itemContent)
             return (
               <StyledOfferTextWrapper>
                 {itemContent.firstLine && (
@@ -42,8 +41,9 @@ const OfferContentItems = () => {
                     hasdeclaredpadding="70px 0 15px 0"
                     hasdeclaredfontweight="bold"
                     as="h2"
-                    dangerouslySetInnerHTML={{ __html: itemContent.firstLine }}
-                  />
+                  >
+                    {itemContent.firstLine}{" "}
+                  </StyledText>
                 )}
                 {itemContent.secondLine && (
                   <StyledText
@@ -52,8 +52,9 @@ const OfferContentItems = () => {
                     hasdeclaredpadding="0 0 0 0"
                     hasdeclaredfontweight="bold"
                     as="h3"
-                    dangerouslySetInnerHTML={{ __html: itemContent.secondLine }}
-                  />
+                  >
+                    {itemContent.secondLine}
+                  </StyledText>
                 )}
                 {itemContent.content ? (
                   <StyledText
@@ -64,8 +65,9 @@ const OfferContentItems = () => {
                     hasdeclaredfontfamily="Raleway"
                     hasdeclaredlineheight="1.32em"
                     as="p"
-                    dangerouslySetInnerHTML={{ __html: itemContent.content }}
-                  />
+                  >
+                    {itemContent.content}
+                  </StyledText>
                 ) : null}
               </StyledOfferTextWrapper>
             )

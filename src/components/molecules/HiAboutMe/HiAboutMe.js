@@ -61,10 +61,9 @@ const HiAboutMe = () => {
             hasdeclaredfontfamily="Raleway"
             hasdeclaredlineheight="1.55em"
             hasdeclaredpadding="0 0 40px 0"
-            dangerouslySetInnerHTML={{
-              __html: getCamilaData.datoCmsHiImCamila.hiImCamilaContent,
-            }}
-          ></StyledText>
+          >
+            {getCamilaData.datoCmsHiImCamila.hiImCamilaContent}
+          </StyledText>
           <StyledButton
             hasdeclaredpadding="16px 70px"
             hasdeclaredbgcolor="var(--red)"
