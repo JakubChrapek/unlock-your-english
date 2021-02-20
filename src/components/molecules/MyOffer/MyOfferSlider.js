@@ -16,14 +16,14 @@ import { StyledOfferLink } from "../../atoms/MyOffer/StyledOfferLink"
 import { StyledButtonPagination } from "../../atoms/MyOffer/StyledButtonPagination"
 import { useAnimation, useDragControls, useMotionValue } from "framer-motion"
 
-const MyOfferSlider = () => {
+const MyOfferSlider = ({ offerPage, offerData }) => {
   const slides = useStaticQuery(graphql`
     query getSlides {
       allDatoCmsOfferItem {
         nodes {
           offerTitle
           offerTextContent
-          id
+          offerPageContentTitle
         }
       }
     }
@@ -76,9 +76,10 @@ const MyOfferSlider = () => {
   }, [width])
 
   return (
-    <StyledMyOfferSliderWrapper>
+    <StyledMyOfferSliderWrapper offerPage={offerPage}>
       <StyledOfferSlider>
         <StyledSlidesWrapper
+          offerPage={offerPage}
           drag="x"
           dragConstraints={{
             left: containerWidth - slidesWidth - (width < 600 ? 40 : 50),
@@ -93,40 +94,79 @@ const MyOfferSlider = () => {
             bounceStiffness: 600,
           }}
         >
-          {slides.allDatoCmsOfferItem.nodes.map(slide => (
-            <StyledSlide>
-              <StyledText
-                hasdeclaredfontsize="36px"
-                hasdeclaredfontweight="bold"
-                hasdeclaredlineheight="1.85em"
-                hasdeclaredfontcolor="var(--blue)"
-                hasdeclaredpadding="0 0 24px 0"
-              >
-                {slide.offerTitle}
-              </StyledText>
-              <StyledText
-                hasdeclaredfontsize="18px"
-                hasdeclaredfontweight="medium"
-                hasdeclaredlineheight="1.64em"
-                hasdeclaredfontcolor="var(--black)"
-                hasdeclaredfontfamily="Raleway"
-                hasdeclaredpadding="0 0 24px 0"
-                hasdeclaredheight="180px"
-                hasoverflow="hidden"
-                dangerouslySetInnerHTML={{ __html: slide.offerTextContent }}
-              />
+          {offerPage
+            ? offerData.nodes.map(slide => (
+                <StyledSlide>
+                  <StyledText
+                    hasdeclaredfontsize="36px"
+                    hasdeclaredfontweight="bold"
+                    hasdeclaredlineheight="1.85em"
+                    hasdeclaredfontcolor="var(--blue)"
+                    hasdeclaredpadding="0 0 24px 0"
+                  >
+                    {slide.offerTitle}
+                  </StyledText>
+                  <StyledText
+                    hasdeclaredfontsize="18px"
+                    hasdeclaredfontweight="medium"
+                    hasdeclaredlineheight="1.64em"
+                    hasdeclaredfontcolor="var(--black)"
+                    hasdeclaredfontfamily="Raleway"
+                    hasdeclaredpadding="0 0 24px 0"
+                    hasdeclaredheight="180px"
+                    hasoverflow="hidden"
+                  >
+                    {slide.offerTextContent}
+                  </StyledText>
 
-              <StyledOfferLink
-                hasdeclaredfontsize="18px"
-                hasdeclaredfontweight="bold"
-                hasdeclaredlineheight="1.32em"
-                hasdeclaredfontcolor="var(--red)"
-                hasdeclaredpadding="6px 0"
-              >
-                Przeczytaj więcej
-              </StyledOfferLink>
-            </StyledSlide>
-          ))}
+                  <StyledOfferLink
+                    hasdeclaredfontsize="18px"
+                    hasdeclaredfontweight="bold"
+                    hasdeclaredlineheight="1.32em"
+                    hasdeclaredfontcolor="var(--red)"
+                    hasdeclaredpadding="6px 0"
+                  >
+                    Przeczytaj więcej
+                    {slide.offerPageContentTitle}
+                  </StyledOfferLink>
+                </StyledSlide>
+              ))
+            : slides.allDatoCmsOfferItem.nodes.map(slide => (
+                <StyledSlide>
+                  <StyledText
+                    hasdeclaredfontsize="36px"
+                    hasdeclaredfontweight="bold"
+                    hasdeclaredlineheight="1.85em"
+                    hasdeclaredfontcolor="var(--blue)"
+                    hasdeclaredpadding="0 0 24px 0"
+                  >
+                    {slide.offerTitle}
+                  </StyledText>
+                  <StyledText
+                    hasdeclaredfontsize="18px"
+                    hasdeclaredfontweight="medium"
+                    hasdeclaredlineheight="1.64em"
+                    hasdeclaredfontcolor="var(--black)"
+                    hasdeclaredfontfamily="Raleway"
+                    hasdeclaredpadding="0 0 24px 0"
+                    hasdeclaredheight="180px"
+                    hasoverflow="hidden"
+                  >
+                    {slide.offerTextContent}
+                  </StyledText>
+
+                  <StyledOfferLink
+                    hasdeclaredfontsize="18px"
+                    hasdeclaredfontweight="bold"
+                    hasdeclaredlineheight="1.32em"
+                    hasdeclaredfontcolor="var(--red)"
+                    hasdeclaredpadding="6px 0"
+                  >
+                    Przeczytaj więcej
+                    {slide.offerPageContentTitle}
+                  </StyledOfferLink>
+                </StyledSlide>
+              ))}
         </StyledSlidesWrapper>
         <StyledSliderArrowWrapper>
           <StyledButtonPagination

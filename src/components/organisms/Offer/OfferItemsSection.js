@@ -4,8 +4,11 @@ import { graphql, useStaticQuery } from "gatsby"
 import OfferSiteItem from "../../molecules/Offer/OfferSiteItem"
 import { StyledOfferItemsSection } from "../../atoms/OfferSiteItem/StyledOfferItemsSection"
 import { StyledOfferItemsWrapper } from "../../atoms/OfferSiteItem/StyledOfferItemsWrapper"
+import MyOfferSlider from "../../molecules/MyOffer/MyOfferSlider"
+import useWindowSize from "../../../utils/getWindowSize"
 
 const OfferItemsSection = () => {
+  const width = useWindowSize()
   const offerItemsData = useStaticQuery(graphql`
     query getOfferItemsData {
       allDatoCmsOfferItem {
@@ -20,7 +23,7 @@ const OfferItemsSection = () => {
 
   return (
     <StyledOfferItemsSection>
-      <StyledOfferItemsWrapper>
+      {width <= 962 ? <MyOfferSlider offerData={offerItemsData.allDatoCmsOfferItem} offerPage={true}/> : <StyledOfferItemsWrapper>
         {offerItemsData.allDatoCmsOfferItem.nodes.map(slide => (
           <OfferSiteItem
             offerTitle={slide.offerTitle}
@@ -28,7 +31,7 @@ const OfferItemsSection = () => {
             offerPageContentTitle={slide.offerPageContentTitle}
           />
         ))}
-      </StyledOfferItemsWrapper>
+      </StyledOfferItemsWrapper>}
     </StyledOfferItemsSection>
   )
 }

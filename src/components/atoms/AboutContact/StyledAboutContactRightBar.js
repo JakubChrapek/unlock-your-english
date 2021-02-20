@@ -5,7 +5,7 @@ export const StyledAboutContactRightBar = styled.div`
   @media only screen and (max-width: 767px) {
     padding-right: 0;
   }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 400px) {
     width: 100%;
   }
 `

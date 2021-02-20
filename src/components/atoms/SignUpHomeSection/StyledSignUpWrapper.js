@@ -8,7 +8,7 @@ export const StyledSignUpWrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-
+  position: relative:
   @media only screen and (max-width: 874px) {
     padding: 71px 60px;
   }

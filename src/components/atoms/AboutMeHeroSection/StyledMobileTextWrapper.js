@@ -14,7 +14,7 @@ export const StyledMobileTextWrapper = styled.div`
   }
   @media only screen and (max-width: 440px) {
     padding: 0 28px;
-    max-width: none;
+    max-width: unset;
     align-self: center;
     h1 {
       padding-bottom: 8px;

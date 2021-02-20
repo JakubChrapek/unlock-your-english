@@ -1,6 +1,7 @@
 import styled from "styled-components"
+import { Form } from "formik"
 
-export const StyledSignUpForm = styled.form`
+export const StyledSignUpForm = styled(Form)`
   display: flex;
   flex-direction: column;
   justify-content: center;

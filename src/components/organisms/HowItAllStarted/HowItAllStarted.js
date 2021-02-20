@@ -25,10 +25,10 @@ const HowItAllStarted = () => {
           }
         }
       }
-      allDatoCmsHowitallstartedparagraph {
-        nodes {
-          howitallstarted
-        }
+      datoCmsHowitallstartedparagraph {
+        paragraph1
+        paragraph2
+        paragraph3
       }
       allDatoCmsOwnlanguageschool {
         nodes {
@@ -55,20 +55,40 @@ const HowItAllStarted = () => {
             >
               Jak to się zaczęło?
             </StyledText>
-            {howItAllStartedData.allDatoCmsHowitallstartedparagraph.nodes.map(
-              text => (
+            
                 <StyledText
                   hasdeclaredfontsize="18px"
                   hasdeclaredfontfamily="Raleway"
                   hasdeclaredfontweight="medium"
                   hasdeclaredlineheight="1.32em"
                   hasdeclaredpadding="0 0 34px 0"
-                  dangerouslySetInnerHTML={{
-                    __html: text.howitallstarted,
-                  }}
-                />
-              )
-            )}
+                  // dangerouslySetInnerHTML={{
+                  //   __html: text.howitallstarted,
+                  // }}
+                >{howItAllStartedData.datoCmsHowitallstartedparagraph.paragraph1}
+                  </StyledText>
+                  <StyledText
+                  hasdeclaredfontsize="18px"
+                  hasdeclaredfontfamily="Raleway"
+                  hasdeclaredfontweight="medium"
+                  hasdeclaredlineheight="1.32em"
+                  hasdeclaredpadding="0 0 34px 0"
+                  // dangerouslySetInnerHTML={{
+                  //   __html: text.howitallstarted,
+                  // }}
+                >{howItAllStartedData.datoCmsHowitallstartedparagraph.paragraph2}
+                  </StyledText>
+                  <StyledText
+                  hasdeclaredfontsize="18px"
+                  hasdeclaredfontfamily="Raleway"
+                  hasdeclaredfontweight="medium"
+                  hasdeclaredlineheight="1.32em"
+                  hasdeclaredpadding="0 0 34px 0"
+                  // dangerouslySetInnerHTML={{
+                  //   __html: text.howitallstarted,
+                  // }}
+                >{howItAllStartedData.datoCmsHowitallstartedparagraph.paragraph3}</StyledText>
+            
           </StyledHowItAllStartedTopBar>
           <StyledHowItAllStartedBottomBar>
             <StyledText
@@ -88,10 +108,10 @@ const HowItAllStarted = () => {
                 hasdeclaredfontweight="medium"
                 hasdeclaredlineheight="1.32em"
                 hasdeclaredpadding="0 0 34px 0"
-                dangerouslySetInnerHTML={{
-                  __html: text.ownlanguageschoolparagraph,
-                }}
-              />
+                // dangerouslySetInnerHTML={{
+                //   __html: text.ownlanguageschoolparagraph,
+                // }}
+              >{text.ownlanguageschoolparagraph}</StyledText>
             ))}
           </StyledHowItAllStartedBottomBar>
         </StyledHowItAllStartedWrapper>
@@ -114,10 +134,10 @@ const HowItAllStarted = () => {
               hasdeclaredfontweight="medium"
               hasdeclaredlineheight="1.32em"
               hasdeclaredmaxwidth="447px"
-              dangerouslySetInnerHTML={{
-                __html: howItAllStartedData.datoCmsAboutMeContent.privately,
-              }}
-            />
+              // dangerouslySetInnerHTML={{
+              //   __html: howItAllStartedData.datoCmsAboutMeContent.privately,
+              // }}
+            >{howItAllStartedData.datoCmsAboutMeContent.privately}</StyledText>
           </StyledPrivatelyTextWrapper>
           <StyledPrivatelyImageWrapper>
             <StyledPrivatelyImage

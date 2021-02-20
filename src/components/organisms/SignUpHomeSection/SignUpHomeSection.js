@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Formik } from "formik"
+import { Formik, Field, ErrorMessage } from "formik"
 import { StyledSignUpSection } from "../../atoms/SignUpHomeSection/StyledSignUpSection"
 import { StyledSignUpWrapper } from "../../atoms/SignUpHomeSection/StyledSignUpWrapper"
 import { StyledSignUpForm } from "../../molecules/SignUpHomeSection/StyledSignUpForm"
@@ -8,16 +8,47 @@ import { StyledText } from "../../atoms/Text/StyledText"
 import { GoCheck } from "react-icons/go"
 import { StyledButton } from "../../atoms/Button/StyledButton"
 import { StyledError } from "../../atoms/Error/StyledError"
-import { AnimatePresence } from "framer-motion"
+import { AnimatePresence, AnimateSharedLayout } from "framer-motion"
 import { StyledInputWrapper } from "../../atoms/SignUpHomeSection/StyledInputWrapper"
 import { StyledSavedCorrectly } from "../../atoms/SignUpHomeSection/StyledSavedCorrectly"
+import { StyledErrorCheckbox } from "../../atoms/SignUpHomeSection/StyledErrorCheckbox"
+import * as Yup from "yup"
+import { useLocation } from "@reach/router"
 
 const SignUpHomeSection = () => {
   const [hideBox, setHideBox] = useState(false)
-  const encode = (data) => {
+
+  let pathname = useLocation().pathname
+
+  const validationSchema = Yup.object({
+    email: Yup.string().email("Błędny adres email").required("Email wmagany"),
+    privacy: Yup.boolean().oneOf([true], "Wymagana akceptacja"),
+  })
+
+  const encode = data => {
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
+      .join("&")
+  }
+  const handleSubmit = (values, e) => {
+    fetch("/", {
+      url: pathname,
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "Newsletter Form", ...values }),
+    })
+      .then(() => {
+        e.resetForm({
+          values: {
+            email: "",
+            privacy: false,
+          },
+        })
+        setHideBox(true)
+      })
+      .catch(err => {
+        setHideBox(false)
+      })
   }
   return (
     <StyledSignUpSection>
@@ -47,122 +78,119 @@ const SignUpHomeSection = () => {
           termin najbliższej lekcji!
         </StyledText>
         <Formik
-          initialValues={{ email: "", password: "" }}
-          validate={values => {
-            const errors = {}
-            if (!values.email) {
-              errors.email = "Email wymagany"
-            } else if (
-              !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-            ) {
-              errors.email = "Błędny adres email"
-            }
-            return errors
-          }}
-          
-          onSubmit={(values, actions, { setSubmitting }) => {
-
-            // fetch("/", {
-            //   method: "POST",
-            //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            //   body: encode({ "form-name": "contact-demo", ...values })
-            // })
-            // .then(() => {
-            //   alert('Success');
-            //   actions.resetForm()
-            // })
-            // .catch(() => {
-            //   alert('Error');
-            // })
-            // .finally(() => actions.setSubmitting(false))
-          
-
-
-            setTimeout(() => {
-              alert(JSON.stringify(values, null, 2))
-              setSubmitting(false)
-            }, 400)
-          }}
+          initialValues={{ email: "", privacy: false }}
+          validationSchema={validationSchema}
+          onSubmit={handleSubmit}
         >
-          {({
-            values,
-            errors,
-            touched,
-            handleChange,
-            handleBlur,
-            handleSubmit,
-            isSubmitting,
-          }) => (
-            <StyledSignUpForm onSubmit={handleSubmit}>
-              <StyledInputWrapper hidecheckbox={hideBox}>
-                <div>
-                  <AnimatePresence initial={false}>
-                    {errors.email && touched.email ? (
-                      <StyledError
-                        key={errors.email}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
+          {({ errors, handleSubmit, isSubmitting }) => (
+            <StyledSignUpForm
+              onSubmit={handleSubmit}
+              name="Newsletter Form"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              action="/thank-you"
+            >
+              <input type="hidden" name="form-name" value="Newsletter Form" />
+              <input type="hidden" name="bot-field" />
+              <AnimateSharedLayout>
+                <StyledInputWrapper layout hidecheckbox={hideBox}>
+                  <div>
+                    <AnimatePresence
+                      initial={false}
+                      transition={{ opacity: 0.1 }}
+                    >
+                      <ErrorMessage name="email">
+                        {errorMsg => (
+                          <StyledError
+                            key={errors.email}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                          >
+                            <StyledText
+                              hasdeclaredfontfamily="Raleway"
+                              hasdeclaredfontsize="18px"
+                              hasdeclaredpadding="7px 45px"
+                              hasdeclaredfontcolor="var(--red)"
+                            >
+                              {errorMsg}
+                            </StyledText>
+                          </StyledError>
+                        )}
+                      </ErrorMessage>
+                    </AnimatePresence>
+                    <Field
+                      type="email"
+                      name="email"
+                      placeholder="A tu wpisz swój email"
+                      hideInput={true}
+                    />
+                    <StyledSavedCorrectly active={hideBox}>
+                      <StyledText
+                        hasdeclaredfontfamily="Raleway"
+                        hasdeclaredfontsize="18px"
+                        hasdeclaredfontcolor="var(--white)"
                       >
+                        Gratulacje zapisałeś się poprawnie!
+                      </StyledText>
+                    </StyledSavedCorrectly>
+                  </div>
+                  <StyledButton
+                    hasdeclaredbgcolor="var(--gray)"
+                    hasdeclaredfontcolor="var(--white)"
+                    hasdeclaredfontfamily="Raleway"
+                    hasdeclaredfontsize="18px"
+                    type="submit"
+                    disabled={isSubmitting}
+                    hideCheckbox={hideBox}
+                  >
+                    Zapisz
+                  </StyledButton>
+                  <StyledCheckboxWrapper hidecheckbox={hideBox}>
+                    <Field
+                      type="checkbox"
+                      name="privacy"
+                      id="accept-newsletter"
+                    />
+                    <label htmlFor="accept-newsletter" name="privacy">
+                      <StyledText
+                        hasdeclaredfontsize="13px"
+                        hasdeclaredfontcolor="var(--white)"
+                        hasdeclaredfontfamily="Raleway"
+                        hasdeclaredfontweight="medium"
+                        hasdeclaredlineheight="1.32em"
+                        hasdeclaredpadding="5px 0 3px 0"
+                        hasdeclaredfontalign="center"
+                        as="p"
+                      >
+                        zgoda na przetwarzanie twoich danych osobowych
+                      </StyledText>
+                      <GoCheck size="24px" />
+                    </label>
+                  </StyledCheckboxWrapper>
+                </StyledInputWrapper>
+                <AnimatePresence initial={false} transition={{ opacity: 0.1 }}>
+                  <StyledErrorCheckbox>
+                    <ErrorMessage name="privacy">
+                      {errorMsg => (
                         <StyledText
+                          key={errors.privacy}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
                           hasdeclaredfontfamily="Raleway"
                           hasdeclaredfontsize="18px"
                           hasdeclaredpadding="7px 45px"
                           hasdeclaredfontcolor="var(--red)"
                         >
-                          {errors.email && touched.email && errors.email}
+                          {errorMsg}
                         </StyledText>
-                      </StyledError>
-                    ) : null}
-                  </AnimatePresence>
-                  <input
-                    type="email"
-                    name="email"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    value={values.email}
-                    placeholder="A tu wpisz swój email"
-                    hideInput={true}
-                  />
-                  <StyledSavedCorrectly active={hideBox}>
-                    <StyledText
-                      hasdeclaredfontfamily="Raleway"
-                      hasdeclaredfontsize="18px"
-                      hasdeclaredfontcolor="var(--white)"
-                    >
-                      Gratulacje zapisałeś się poprawnie!
-                    </StyledText>
-                  </StyledSavedCorrectly>
-                </div>
-                <StyledButton
-                  hasdeclaredbgcolor="var(--gray)"
-                  hasdeclaredfontcolor="var(--white)"
-                  hasdeclaredfontfamily="Raleway"
-                  hasdeclaredfontsize="18px"
-                  type="submit"
-                  disabled={isSubmitting}
-                >
-                  Zapisz
-                </StyledButton>
-                <StyledCheckboxWrapper hidecheckbox={hideBox}>
-                  <input type="checkbox" id="accept-newsletter" />
-                  <label for="accept-newsletter">
-                    <StyledText
-                      hasdeclaredfontsize="13px"
-                      hasdeclaredfontcolor="var(--white)"
-                      hasdeclaredfontfamily="Raleway"
-                      hasdeclaredfontweight="medium"
-                      hasdeclaredlineheight="1.32em"
-                      hasdeclaredpadding="5px 0 3px 0"
-                      hasdeclaredfontalign="center"
-                      as="p"
-                    >
-                      zgoda na przetwarzanie twoich danych osobowych
-                    </StyledText>
-                    <GoCheck size="24px" />
-                  </label>
-                </StyledCheckboxWrapper>
-              </StyledInputWrapper>
+                      )}
+                    </ErrorMessage>
+                  </StyledErrorCheckbox>
+                </AnimatePresence>
+              </AnimateSharedLayout>
             </StyledSignUpForm>
           )}
         </Formik>

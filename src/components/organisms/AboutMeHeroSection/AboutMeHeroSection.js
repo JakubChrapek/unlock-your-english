@@ -83,10 +83,9 @@ const AboutMeHeroSection = () => {
             hasdeclaredfontfamily="Raleway"
             hasdeclaredpadding="0 0 24px 60px"
             hasdeclaredlineheight="1.41em"
-            dangerouslySetInnerHTML={{
-              __html: aboutMeData.datoCmsAboutMeContent.heroContent,
-            }}
-          ></StyledText>
+          >
+            {aboutMeData.datoCmsAboutMeContent.heroContent}
+          </StyledText>
         </StyledTextWrapper>
       </StyledAboutMeHeroWrapper>
     </StyledAboutMeHeroSection>

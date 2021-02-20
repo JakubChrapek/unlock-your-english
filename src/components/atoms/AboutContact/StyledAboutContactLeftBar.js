@@ -22,8 +22,8 @@ export const StyledAboutContactLeftBar = styled.div`
       max-width: 317px;
     }
   }
-  @media only screen and (max-width: 500px) {
-    p {
+  @media only screen and (max-width: 400px) {
+    > p {
       max-width: none;
     }
   }

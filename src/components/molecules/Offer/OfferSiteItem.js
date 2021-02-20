@@ -38,9 +38,9 @@ const OfferSiteItem = ({
         hasdeclaredfontcolor="var(--red)"
         hasdeclaredfontweight="bold"
         hasdeclaredpadding="0 0 4px 0"
-        // to={}
       >
         Przeczytaj więcej
+        {offerPageContentTitle}
       </StyledLink>
     </StyledOfferSiteItemWrapper>
   )

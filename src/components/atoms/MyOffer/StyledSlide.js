@@ -20,7 +20,7 @@ export const StyledSlide = styled.div`
     min-width: calc(100vw - 80px);
     padding: 40px 20px 40px 50px;
     &:first-of-type {
-      margin-left: 40px;
+      margin-left: 30px;
     }
   }
 `

@@ -1,6 +1,6 @@
 import styled from "styled-components"
-
-export const StyledInputWrapper = styled.div`
+import { motion } from "framer-motion"
+export const StyledInputWrapper = styled(motion.div)`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

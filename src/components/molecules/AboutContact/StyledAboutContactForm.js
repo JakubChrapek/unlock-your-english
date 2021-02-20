@@ -1,26 +1,30 @@
 import styled from "styled-components"
 import { Form } from "formik"
+
 export const StyledAboutContactForm = styled(Form)`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 317px;
   @media only screen and (max-width: 767px) {
-    width: 317px;
     margin-top: 38px;
     align-items: center;
   }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 375px) {
     width: 100%;
   }
-  > input {
+  > div {
+    width: 100%;
+  }
+  input {
+    width: 100%;
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding: 13px;
     font-family: Raleway;
     font-weight: bold;
     margin-bottom: 8px;
-    @media only screen and (max-width: 767px) {
-      width: 100%;
-    }
+
     &::placeholder {
       font-weight: bold;
     }
@@ -28,7 +32,8 @@ export const StyledAboutContactForm = styled(Form)`
       outline: none;
     }
   }
-  > textarea {
+  textarea {
+    width: 100%;
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     resize: none;
@@ -36,9 +41,6 @@ export const StyledAboutContactForm = styled(Form)`
     font-family: Raleway;
     font-weight: bold;
     margin-top: 12px;
-    @media only screen and (max-width: 767px) {
-      width: 100%;
-    }
     &::placeholder {
       font-weight: bold;
     }
@@ -46,6 +48,7 @@ export const StyledAboutContactForm = styled(Form)`
       outline: none;
     }
   }
+
   > button {
     margin-top: 48px;
     width: 290px;

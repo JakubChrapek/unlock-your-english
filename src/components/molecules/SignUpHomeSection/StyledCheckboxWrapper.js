@@ -1,16 +1,21 @@
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
-export const StyledCheckboxWrapper = styled.div`
+export const StyledCheckboxWrapper = styled(motion.div)`
   display: ${({ hidecheckbox }) => (hidecheckbox ? "none" : "flex")};
   align-items: center;
+  justify-content: center;
   margin-top: 23px;
   input {
     display: none;
   }
   label {
+    cursor: pointer;
     position: relative;
     transform: translateX(24px);
-    cursor: pointer;
+    @media only screen and (max-width: 467px) {
+      width: 200px;
+    }
     &::before {
       content: "";
       position: absolute;
