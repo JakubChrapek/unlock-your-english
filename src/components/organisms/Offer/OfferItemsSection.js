@@ -24,10 +24,7 @@ const OfferItemsSection = () => {
   return (
     <StyledOfferItemsSection>
       {width <= 962 ? (
-        <MyOfferSlider
-          offerData={offerItemsData.allDatoCmsOfferItem}
-          offerPage={true}
-        />
+        <MyOfferSlider slideData={offerItemsData.allDatoCmsOfferItem} />
       ) : (
         <StyledOfferItemsWrapper>
           {offerItemsData.allDatoCmsOfferItem.nodes.map(slide => (

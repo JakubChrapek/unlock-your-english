@@ -43,7 +43,7 @@ const OfferContentItems = () => {
                     hasdeclaredfontweight="bold"
                     as="h2"
                   >
-                    {itemContent.firstLine}{" "}
+                    {itemContent.firstLine}
                   </StyledText>
                 )}
                 {itemContent.secondLine && (

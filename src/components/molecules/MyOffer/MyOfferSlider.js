@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react"
 
-import { graphql, useStaticQuery } from "gatsby"
 import useWindowSize from "../../../utils/getWindowSize"
 import { translateXForElement } from "../../../utils/getTranslateXForElement"
 import { useAnimation, useDragControls, useMotionValue } from "framer-motion"
@@ -16,19 +15,7 @@ import { StyledText } from "../../atoms/Text/StyledText"
 import { StyledOfferLink } from "../../atoms/MyOffer/StyledOfferLink"
 import { StyledButtonPagination } from "../../atoms/MyOffer/StyledButtonPagination"
 
-const MyOfferSlider = ({ offerPage, offerData }) => {
-  const slides = useStaticQuery(graphql`
-    query getSlides {
-      allDatoCmsOfferItem {
-        nodes {
-          offerTitle
-          offerTextContent
-          offerPageContentTitle
-        }
-      }
-    }
-  `)
-
+const MyOfferSlider = ({ slideData }) => {
   const [containerWidth, setContainerWidth] = useState(undefined)
   const [slidesWidth, setSlidesWidth] = useState(undefined)
   const [singleSlideWidth, setSingleSlideWidth] = useState(undefined)
@@ -76,10 +63,10 @@ const MyOfferSlider = ({ offerPage, offerData }) => {
   }, [width])
 
   return (
-    <StyledMyOfferSliderWrapper offerPage={offerPage}>
+    <StyledMyOfferSliderWrapper>
+      {console.log(slideData)}
       <StyledOfferSlider>
         <StyledSlidesWrapper
-          offerPage={offerPage}
           drag="x"
           dragConstraints={{
             left: containerWidth - slidesWidth - (width < 600 ? 40 : 50),
@@ -94,79 +81,42 @@ const MyOfferSlider = ({ offerPage, offerData }) => {
             bounceStiffness: 600,
           }}
         >
-          {offerPage
-            ? offerData.nodes.map(slide => (
-                <StyledSlide>
-                  <StyledText
-                    hasdeclaredfontsize="36px"
-                    hasdeclaredfontweight="bold"
-                    hasdeclaredlineheight="1.85em"
-                    hasdeclaredfontcolor="var(--blue)"
-                    hasdeclaredpadding="0 0 24px 0"
-                  >
-                    {slide.offerTitle}
-                  </StyledText>
-                  <StyledText
-                    hasdeclaredfontsize="18px"
-                    hasdeclaredfontweight="medium"
-                    hasdeclaredlineheight="1.64em"
-                    hasdeclaredfontcolor="var(--black)"
-                    hasdeclaredfontfamily="Raleway"
-                    hasdeclaredpadding="0 0 24px 0"
-                    hasdeclaredheight="180px"
-                    hasoverflow="hidden"
-                  >
-                    {slide.offerTextContent}
-                  </StyledText>
+          {slideData.nodes.map(slide => (
+            <StyledSlide>
+              <StyledText
+                hasdeclaredfontsize="36px"
+                hasdeclaredfontweight="bold"
+                hasdeclaredlineheight="1.85em"
+                hasdeclaredfontcolor="var(--blue)"
+                hasdeclaredpadding="0 0 24px 0"
+              >
+                {slide.offerTitle}
+              </StyledText>
+              <StyledText
+                hasdeclaredfontsize="18px"
+                hasdeclaredfontweight="medium"
+                hasdeclaredlineheight="1.64em"
+                hasdeclaredfontcolor="var(--black)"
+                hasdeclaredfontfamily="Raleway"
+                hasdeclaredpadding="0 0 24px 0"
+                hasdeclaredheight="180px"
+                hasoverflow="hidden"
+              >
+                {slide.offerTextContent}
+              </StyledText>
 
-                  <StyledOfferLink
-                    hasdeclaredfontsize="18px"
-                    hasdeclaredfontweight="bold"
-                    hasdeclaredlineheight="1.32em"
-                    hasdeclaredfontcolor="var(--red)"
-                    hasdeclaredpadding="6px 0"
-                  >
-                    Przeczytaj więcej
-                    {slide.offerPageContentTitle}
-                  </StyledOfferLink>
-                </StyledSlide>
-              ))
-            : slides.allDatoCmsOfferItem.nodes.map(slide => (
-                <StyledSlide>
-                  <StyledText
-                    hasdeclaredfontsize="36px"
-                    hasdeclaredfontweight="bold"
-                    hasdeclaredlineheight="1.85em"
-                    hasdeclaredfontcolor="var(--blue)"
-                    hasdeclaredpadding="0 0 24px 0"
-                  >
-                    {slide.offerTitle}
-                  </StyledText>
-                  <StyledText
-                    hasdeclaredfontsize="18px"
-                    hasdeclaredfontweight="medium"
-                    hasdeclaredlineheight="1.64em"
-                    hasdeclaredfontcolor="var(--black)"
-                    hasdeclaredfontfamily="Raleway"
-                    hasdeclaredpadding="0 0 24px 0"
-                    hasdeclaredheight="180px"
-                    hasoverflow="hidden"
-                  >
-                    {slide.offerTextContent}
-                  </StyledText>
-
-                  <StyledOfferLink
-                    hasdeclaredfontsize="18px"
-                    hasdeclaredfontweight="bold"
-                    hasdeclaredlineheight="1.32em"
-                    hasdeclaredfontcolor="var(--red)"
-                    hasdeclaredpadding="6px 0"
-                  >
-                    Przeczytaj więcej
-                    {slide.offerPageContentTitle}
-                  </StyledOfferLink>
-                </StyledSlide>
-              ))}
+              <StyledOfferLink
+                hasdeclaredfontsize="18px"
+                hasdeclaredfontweight="bold"
+                hasdeclaredlineheight="1.32em"
+                hasdeclaredfontcolor="var(--red)"
+                hasdeclaredpadding="6px 0"
+              >
+                Przeczytaj więcej
+                {slide.offerPageContentTitle}
+              </StyledOfferLink>
+            </StyledSlide>
+          ))}
         </StyledSlidesWrapper>
         <StyledSliderArrowWrapper>
           <StyledButtonPagination
