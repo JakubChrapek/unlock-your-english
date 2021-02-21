@@ -1,6 +1,9 @@
 import React, { useState } from "react"
 import { useLocation } from "@reach/router"
 
+import { useMenuState, useMenuDispatch } from "../../../context/menuContext"
+import actions from "../../../context/actions"
+
 import { StyledHamburgerButton } from "../../atoms/HamburgerButton/StyledHamburgerButton"
 import Navigation from "../../molecules/Header/Navigation/Navigation"
 import Logo from "../../molecules/Logo/Logo"
@@ -8,8 +11,6 @@ import Logo from "../../molecules/Logo/Logo"
 import { StyledHeader } from "../../atoms/Header/StyledHeader"
 import { StyledHeaderWrapper } from "../../atoms/Header/StyledHeaderWrapper"
 import { StyledHamburgerButtonSpan } from "../../atoms/HamburgerButton/StyledHamburgerButtonSpan"
-import { useMenuState, useMenuDispatch } from "../../../context/menuContext"
-import actions from "../../../context/actions"
 
 const Header = () => {
   const { show: mobile } = useMenuState()

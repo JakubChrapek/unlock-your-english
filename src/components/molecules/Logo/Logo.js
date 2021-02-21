@@ -1,8 +1,10 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { StyledLogo } from "./StyledLogo"
 import Img from "gatsby-image"
 import { motion, AnimatePresence } from "framer-motion"
+
+import { StyledLogo } from "./StyledLogo"
+
 const Logo = ({ pathnameColor, showNav }) => {
   const logoImage = useStaticQuery(graphql`
     query logo {

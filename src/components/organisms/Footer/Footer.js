@@ -2,6 +2,8 @@ import React from "react"
 
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa"
+
 import { StyledFooterWrapper } from "../../atoms/Footer/StyledFooterWrapper"
 import { StyledFooterSection } from "../../atoms/Footer/StyledFooterSection"
 import { StyledFooterLogo } from "../../atoms/Footer/StyledFooterLogo"
@@ -9,8 +11,6 @@ import { StyledFooterMenuWrapper } from "../../molecules/Footer/StyledFooterMenu
 import { StyledFooterMedia } from "../../atoms/Footer/StyledFooterMedia"
 import { StyleFooterMenuUl } from "../../molecules/Footer/StyleFooterMenuUl"
 import { StyledLink } from "../../atoms/Link/StyledLink"
-
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa"
 
 const Footer = () => {
   const logoFooterImage = useStaticQuery(graphql`

@@ -1,4 +1,5 @@
 import React from "react"
+
 import { StyledText } from "../../atoms/Text/StyledText"
 import { StyledLink } from "../../atoms/Link/StyledLink"
 import { StyledOfferSiteItemWrapper } from "../../molecules/OfferSiteItem/StyledOfferSiteItemWrapper"

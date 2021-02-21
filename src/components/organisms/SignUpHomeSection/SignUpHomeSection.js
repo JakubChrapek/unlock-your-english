@@ -1,19 +1,21 @@
 import React, { useState } from "react"
 import { Formik, Field, ErrorMessage } from "formik"
+import { GoCheck } from "react-icons/go"
+import * as Yup from "yup"
+import { useLocation } from "@reach/router"
+import { AnimatePresence, AnimateSharedLayout } from "framer-motion"
+
 import { StyledSignUpSection } from "../../atoms/SignUpHomeSection/StyledSignUpSection"
 import { StyledSignUpWrapper } from "../../molecules/SignUpHomeSection/StyledSignUpWrapper"
 import { StyledSignUpForm } from "../../molecules/SignUpHomeSection/StyledSignUpForm"
 import { StyledCheckboxWrapper } from "../../molecules/SignUpHomeSection/StyledCheckboxWrapper"
 import { StyledText } from "../../atoms/Text/StyledText"
-import { GoCheck } from "react-icons/go"
+
 import { StyledButton } from "../../atoms/Button/StyledButton"
 import { StyledError } from "../../molecules/Error/StyledError"
-import { AnimatePresence, AnimateSharedLayout } from "framer-motion"
 import { StyledInputWrapper } from "../../molecules/SignUpHomeSection/StyledInputWrapper"
 import { StyledSavedCorrectly } from "../../atoms/SignUpHomeSection/StyledSavedCorrectly"
 import { StyledErrorCheckbox } from "../../atoms/SignUpHomeSection/StyledErrorCheckbox"
-import * as Yup from "yup"
-import { useLocation } from "@reach/router"
 
 const SignUpHomeSection = () => {
   const [hideBox, setHideBox] = useState(false)

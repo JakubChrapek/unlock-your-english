@@ -1,9 +1,10 @@
 import React from "react"
-import { StyledNavigationList } from "../../../molecules/Navigation/StyledNavigationList"
-import { StyledLink } from "../../../atoms/Link/StyledLink"
 
 import { useMenuState, useMenuDispatch } from "../../../../context/menuContext"
 import actions from "../../../../context/actions"
+
+import { StyledNavigationList } from "../../../molecules/Navigation/StyledNavigationList"
+import { StyledLink } from "../../../atoms/Link/StyledLink"
 
 const Navigation = ({ showNav, pathnameColor }) => {
   const { show } = useMenuState()

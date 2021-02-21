@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react"
 import { Formik, Field, ErrorMessage } from "formik"
+import { useLocation } from "@reach/router"
 import * as Yup from "yup"
+import { GoCheck } from "react-icons/go"
+
 import { StyledAboutContactForm } from "./StyledAboutContactForm"
 import { StyledCheckboxWrapper } from "../../molecules/SignUpHomeSection/StyledCheckboxWrapper"
 import { StyledText } from "../../atoms/Text/StyledText"
-import { GoCheck } from "react-icons/go"
 import { StyledButton } from "../../atoms/Button/StyledButton"
-import { useLocation } from "@reach/router"
 import { AnimateSharedLayout } from "framer-motion"
 import { StyledAboutContactFormErrorBox } from "../../atoms/AboutContact/StyledAboutContactFormErrorBox"
 

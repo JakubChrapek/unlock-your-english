@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
+
 import { StyledFullPageResponsieImage } from "../../molecules/HomeHeroSection/StyledFullPageImage"
 import { StyledHomeHeroSection } from "../../atoms/HomeHeroSection/StyledHomeHeroSection"
 import { StyledText } from "../../atoms/Text/StyledText"

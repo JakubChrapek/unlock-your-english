@@ -1,6 +1,6 @@
 import React from "react"
-
 import { graphql, useStaticQuery } from "gatsby"
+
 import { StyledHiAboutMeImage } from "../../atoms/HiAboutMe/StyledHiAboutMeImage"
 import { StyledHiAboutMeSection } from "../../atoms/HiAboutMe/StyledHiAboutMeSection"
 import { StyledHiAboutMeWrapper } from "../../atoms/HiAboutMe/StyledHiAboutMeWrapper"

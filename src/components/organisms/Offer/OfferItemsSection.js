@@ -1,11 +1,11 @@
 import React from "react"
-
 import { graphql, useStaticQuery } from "gatsby"
+import useWindowSize from "../../../utils/getWindowSize"
+
 import OfferSiteItem from "../../molecules/Offer/OfferSiteItem"
 import { StyledOfferItemsSection } from "../../atoms/OfferSiteItem/StyledOfferItemsSection"
 import { StyledOfferItemsWrapper } from "../../atoms/OfferSiteItem/StyledOfferItemsWrapper"
 import MyOfferSlider from "../../molecules/MyOffer/MyOfferSlider"
-import useWindowSize from "../../../utils/getWindowSize"
 
 const OfferItemsSection = () => {
   const width = useWindowSize()

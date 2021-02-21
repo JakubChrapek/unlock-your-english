@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import useWindowSize from "../../../utils/getWindowSize"
 import { translateXForElement } from "../../../utils/getTranslateXForElement"
+import { useAnimation, useDragControls, useMotionValue } from "framer-motion"
 
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai"
 
@@ -14,7 +15,6 @@ import { StyledOfferSlider } from "../../atoms/MyOffer/StyledOfferSlider"
 import { StyledText } from "../../atoms/Text/StyledText"
 import { StyledOfferLink } from "../../atoms/MyOffer/StyledOfferLink"
 import { StyledButtonPagination } from "../../atoms/MyOffer/StyledButtonPagination"
-import { useAnimation, useDragControls, useMotionValue } from "framer-motion"
 
 const MyOfferSlider = ({ offerPage, offerData }) => {
   const slides = useStaticQuery(graphql`

@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+
 import { StyledOfferConentItem } from "../../atoms/OfferContentItems/StyledOfferConentItem"
 import { StyledOfferContentWrapper } from "../../molecules/OfferContentItems/StyledOfferContentWrapper"
 import { StyledText } from "../../atoms/Text/StyledText"

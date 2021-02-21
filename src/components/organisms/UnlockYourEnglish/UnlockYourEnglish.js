@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+
 import { StyledEnglishImage } from "../../atoms/UnlockYourEnglish/StyledEnglishImage"
 import { StyledLeftBar } from "../../molecules/UnlockYourEnglish/StyledLeftBar"
 import { StyledUnlockYourEnglishSection } from "../../atoms/UnlockYourEnglish/StyledUnlockYourEnglishSection"
