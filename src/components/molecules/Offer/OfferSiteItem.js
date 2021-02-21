@@ -11,7 +11,6 @@ const OfferSiteItem = ({
 }) => {
   return (
     <StyledOfferSiteItemWrapper>
-      {console.log(offerTitle, offerTextContent, offerPageContentTitle)}
       <div>
         <StyledText
           as="h2"

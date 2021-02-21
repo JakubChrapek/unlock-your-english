@@ -13,14 +13,21 @@ const OfferContentItems = () => {
         nodes {
           offerPageContentTitle
           movieTitlesAndDescriptions {
-            ... on DatoCmsOfferItemTitleFirstLine {
-              firstLine
-            }
-            ... on DatoCmsOfferItemTitleSecondLine {
-              secondLine
+            ... on DatoCmsListItem {
+              id
+              lineText
             }
             ... on DatoCmsOfferItemContent {
+              id
               content
+            }
+            ... on DatoCmsOfferItemTitleSecondLine {
+              id
+              secondLine
+            }
+            ... on DatoCmsOfferItemTitleFirstLine {
+              id
+              firstLine
             }
           }
         }
@@ -57,11 +64,11 @@ const OfferContentItems = () => {
                     {itemContent.secondLine}
                   </StyledText>
                 )}
-                {itemContent.content ? (
+                {itemContent.content && (
                   <StyledText
                     hasdeclaredfontsize="18px"
                     hasdeclaredfontcolor="var(--black)"
-                    hasdeclaredpadding="30px 0 0 20px"
+                    hasdeclaredpadding="30px 0 20px 20px"
                     hasdeclaredfontweight="medium"
                     hasdeclaredfontfamily="Raleway"
                     hasdeclaredlineheight="1.32em"
@@ -69,7 +76,20 @@ const OfferContentItems = () => {
                   >
                     {itemContent.content}
                   </StyledText>
-                ) : null}
+                )}
+                {itemContent.lineText && (
+                  <StyledText
+                    hasdeclaredfontsize="18px"
+                    hasdeclaredfontcolor="var(--black)"
+                    hasdeclaredpadding="2px 0 0 20px"
+                    hasdeclaredfontweight="medium"
+                    hasdeclaredfontfamily="Raleway"
+                    hasdeclaredlineheight="1.32em"
+                    as="p"
+                  >
+                    {itemContent.lineText}
+                  </StyledText>
+                )}
               </StyledOfferTextWrapper>
             )
           })}
