@@ -34,7 +34,6 @@ export const StyledPrivatelyImageWrapper = styled.div`
     right: 0;
     width: 263px;
     height: 367px;
-    /* transform: translateX(20px); */
   }
   &::after {
     content: "";

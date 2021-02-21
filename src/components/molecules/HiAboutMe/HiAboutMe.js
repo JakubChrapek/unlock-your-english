@@ -6,7 +6,7 @@ import { StyledHiAboutMeSection } from "../../atoms/HiAboutMe/StyledHiAboutMeSec
 import { StyledHiAboutMeWrapper } from "../../atoms/HiAboutMe/StyledHiAboutMeWrapper"
 import { StyledText } from "../../atoms/Text/StyledText"
 import { StyledLeftBar } from "../../atoms/HiAboutMe/StyledLeftBar"
-import { StyledRightBar } from "../../atoms/HiAboutMe/StyledRightBar"
+import { StyledRightBar } from "../../molecules/HiAboutMe/StyledRightBar"
 import { StyledButton } from "../../atoms/Button/StyledButton"
 
 const HiAboutMe = () => {

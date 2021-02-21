@@ -1,10 +1,10 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
-import { StyledFullPageResponsieImage } from "../../atoms/HomeHeroSection/StyledFullPageImage"
+import { StyledFullPageResponsieImage } from "../../molecules/HomeHeroSection/StyledFullPageImage"
 import { StyledHomeHeroSection } from "../../atoms/HomeHeroSection/StyledHomeHeroSection"
 import { StyledText } from "../../atoms/Text/StyledText"
-import { StyledHeroTextWrapper } from "../../atoms/HomeHeroSection/StyledHeroTextWrapper"
+import { StyledHeroTextWrapper } from "../../molecules/HomeHeroSection/StyledHeroTextWrapper"
 import { StyledButton } from "../../atoms/Button/StyledButton"
 
 const HomeHeroSection = () => {

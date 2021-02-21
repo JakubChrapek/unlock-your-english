@@ -1,17 +1,17 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { StyledHowItAllStartedSection } from "../../atoms/HowItAllStarted/StyledHowItAllStartedSection"
+import { StyledHowItAllStartedSection } from "../../molecules/HowItAllStarted/StyledHowItAllStartedSection"
 import { StyledHowItAllStartedWrapper } from "../../atoms/HowItAllStarted/StyledHowItAllStartedWrapper"
-import { StyledMyOfferSpiral } from "../../atoms/MyOffer/StyledMyOfferSpiral"
+import { StyledMyOfferSpiral } from "../../molecules/MyOffer/StyledMyOfferSpiral"
 import { StyledText } from "../../atoms/Text/StyledText"
 import aboutSpiral from "../../../images/aboutspiral.svg"
 import { StyledPrivatelyImage } from "../../atoms/HowItAllStarted/StyledPrivatelyImage"
 import { StyledPrivatelyImageWrapper } from "../../atoms/HowItAllStarted/StyledPrivatelyImageWrapper"
-import { StyledPrivatelyWrapper } from "../../atoms/HowItAllStarted/StyledPrivatelyWrapper"
-import { StyledPrivatelyTextWrapper } from "../../atoms/HowItAllStarted/StyledPrivatelyTextWrapper"
-import { StyledHowItAllStartedTopBar } from "../../atoms/HowItAllStarted/StyledHowItAllStartedTopBar"
-import { StyledHowItAllStartedBottomBar } from "../../atoms/HowItAllStarted/StyledHowItAllStartedBottomBar"
+import { StyledPrivatelyWrapper } from "../../molecules/HowItAllStarted/StyledPrivatelyWrapper"
+import { StyledPrivatelyTextWrapper } from "../../molecules/HowItAllStarted/StyledPrivatelyTextWrapper"
+import { StyledHowItAllStartedTopBar } from "../../molecules/HowItAllStarted/StyledHowItAllStartedTopBar"
+import { StyledHowItAllStartedBottomBar } from "../../molecules/HowItAllStarted/StyledHowItAllStartedBottomBar"
 
 const HowItAllStarted = () => {
   const howItAllStartedData = useStaticQuery(graphql`

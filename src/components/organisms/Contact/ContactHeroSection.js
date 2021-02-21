@@ -9,8 +9,8 @@ import { StyledHeroContactSection } from "../../atoms/Contact/StyledHeroContactS
 import { StyledHeroContactWrapper } from "../../atoms/Contact/StyledHeroContactWrapper"
 import { StyledImageWrapper } from "../../atoms/Contact/StyledImageWrapper"
 import { StyledText } from "../../atoms/Text/StyledText"
-import { StyledSmallLargeBox } from "../../atoms/Contact/StyledSmallLargeBox"
-import { StyledContactFormWrapper } from "../../atoms/Contact/StyledContactFormWrapper"
+import { StyledSmallLargeBox } from "../../molecules/Contact/StyledSmallLargeBox"
+import { StyledContactFormWrapper } from "../../molecules/Contact/StyledContactFormWrapper"
 
 const ContactHeroSection = () => {
   const contactPageData = useStaticQuery(graphql`

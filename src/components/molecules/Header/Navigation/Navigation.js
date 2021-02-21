@@ -1,5 +1,5 @@
 import React from "react"
-import { StyledNavigationList } from "../../../atoms/Navigation/StyledNavigationList"
+import { StyledNavigationList } from "../../../molecules/Navigation/StyledNavigationList"
 import { StyledLink } from "../../../atoms/Link/StyledLink"
 
 import { useMenuState, useMenuDispatch } from "../../../../context/menuContext"

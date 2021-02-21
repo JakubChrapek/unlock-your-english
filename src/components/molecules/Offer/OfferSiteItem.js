@@ -1,7 +1,7 @@
 import React from "react"
 import { StyledText } from "../../atoms/Text/StyledText"
 import { StyledLink } from "../../atoms/Link/StyledLink"
-import { StyledOfferSiteItemWrapper } from "../../atoms/OfferSiteItem/StyledOfferSiteItemWrapper"
+import { StyledOfferSiteItemWrapper } from "../../molecules/OfferSiteItem/StyledOfferSiteItemWrapper"
 
 const OfferSiteItem = ({
   offerTitle,

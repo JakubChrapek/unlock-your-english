@@ -2,8 +2,8 @@ import React from "react"
 
 import { graphql, useStaticQuery } from "gatsby"
 
-import { StyledHerroOfferSection } from "../../atoms/Offer/StyledHerroOfferSection"
-import { StyledHerroOfferWrapper } from "../../atoms/Offer/StyledHerroOfferWrapper"
+import { StyledHerroOfferSection } from "../../molecules/Offer/StyledHerroOfferSection"
+import { StyledHerroOfferWrapper } from "./StyledHerroOfferWrapper"
 import { StyledHerroImage } from "../../atoms/Offer/StyledHerroImage"
 import { StyledText } from "../../atoms/Text/StyledText"
 

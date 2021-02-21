@@ -4,10 +4,10 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import { StyledAboutMeHeroSection } from "../../atoms/AboutMeHeroSection/StyledAboutMeHeroSection"
 import { StyledAboutMeHeroWrapper } from "../../atoms/AboutMeHeroSection/StyledAboutMeHeroWrapper"
-import { StyledImageWrapper } from "../../atoms/AboutMeHeroSection/StyledImageWrapper"
-import { StyledTextWrapper } from "../../atoms/AboutMeHeroSection/StyledTextWrapper"
+import { StyledImageWrapper } from "../../molecules/AboutMeHeroSection/StyledImageWrapper"
+import { StyledTextWrapper } from "../../molecules/AboutMeHeroSection/StyledTextWrapper"
 import { StyledText } from "../../atoms/Text/StyledText"
-import { StyledMobileTextWrapper } from "../../atoms/AboutMeHeroSection/StyledMobileTextWrapper"
+import { StyledMobileTextWrapper } from "../../molecules/AboutMeHeroSection/StyledMobileTextWrapper"
 
 const AboutMeHeroSection = () => {
   const aboutMeData = useStaticQuery(graphql`

@@ -8,7 +8,7 @@ import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai"
 
 import { StyledMyOfferSliderWrapper } from "../../atoms/MyOffer/StyledMyOfferSliderWrapper"
 import { StyledSlidesWrapper } from "../../atoms/MyOffer/StyledSlidesWrapper"
-import { StyledSlide } from "../../atoms/MyOffer/StyledSlide"
+import { StyledSlide } from "../../molecules/MyOffer/StyledSlide"
 import { StyledSliderArrowWrapper } from "../../atoms/MyOffer/StyledSliderArrowWrapper"
 import { StyledOfferSlider } from "../../atoms/MyOffer/StyledOfferSlider"
 import { StyledText } from "../../atoms/Text/StyledText"

@@ -2,7 +2,7 @@ import React from "react"
 
 import { StyledAboutContactSection } from "../../atoms/AboutContact/StyledAboutContactSection"
 import { StyledAboutContactWrapper } from "../../atoms/AboutContact/StyledAboutContactWrapper"
-import { StyledAboutContactLeftBar } from "../../atoms/AboutContact/StyledAboutContactLeftBar"
+import { StyledAboutContactLeftBar } from "../../molecules/AboutContact/StyledAboutContactLeftBar"
 import { StyledAboutContactRightBar } from "../../atoms/AboutContact/StyledAboutContactRightBar"
 import AboutContactForm from "../../molecules/AboutContact/AboutContactForm"
 import { StyledText } from "../../atoms/Text/StyledText"

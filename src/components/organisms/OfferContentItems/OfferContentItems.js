@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { StyledOfferConentItem } from "../../atoms/OfferContentItems/StyledOfferConentItem"
-import { StyledOfferContentWrapper } from "../../atoms/OfferContentItems/StyledOfferContentWrapper"
+import { StyledOfferContentWrapper } from "../../molecules/OfferContentItems/StyledOfferContentWrapper"
 import { StyledText } from "../../atoms/Text/StyledText"
-import { StyledOfferTextWrapper } from "../../atoms/OfferContentItems/StyledOfferTextWrapper"
+import { StyledOfferTextWrapper } from "../../molecules/OfferContentItems/StyledOfferTextWrapper"
 
 const OfferContentItems = () => {
   const offerContentItemsData = useStaticQuery(graphql`

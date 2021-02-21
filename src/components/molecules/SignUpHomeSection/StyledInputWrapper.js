@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { motion } from "framer-motion"
+
 export const StyledInputWrapper = styled(motion.div)`
   display: flex;
   flex-wrap: wrap;

@@ -8,22 +8,22 @@ import { StyledUserImageImg } from "../../atoms/WhatSayAboutMe/StyledUserImage"
 import { StyledText } from "../../atoms/Text/StyledText"
 import { StyledWhatSayAboutMeSection } from "../../atoms/WhatSayAboutMe/StyledWhatSayAboutMeSection"
 import { StyledWhatSayAboutMeWrapper } from "../../atoms/WhatSayAboutMe/StyledWhatSayAboutMeWrapper"
-import { StyledSliderWrapper } from "../../atoms/WhatSayAboutMe/StyledSliderWrapper"
+import { StyledSliderWrapper } from "../../molecules/WhatSayAboutMe/StyledSliderWrapper"
 
 import { StyledSlide } from "../../atoms/WhatSayAboutMe/StyledSlide"
 import { StyledLeftArrow } from "../../atoms/WhatSayAboutMe/StyledLeftArrow"
 import { StyledRightArrow } from "../../atoms/WhatSayAboutMe/StyledRightArrow"
 import { StyledPagination } from "../../atoms/WhatSayAboutMe/StyledPagination"
-import { StyledUserWrapper } from "../../atoms/WhatSayAboutMe/StyledUserWrapper"
+import { StyledUserWrapper } from "../../molecules/WhatSayAboutMe/StyledUserWrapper"
 import { StyledUserImage } from "../../atoms/WhatSayAboutMe/StyledUserImage"
 
-import { StyledWrapperWithoutPagination } from "../../atoms/WhatSayAboutMe/StyledWrapperWithoutPagination"
+import { StyledWrapperWithoutPagination } from "../../molecules/WhatSayAboutMe/StyledWrapperWithoutPagination"
 import { StyledSpanPagination } from "../../atoms/WhatSayAboutMe/StyledSpanPagination"
 import { StyledButtonPagination } from "../../atoms/MyOffer/StyledButtonPagination"
 import { IoIosArrowForward } from "react-icons/io"
 import { IoIosArrowBack } from "react-icons/io"
 
-import { StyledMyOfferSpiral } from "../../atoms/MyOffer/StyledMyOfferSpiral"
+import { StyledMyOfferSpiral } from "../../molecules/MyOffer/StyledMyOfferSpiral"
 import aboutSpiral from "../../../images/aboutspiral.svg"
 
 const WhatSayAboutMe = () => {
