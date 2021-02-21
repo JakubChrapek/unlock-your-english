@@ -34,7 +34,7 @@ export default function useWindowSize() {
       setWidth(getWidth())
     }
     // set resize listener
-    // window.addEventListener("resize", resizeListener)
+    window.addEventListener("resize", resizeListener)
     window.addEventListener("onLoad", loadListener)
     // clean up function
     return () => {
