@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
+import { Link } from "react-scroll"
 
 import { StyledFullPageResponsieImage } from "../../molecules/HomeHeroSection/StyledFullPageImage"
 import { StyledHomeHeroSection } from "../../atoms/HomeHeroSection/StyledHomeHeroSection"
@@ -48,14 +49,16 @@ const HomeHeroSection = () => {
           działalność edukacyjna, zajmującą się przede wszystkim nauką języka
           angielskiego
         </StyledText>
-        <StyledButton
-          hasdeclaredpadding="16px 42px"
-          hasdeclaredfontcolor="var(--white)"
-          hasdeclaredbgcolor="var(--red)"
-          hasdeclaredfontfamily="Manrope"
-        >
-          Unlock your english
-        </StyledButton>
+        <Link to="unlock-your-english" smooth={true} duration={500}>
+          <StyledButton
+            hasdeclaredpadding="16px 42px"
+            hasdeclaredfontcolor="var(--white)"
+            hasdeclaredbgcolor="var(--red)"
+            hasdeclaredfontfamily="Manrope"
+          >
+            Unlock your english
+          </StyledButton>
+        </Link>
       </StyledHeroTextWrapper>
       <StyledFullPageResponsieImage>
         <Img fluid={data.datoCmsPageHome.heroimage.fluid} alt="Hero Image" />
