@@ -84,17 +84,17 @@ const Footer = () => {
         <StyledFooterMedia>
           <StyleFooterMenuUl hasmarginright={true}>
             <li>
-              <Link to="">
+              <Link to="" rel="noreferrer" target="_blank">
                 <FaInstagram size="32px" />
               </Link>
             </li>
             <li>
-              <Link to="">
+              <Link to="" rel="noreferrer" target="_blank">
                 <FaFacebook size="32px" />
               </Link>
             </li>
             <li>
-              <Link to="">
+              <Link to="" rel="noreferrer" target="_blank">
                 <FaLinkedin size="32px" />
               </Link>
             </li>
