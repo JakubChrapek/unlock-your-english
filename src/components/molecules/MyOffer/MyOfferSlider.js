@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react"
 import { Link } from "react-scroll"
 import slugify from "slugify"
+import { navigate } from "@reach/router"
 
 import useWindowSize from "../../../utils/getWindowSize"
 import { translateXForElement } from "../../../utils/getTranslateXForElement"
@@ -17,7 +18,7 @@ import { StyledText } from "../../atoms/Text/StyledText"
 import { StyledOfferLink } from "../../atoms/MyOffer/StyledOfferLink"
 import { StyledButtonPagination } from "../../atoms/MyOffer/StyledButtonPagination"
 
-const MyOfferSlider = ({ slideData }) => {
+const MyOfferSlider = ({ slideData, fromAnotherPage }) => {
   const [containerWidth, setContainerWidth] = useState(undefined)
   const [slidesWidth, setSlidesWidth] = useState(undefined)
   const [singleSlideWidth, setSingleSlideWidth] = useState(undefined)
@@ -111,6 +112,16 @@ const MyOfferSlider = ({ slideData }) => {
                 })}
                 smooth={true}
                 duration={400}
+                onClick={
+                  fromAnotherPage
+                    ? () =>
+                        navigate(
+                          `/offer/#${slugify(slide.offerPageContentTitle, {
+                            lower: true,
+                          })}`
+                        )
+                    : () => {}
+                }
               >
                 <StyledOfferLink
                   hasdeclaredfontsize="18px"

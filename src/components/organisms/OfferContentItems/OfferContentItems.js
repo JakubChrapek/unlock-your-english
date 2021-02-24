@@ -44,7 +44,9 @@ const OfferContentItems = () => {
           key={item.offerPageContentTitle}
           name={slugify(item.offerPageContentTitle, { lower: true })}
         >
-          <StyledOfferConentItem>
+          <StyledOfferConentItem
+            id={slugify(item.offerPageContentTitle, { lower: true })}
+          >
             {item.movieTitlesAndDescriptions.map(itemContent => {
               return (
                 <StyledOfferTextWrapper key={itemContent.id}>

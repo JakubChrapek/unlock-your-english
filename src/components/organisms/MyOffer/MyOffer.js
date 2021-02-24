@@ -29,7 +29,7 @@ const MyOffer = () => {
         >
           Moja oferta
         </StyledText>
-        <MyOfferSlider slideData={slides.allDatoCmsOfferItem} />
+        <MyOfferSlider fromAnotherPage slideData={slides.allDatoCmsOfferItem} />
       </StyledMyOfferWrapper>
     </StyledMyOfferSection>
   )
