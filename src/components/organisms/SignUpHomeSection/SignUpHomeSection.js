@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import { Formik, Field, ErrorMessage } from "formik"
 import { GoCheck } from "react-icons/go"
 import * as Yup from "yup"
@@ -19,7 +19,8 @@ import { StyledErrorCheckbox } from "../../atoms/SignUpHomeSection/StyledErrorCh
 
 const SignUpHomeSection = () => {
   const [hideBox, setHideBox] = useState(false)
-
+  const [defineHeight, setDefineHeight] = useState(false)
+  const sectionRef = useRef(null)
   let pathname = useLocation().pathname
 
   const validationSchema = Yup.object({
@@ -52,9 +53,16 @@ const SignUpHomeSection = () => {
         setHideBox(false)
       })
   }
+  useEffect(() => {
+    setDefineHeight(sectionRef.current.clientHeight)
+  }, [hideBox])
   return (
-    <StyledSignUpSection>
-      <StyledSignUpWrapper>
+    <StyledSignUpSection
+      ref={sectionRef}
+      defineheight={defineHeight}
+      hidebox={hideBox}
+    >
+      <StyledSignUpWrapper hidebox={hideBox}>
         <StyledText
           hasdeclaredfontsize="48px"
           hasdeclaredfontweight="bold"
@@ -95,106 +103,110 @@ const SignUpHomeSection = () => {
             >
               <input type="hidden" name="form-name" value="Newsletter Form" />
               <input type="hidden" name="bot-field" />
-              <AnimateSharedLayout>
-                <StyledInputWrapper layout hidecheckbox={hideBox}>
-                  <div>
-                    <AnimatePresence
-                      initial={false}
-                      transition={{ opacity: 0.1 }}
-                    >
-                      <ErrorMessage name="email">
-                        {errorMsg => (
-                          <StyledError
-                            key={errors.email}
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                          >
-                            <StyledText
-                              hasdeclaredfontfamily="Raleway"
-                              hasdeclaredfontsize="18px"
-                              hasdeclaredpadding="7px 45px"
-                              hasdeclaredfontcolor="var(--red)"
-                            >
-                              {errorMsg}
-                            </StyledText>
-                          </StyledError>
-                        )}
-                      </ErrorMessage>
-                    </AnimatePresence>
-                    <Field
-                      type="email"
-                      name="email"
-                      placeholder="A tu wpisz swój email"
-                    />
-                    <StyledSavedCorrectly active={hideBox}>
-                      <StyledText
-                        hasdeclaredfontfamily="Raleway"
-                        hasdeclaredfontsize="18px"
-                        hasdeclaredfontcolor="var(--white)"
-                      >
-                        Gratulacje zapisałeś się poprawnie!
-                      </StyledText>
-                    </StyledSavedCorrectly>
-                  </div>
-                  <StyledButton
-                    hasdeclaredbgcolor="var(--gray)"
-                    hasdeclaredfontcolor="var(--white)"
-                    hasdeclaredfontfamily="Raleway"
-                    hasdeclaredfontsize="18px"
-                    type="submit"
-                    disabled={isSubmitting}
-                    hideCheckbox={hideBox}
+              <StyledInputWrapper layout hidecheckbox={hideBox}>
+                <div>
+                  <AnimatePresence
+                    initial={false}
+                    transition={{ opacity: 0.1 }}
                   >
-                    Zapisz
-                  </StyledButton>
-                  <StyledCheckboxWrapper hidecheckbox={hideBox}>
-                    <Field
-                      type="checkbox"
-                      name="privacy"
-                      id="accept-newsletter"
-                    />
-                    <label htmlFor="accept-newsletter" name="privacy">
-                      <StyledText
-                        hasdeclaredfontsize="13px"
-                        hasdeclaredfontcolor="var(--white)"
-                        hasdeclaredfontfamily="Raleway"
-                        hasdeclaredfontweight="medium"
-                        hasdeclaredlineheight="1.32em"
-                        hasdeclaredpadding="5px 0 3px 0"
-                        hasdeclaredfontalign="center"
-                        as="p"
-                      >
-                        zgoda na przetwarzanie twoich danych osobowych
-                      </StyledText>
-                      <GoCheck size="24px" />
-                    </label>
-                  </StyledCheckboxWrapper>
-                </StyledInputWrapper>
-                <AnimatePresence initial={false} transition={{ opacity: 0.1 }}>
-                  <StyledErrorCheckbox>
-                    <ErrorMessage name="privacy">
+                    <ErrorMessage name="email">
                       {errorMsg => (
-                        <StyledText
-                          key={errors.privacy}
+                        <StyledError
+                          key={errors.email}
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}
-                          hasdeclaredfontfamily="Raleway"
-                          hasdeclaredfontsize="18px"
-                          hasdeclaredpadding="7px 45px"
-                          hasdeclaredfontcolor="var(--red)"
                         >
-                          {errorMsg}
-                        </StyledText>
+                          <StyledText
+                            hasdeclaredfontfamily="Raleway"
+                            hasdeclaredfontsize="18px"
+                            hasdeclaredpadding="7px 45px"
+                            hasdeclaredfontcolor="var(--red)"
+                          >
+                            {errorMsg}
+                          </StyledText>
+                        </StyledError>
                       )}
                     </ErrorMessage>
-                  </StyledErrorCheckbox>
-                </AnimatePresence>
-              </AnimateSharedLayout>
+                  </AnimatePresence>
+                  <Field
+                    type="email"
+                    name="email"
+                    placeholder="A tu wpisz swój email"
+                  />
+                </div>
+                <StyledButton
+                  hasdeclaredbgcolor="var(--gray)"
+                  hasdeclaredfontcolor="var(--white)"
+                  hasdeclaredfontfamily="Raleway"
+                  hasdeclaredfontsize="18px"
+                  type="submit"
+                  disabled={isSubmitting}
+                  hideCheckbox={hideBox}
+                >
+                  Zapisz
+                </StyledButton>
+                <StyledCheckboxWrapper hidecheckbox={hideBox}>
+                  <Field
+                    type="checkbox"
+                    name="privacy"
+                    id="accept-newsletter"
+                  />
+                  <label htmlFor="accept-newsletter" name="privacy">
+                    <StyledText
+                      hasdeclaredfontsize="13px"
+                      hasdeclaredfontcolor="var(--white)"
+                      hasdeclaredfontfamily="Raleway"
+                      hasdeclaredfontweight="medium"
+                      hasdeclaredlineheight="1.32em"
+                      hasdeclaredpadding="5px 0 3px 0"
+                      hasdeclaredfontalign="center"
+                      as="p"
+                    >
+                      zgoda na przetwarzanie twoich danych osobowych
+                    </StyledText>
+                    <GoCheck size="24px" />
+                  </label>
+                </StyledCheckboxWrapper>
+              </StyledInputWrapper>
+              <AnimatePresence initial={false} transition={{ opacity: 0.1 }}>
+                <StyledErrorCheckbox>
+                  <ErrorMessage name="privacy">
+                    {errorMsg => (
+                      <StyledText
+                        key={errors.privacy}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        hasdeclaredfontfamily="Raleway"
+                        hasdeclaredfontsize="18px"
+                        hasdeclaredpadding="7px 45px"
+                        hasdeclaredfontcolor="var(--red)"
+                      >
+                        {errorMsg}
+                      </StyledText>
+                    )}
+                  </ErrorMessage>
+                </StyledErrorCheckbox>
+              </AnimatePresence>
             </StyledSignUpForm>
           )}
         </Formik>
+        <StyledSavedCorrectly
+          active={hideBox}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ opacity: 0.6 }}
+        >
+          <StyledText
+            hasdeclaredfontfamily="Raleway"
+            hasdeclaredfontsize="18px"
+            hasdeclaredfontcolor="var(--white)"
+          >
+            Gratulacje zapisałeś się poprawnie!
+          </StyledText>
+        </StyledSavedCorrectly>
       </StyledSignUpWrapper>
     </StyledSignUpSection>
   )

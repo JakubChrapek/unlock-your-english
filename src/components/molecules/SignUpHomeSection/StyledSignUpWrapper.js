@@ -9,6 +9,7 @@ export const StyledSignUpWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   position: relative;
+  height: ${({ hidebox }) => (hidebox ? "100%" : "auto")};
   @media only screen and (max-width: 874px) {
     padding: 71px 60px;
   }
@@ -25,10 +26,11 @@ export const StyledSignUpWrapper = styled.div`
       }
     }
     > p {
-      font-size: 14px;
+      font-size: 18px;
       padding: 32px 44px 42px 44px;
       @media only screen and (max-width: 646px) {
         padding: 32px 44px 35px 44px;
+        font-size: 14px;
         line-height: 1.85em;
       }
       @media only screen and (max-width: 480px) {

@@ -5,4 +5,6 @@ export const StyledSavedCorrectly = styled(motion.div)`
   display: ${({ active }) => (active ? "flex" : "none")};
   align-items: center;
   height: 51px;
+  position: absolute;
+  top: 65%;
 `
