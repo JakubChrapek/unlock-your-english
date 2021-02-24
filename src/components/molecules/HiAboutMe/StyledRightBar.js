@@ -47,4 +47,8 @@ export const StyledRightBar = styled.div`
       max-width: 277px;
     }
   }
+
+  > a {
+    text-decoration: none;
+  }
 `

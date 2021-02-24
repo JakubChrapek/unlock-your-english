@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-
+import { Link } from "gatsby"
 import { StyledHiAboutMeImage } from "../../atoms/HiAboutMe/StyledHiAboutMeImage"
 import { StyledHiAboutMeSection } from "../../atoms/HiAboutMe/StyledHiAboutMeSection"
 import { StyledHiAboutMeWrapper } from "../../atoms/HiAboutMe/StyledHiAboutMeWrapper"
@@ -64,15 +64,17 @@ const HiAboutMe = () => {
           >
             {getCamilaData.datoCmsHiImCamila.hiImCamilaContent}
           </StyledText>
-          <StyledButton
-            hasdeclaredpadding="16px 70px"
-            hasdeclaredbgcolor="var(--red)"
-            hasdeclaredfontsize="20px"
-            hasdeclaredfontcolor="var(--white)"
-            hasdeclaredfontfamily="Manrope"
-          >
-            Więcej o mnie
-          </StyledButton>
+          <Link to="about">
+            <StyledButton
+              hasdeclaredpadding="16px 70px"
+              hasdeclaredbgcolor="var(--red)"
+              hasdeclaredfontsize="20px"
+              hasdeclaredfontcolor="var(--white)"
+              hasdeclaredfontfamily="Manrope"
+            >
+              Więcej o mnie
+            </StyledButton>
+          </Link>
         </StyledRightBar>
       </StyledHiAboutMeWrapper>
     </StyledHiAboutMeSection>
