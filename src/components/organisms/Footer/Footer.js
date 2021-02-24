@@ -39,6 +39,7 @@ const Footer = () => {
             <li>
               <StyledLink
                 to="/about"
+                activeClassName="active"
                 hasdeclaredfontsize="14px"
                 hasdeclaredfontweight="bold"
                 hasdeclaredmargin="0 80px 0 0"
@@ -50,6 +51,7 @@ const Footer = () => {
             <li>
               <StyledLink
                 to="/offer"
+                activeClassName="active"
                 hasdeclaredfontsize="14px"
                 hasdeclaredfontweight="bold"
                 hasdeclaredmargin="0 80px 0 0"
@@ -61,6 +63,7 @@ const Footer = () => {
             <li>
               <StyledLink
                 to="/contact"
+                activeClassName="active"
                 hasdeclaredfontsize="14px"
                 hasdeclaredfontweight="bold"
                 hasdeclaredmargin="0 80px 0 0"
@@ -72,6 +75,7 @@ const Footer = () => {
             <li>
               <StyledLink
                 to="/privacy-policy"
+                activeClassName="active"
                 hasdeclaredfontsize="14px"
                 hasdeclaredfontweight="bold"
                 hasdeclaredpadding="4px 0"

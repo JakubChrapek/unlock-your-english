@@ -59,4 +59,9 @@ export const StyledLink = styled(Link)`
       transform: scaleY(1);
     }
   }
+  &.active {
+    &:after {
+      transform: scaleY(1);
+    }
+  }
 `
