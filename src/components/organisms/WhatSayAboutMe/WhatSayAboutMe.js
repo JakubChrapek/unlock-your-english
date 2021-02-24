@@ -50,6 +50,9 @@ const WhatSayAboutMe = () => {
   const paginate = newDirection => {
     setSlide([slide + newDirection, newDirection])
   }
+  const handleSetSlide = iterator => {
+    setSlide([iterator, iterator])
+  }
   return (
     <StyledWhatSayAboutMeSection>
       <StyledMyOfferSpiral>
@@ -76,7 +79,6 @@ const WhatSayAboutMe = () => {
                     type: "spring",
                     duration: 0.8,
                   }}
-                  key={slideItem.id}
                 >
                   <StyledWrapperWithoutPagination
                     key={`${slide}-wrapper`}
@@ -156,8 +158,8 @@ const WhatSayAboutMe = () => {
         <StyledPagination>
           {allDatoData.nodes.map((slideItem, iterator) => (
             <StyledSpanPagination
-              key={slideItem.id}
               active={iterator === slideIndex}
+              onClick={() => handleSetSlide(iterator)}
             ></StyledSpanPagination>
           ))}
         </StyledPagination>

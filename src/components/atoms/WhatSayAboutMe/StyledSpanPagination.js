@@ -8,4 +8,5 @@ export const StyledSpanPagination = styled.span`
   border-radius: 50%;
   display: block;
   margin-right: 20px;
+  cursor: pointer;
 `
