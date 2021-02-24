@@ -10,7 +10,6 @@ import { StyledText } from "../../atoms/Text/StyledText"
 import { StyledSpiral } from "../../molecules/UnlockYourEnglish/StyledSpiral"
 import { StyledLeftBarImageWrapper } from "../../atoms/UnlockYourEnglish/StyledLeftBarImageWrapper"
 import spiral from "../../../images/spiral.svg"
-import useWindowSize from "../../../utils/getWindowSize"
 
 const UnlockYourEnglish = () => {
   const unlockImagesQuery = useStaticQuery(graphql`
@@ -34,7 +33,6 @@ const UnlockYourEnglish = () => {
       }
     }
   `)
-  const width = useWindowSize()
   const image = unlockImagesQuery.datoCmsUnlockYourImage
   return (
     <StyledUnlockYourEnglishSection>
@@ -80,7 +78,6 @@ const UnlockYourEnglish = () => {
             hasdeclaredfontweight="medium"
             hasdeclaredfontfamily="Raleway"
             hasdeclaredlineheight="1.32em"
-            hasdeclaredfontweight="medium"
             as="h3"
           >
             Mobilna pracownia językowa „Unlock Your English” to całoroczna

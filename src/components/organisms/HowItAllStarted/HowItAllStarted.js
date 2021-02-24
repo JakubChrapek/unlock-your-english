@@ -37,7 +37,8 @@ const HowItAllStarted = () => {
       }
     }
   `)
-
+  const paragrpahData = howItAllStartedData.datoCmsHowitallstartedparagraph
+  const contentData = howItAllStartedData.datoCmsAboutMeContent
   return (
     <StyledHowItAllStartedSection>
       <StyledMyOfferSpiral>
@@ -63,7 +64,7 @@ const HowItAllStarted = () => {
               hasdeclaredlineheight="1.32em"
               hasdeclaredpadding="0 0 34px 0"
             >
-              {howItAllStartedData.datoCmsHowitallstartedparagraph.paragraph1}
+              {paragrpahData.paragraph1}
             </StyledText>
             <StyledText
               hasdeclaredfontsize="18px"
@@ -72,7 +73,7 @@ const HowItAllStarted = () => {
               hasdeclaredlineheight="1.32em"
               hasdeclaredpadding="0 0 34px 0"
             >
-              {howItAllStartedData.datoCmsHowitallstartedparagraph.paragraph2}
+              {paragrpahData.paragraph2}
             </StyledText>
             <StyledText
               hasdeclaredfontsize="18px"
@@ -81,7 +82,7 @@ const HowItAllStarted = () => {
               hasdeclaredlineheight="1.32em"
               hasdeclaredpadding="0 0 34px 0"
             >
-              {howItAllStartedData.datoCmsHowitallstartedparagraph.paragraph3}
+              {paragrpahData.paragraph3}
             </StyledText>
           </StyledHowItAllStartedTopBar>
           <StyledHowItAllStartedBottomBar>
@@ -97,14 +98,12 @@ const HowItAllStarted = () => {
             </StyledText>
             {howItAllStartedData.allDatoCmsOwnlanguageschool.nodes.map(text => (
               <StyledText
+                key={text.ownlanguageschoolparagraph}
                 hasdeclaredfontsize="18px"
                 hasdeclaredfontfamily="Raleway"
                 hasdeclaredfontweight="medium"
                 hasdeclaredlineheight="1.32em"
                 hasdeclaredpadding="0 0 34px 0"
-                // dangerouslySetInnerHTML={{
-                //   __html: text.ownlanguageschoolparagraph,
-                // }}
               >
                 {text.ownlanguageschoolparagraph}
               </StyledText>
@@ -130,19 +129,14 @@ const HowItAllStarted = () => {
               hasdeclaredfontweight="medium"
               hasdeclaredlineheight="1.32em"
               hasdeclaredmaxwidth="447px"
-              // dangerouslySetInnerHTML={{
-              //   __html: howItAllStartedData.datoCmsAboutMeContent.privately,
-              // }}
             >
-              {howItAllStartedData.datoCmsAboutMeContent.privately}
+              {contentData.privately}
             </StyledText>
           </StyledPrivatelyTextWrapper>
           <StyledPrivatelyImageWrapper>
             <StyledPrivatelyImage
-              fluid={
-                howItAllStartedData.datoCmsAboutMeContent.privatelyImage.fluid
-              }
-              alt={howItAllStartedData.datoCmsAboutMeContent.privatelyImage.alt}
+              fluid={contentData.privatelyImage.fluid}
+              alt={contentData.privatelyImage.alt}
             />
           </StyledPrivatelyImageWrapper>
           <StyledText

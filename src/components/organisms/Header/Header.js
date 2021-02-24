@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <StyledHeader>
       <StyledHeaderWrapper>
-        <Logo showNav={mobile} pathnameColor={pathname} />
+        <Logo shownav={mobile} pathnameColor={pathname} />
         <StyledHamburgerButton
           onClick={() => {
             setShow(!show)
@@ -29,17 +29,17 @@ const Header = () => {
           }}
         >
           <StyledHamburgerButtonSpan
-            showNav={mobile}
+            shownav={mobile}
             pathnameColor={pathname}
           />
           <StyledHamburgerButtonSpan
             hasdeclaredwidth="75%"
-            showNav={mobile}
+            shownav={mobile}
             pathnameColor={pathname}
           />
         </StyledHamburgerButton>
       </StyledHeaderWrapper>
-      <Navigation showNav={mobile} pathnameColor={pathname} />
+      <Navigation shownav={mobile} pathnameColor={pathname} />
     </StyledHeader>
   )
 }

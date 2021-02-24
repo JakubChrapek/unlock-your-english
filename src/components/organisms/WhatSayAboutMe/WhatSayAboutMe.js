@@ -38,6 +38,7 @@ const WhatSayAboutMe = () => {
               ...GatsbyDatoCmsFluid
             }
           }
+          id
           whatTheSayAboutMeContent
         }
       }
@@ -75,6 +76,7 @@ const WhatSayAboutMe = () => {
                     type: "spring",
                     duration: 0.8,
                   }}
+                  key={slideItem.id}
                 >
                   <StyledWrapperWithoutPagination
                     key={`${slide}-wrapper`}
@@ -154,6 +156,7 @@ const WhatSayAboutMe = () => {
         <StyledPagination>
           {allDatoData.nodes.map((slideItem, iterator) => (
             <StyledSpanPagination
+              key={slideItem.id}
               active={iterator === slideIndex}
             ></StyledSpanPagination>
           ))}

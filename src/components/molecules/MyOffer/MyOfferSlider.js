@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from "react"
+import { Link } from "react-scroll"
+import slugify from "slugify"
 
 import useWindowSize from "../../../utils/getWindowSize"
 import { translateXForElement } from "../../../utils/getTranslateXForElement"
-import { useAnimation, useDragControls, useMotionValue } from "framer-motion"
+import { useAnimation } from "framer-motion"
 
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai"
 
@@ -59,12 +61,11 @@ const MyOfferSlider = ({ slideData }) => {
     setSlidesWidth(slidesWidth)
     setContainerWidth(slider.clientWidth)
     setSingleSlideWidth(slider.children[0].clientWidth)
-    const constraint = slider.clientWidth - slidesWidth
+    // const constraint = slider.clientWidth - slidesWidth
   }, [width])
 
   return (
     <StyledMyOfferSliderWrapper>
-      {console.log(slideData)}
       <StyledOfferSlider>
         <StyledSlidesWrapper
           drag="x"
@@ -82,7 +83,7 @@ const MyOfferSlider = ({ slideData }) => {
           }}
         >
           {slideData.nodes.map(slide => (
-            <StyledSlide>
+            <StyledSlide key={slide.offerTitle}>
               <StyledText
                 hasdeclaredfontsize="36px"
                 hasdeclaredfontweight="bold"
@@ -104,17 +105,24 @@ const MyOfferSlider = ({ slideData }) => {
               >
                 {slide.offerTextContent}
               </StyledText>
-
-              <StyledOfferLink
-                hasdeclaredfontsize="18px"
-                hasdeclaredfontweight="bold"
-                hasdeclaredlineheight="1.32em"
-                hasdeclaredfontcolor="var(--red)"
-                hasdeclaredpadding="6px 0"
+              <Link
+                to={slugify(slide.offerPageContentTitle, {
+                  lower: true,
+                })}
+                smooth={true}
+                duration={400}
               >
-                Przeczytaj więcej
-                {slide.offerPageContentTitle}
-              </StyledOfferLink>
+                <StyledOfferLink
+                  hasdeclaredfontsize="18px"
+                  hasdeclaredfontweight="bold"
+                  hasdeclaredlineheight="1.32em"
+                  hasdeclaredfontcolor="var(--red)"
+                  hasdeclaredpadding="6px 0"
+                  as="p"
+                >
+                  Przeczytaj więcej
+                </StyledOfferLink>
+              </Link>
             </StyledSlide>
           ))}
         </StyledSlidesWrapper>
@@ -123,11 +131,7 @@ const MyOfferSlider = ({ slideData }) => {
             onClick={handlePrevClick}
             hasdeclaredmarginright="42px"
           >
-            <AiOutlineArrowLeft
-              size="32px"
-              color="var(--blue)"
-              // color="rgba(17, 19, 30, 0.2)"
-            />
+            <AiOutlineArrowLeft size="32px" color="var(--blue)" />
           </StyledButtonPagination>
           <StyledButtonPagination onClick={handleNextClick}>
             <AiOutlineArrowRight size="32px" color="var(--blue)" />

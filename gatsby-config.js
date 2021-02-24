@@ -88,7 +88,6 @@ module.exports = {
     },
     {
       resolve: "gatsby-omni-font-loader",
-
       options: {
         enableListener: true,
         interval: 500,

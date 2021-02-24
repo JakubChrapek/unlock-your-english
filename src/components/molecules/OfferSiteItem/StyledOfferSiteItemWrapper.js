@@ -14,7 +14,7 @@ export const StyledOfferSiteItemWrapper = styled.div`
     max-height: 100px;
     margin-bottom: 26px;
   }
-  > a {
+  > p {
     position: absolute;
     bottom: 30px;
     left: 50px;

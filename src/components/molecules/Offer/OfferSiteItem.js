@@ -1,8 +1,10 @@
 import React from "react"
 
 import { StyledText } from "../../atoms/Text/StyledText"
-import { StyledLink } from "../../atoms/Link/StyledLink"
+import { StyledOfferLink } from "../../atoms/MyOffer/StyledOfferLink"
 import { StyledOfferSiteItemWrapper } from "../../molecules/OfferSiteItem/StyledOfferSiteItemWrapper"
+import slugify from "slugify"
+import { Link } from "react-scroll"
 
 const OfferSiteItem = ({
   offerTitle,
@@ -26,21 +28,28 @@ const OfferSiteItem = ({
         hasdeclaredfontsize="18px"
         hasdeclaredfontcolor="var(--black)"
         hasdeclaredpadding="0 0 28px 0"
-        hasdeclaredfontweight="medium"
+        hasdeclaredfontweight="normal"
         hasdeclaredfontfamily="Raleway"
         hasdeclaredlineheight="1.32em"
+        as="h3"
       >
         {offerTextContent}
       </StyledText>
-      <StyledLink
-        hasdeclaredfontsize="18px"
-        hasdeclaredfontcolor="var(--red)"
-        hasdeclaredfontweight="bold"
-        hasdeclaredpadding="0 0 4px 0"
+      <Link
+        to={slugify(offerPageContentTitle, { lower: true })}
+        smooth={true}
+        duration={400}
       >
-        Przeczytaj więcej
-        {offerPageContentTitle}
-      </StyledLink>
+        <StyledOfferLink
+          hasdeclaredfontsize="18px"
+          hasdeclaredfontcolor="var(--red)"
+          hasdeclaredfontweight="bold"
+          hasdeclaredpadding="0 0 4px 0"
+          as="p"
+        >
+          Przeczytaj więcej
+        </StyledOfferLink>
+      </Link>
     </StyledOfferSiteItemWrapper>
   )
 }

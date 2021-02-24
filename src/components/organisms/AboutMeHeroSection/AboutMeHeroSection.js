@@ -28,7 +28,7 @@ const AboutMeHeroSection = () => {
       }
     }
   `)
-
+  const dataAbout = aboutMeData.datoCmsAboutMeContent
   return (
     <StyledAboutMeHeroSection>
       <StyledAboutMeHeroWrapper>
@@ -40,7 +40,7 @@ const AboutMeHeroSection = () => {
             hasdeclaredfontweight="1.85em"
             hasdeclaredpadding="0 0 24px 0"
           >
-            {aboutMeData.datoCmsAboutMeContent.heroTitle}
+            {dataAbout.heroTitle}
           </StyledText>
           <StyledText
             as="h2"
@@ -49,7 +49,7 @@ const AboutMeHeroSection = () => {
             hasdeclaredfontweight="1.85em"
             hasdeclaredpadding="0 0 24px 60px"
           >
-            {aboutMeData.datoCmsAboutMeContent.heroTitleSecondLine}
+            {dataAbout.heroTitleSecondLine}
           </StyledText>
         </StyledMobileTextWrapper>
         <StyledImageWrapper>
@@ -65,7 +65,7 @@ const AboutMeHeroSection = () => {
             hasdeclaredfontweight="1.85em"
             hasdeclaredpadding="0 0 24px 0"
           >
-            {aboutMeData.datoCmsAboutMeContent.heroTitle}
+            {dataAbout.heroTitle}
           </StyledText>
           <StyledText
             as="h2"
@@ -74,7 +74,7 @@ const AboutMeHeroSection = () => {
             hasdeclaredfontweight="1.85em"
             hasdeclaredpadding="0 0 24px 60px"
           >
-            {aboutMeData.datoCmsAboutMeContent.heroTitleSecondLine}
+            {dataAbout.heroTitleSecondLine}
           </StyledText>
           <StyledText
             as="p"
@@ -85,7 +85,7 @@ const AboutMeHeroSection = () => {
             hasdeclaredpadding="0 0 24px 60px"
             hasdeclaredlineheight="1.41em"
           >
-            {aboutMeData.datoCmsAboutMeContent.heroContent}
+            {dataAbout.heroContent}
           </StyledText>
         </StyledTextWrapper>
       </StyledAboutMeHeroWrapper>

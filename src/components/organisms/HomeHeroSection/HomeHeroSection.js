@@ -36,7 +36,6 @@ const HomeHeroSection = () => {
         <StyledText
           hasdeclaredmaxwidth="726px"
           hasdeclaredtextalign="center"
-          hasdeclaredfontweight="medium"
           hasdeclaredfontsize="20px"
           hasdeclaredfontcolor="var(--white)"
           hasdeclaredpadding="0 0 44px 0"

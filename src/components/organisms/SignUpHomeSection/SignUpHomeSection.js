@@ -126,7 +126,6 @@ const SignUpHomeSection = () => {
                       type="email"
                       name="email"
                       placeholder="A tu wpisz swój email"
-                      hideInput={true}
                     />
                     <StyledSavedCorrectly active={hideBox}>
                       <StyledText

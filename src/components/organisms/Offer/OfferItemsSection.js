@@ -29,6 +29,7 @@ const OfferItemsSection = () => {
         <StyledOfferItemsWrapper>
           {offerItemsData.allDatoCmsOfferItem.nodes.map(slide => (
             <OfferSiteItem
+              key={slide.offerTitle}
               offerTitle={slide.offerTitle}
               offerTextContent={slide.offerTextContent}
               offerPageContentTitle={slide.offerPageContentTitle}

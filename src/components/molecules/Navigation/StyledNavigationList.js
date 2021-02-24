@@ -14,9 +14,9 @@ export const StyledNavigationList = styled(motion.ul)`
     width: 100%;
     background-color: var(--white);
 
-    opacity: ${({ showNav }) => (showNav ? "1" : "0")};
-    transform: ${({ showNav }) =>
-      showNav ? "translateY(0)" : "translateY(-300px)"};
+    opacity: ${({ shownav }) => (shownav ? "1" : "0")};
+    transform: ${({ shownav }) =>
+      shownav ? "translateY(0)" : "translateY(-300px)"};
     z-index: 1;
     transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
   }

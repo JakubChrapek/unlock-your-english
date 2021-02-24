@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 
 import { StyledLogo } from "./StyledLogo"
 
-const Logo = ({ pathnameColor, showNav }) => {
+const Logo = ({ pathnameColor, shownav }) => {
   const logoImage = useStaticQuery(graphql`
     query logo {
       datoCmsHeader {
@@ -25,23 +25,23 @@ const Logo = ({ pathnameColor, showNav }) => {
     }
   `)
   return (
-    <AnimatePresence initial={false} custom={showNav} exitBeforeEnter>
+    <AnimatePresence initial={false} custom={shownav} exitBeforeEnter>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.1 }}
-        key={showNav}
+        key={shownav}
       >
-        <StyledLogo to="/" showNav={`${showNav}--logo`}>
+        <StyledLogo to="/" shownav={`${shownav}--logo`}>
           <Img
             fluid={
-              pathnameColor === "/" && showNav !== true
+              pathnameColor === "/" && shownav !== true
                 ? logoImage.datoCmsHeader.headerLogo.fluid
                 : logoImage.datoCmsHeader.headerLogoColor.fluid
             }
             alt={
-              pathnameColor === "/" && showNav !== true
+              pathnameColor === "/" && shownav !== true
                 ? logoImage.datoCmsHeader.headerLogo.alt
                 : logoImage.datoCmsHeader.headerLogoColor.alt
             }

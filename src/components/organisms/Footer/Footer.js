@@ -25,16 +25,13 @@ const Footer = () => {
       }
     }
   `)
-
+  const footerData = logoFooterImage.datoCmsHeader.headerLogoColor
   return (
     <StyledFooterSection>
       <StyledFooterWrapper>
         <StyledFooterLogo>
           <Link to="/">
-            <Img
-              fluid={logoFooterImage.datoCmsHeader.headerLogoColor.fluid}
-              alt={logoFooterImage.datoCmsHeader.headerLogoColor.alt}
-            />
+            <Img fluid={footerData.fluid} alt={footerData.alt} />
           </Link>
         </StyledFooterLogo>
         <StyledFooterMenuWrapper>

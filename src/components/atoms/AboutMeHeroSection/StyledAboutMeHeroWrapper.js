@@ -12,6 +12,7 @@ export const StyledAboutMeHeroWrapper = styled.div`
     justify-content: center;
     padding: 160px 20px 0 20px;
     margin: 0 auto;
+    height: auto;
   }
   @media only screen and (max-width: 440px) {
     align-items: flex-start;

@@ -25,6 +25,7 @@ const ContactHeroSection = () => {
       }
     }
   `)
+  const contactHeroData = contactPageData.datoCmsContactPageContent
   return (
     <StyledHeroContactSection>
       <StyledHeroContactWrapper>
@@ -49,8 +50,8 @@ const ContactHeroSection = () => {
         </StyledSmallLargeBox>
         <StyledImageWrapper>
           <Img
-            fluid={contactPageData.datoCmsContactPageContent.heroImage.fluid}
-            alt={contactPageData.datoCmsContactPageContent.heroImage.alt}
+            fluid={contactHeroData.heroImage.fluid}
+            alt={contactHeroData.heroImage.alt}
           />
         </StyledImageWrapper>
         <StyledContactFormWrapper>
