@@ -23,7 +23,9 @@ const OfferItemsSection = () => {
 
   return (
     <StyledOfferItemsSection>
-      {width <= 962 ? (
+      {typeof window === "undefined" ? (
+        <></>
+      ) : width <= 962 ? (
         <MyOfferSlider slideData={offerItemsData.allDatoCmsOfferItem} />
       ) : (
         <StyledOfferItemsWrapper>
