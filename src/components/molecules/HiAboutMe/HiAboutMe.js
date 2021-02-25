@@ -59,8 +59,9 @@ const HiAboutMe = () => {
             hasdeclaredfontweight="medium"
             hasdeclaredfontcolor="var(--black)"
             hasdeclaredfontfamily="Raleway"
-            hasdeclaredlineheight="1.55em"
+            hasdeclaredlineheight="1.85em"
             hasdeclaredpadding="0 0 40px 0"
+            hasdeclaredtextalign="justify"
           >
             {getCamilaData.datoCmsHiImCamila.hiImCamilaContent}
           </StyledText>

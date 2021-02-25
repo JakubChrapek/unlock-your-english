@@ -22,5 +22,32 @@ export const StyledSlide = styled.div`
     &:first-of-type {
       margin-left: 30px;
     }
+    h3 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 14px;
+      height: 140px;
+    }
+  }
+  @media (max-width: 495px) {
+    p {
+      height: 160px;
+    }
+  }
+  @media (max-width: 414px) {
+    p {
+      height: 170px;
+    }
+  }
+  @media (max-width: 383px) {
+    p {
+      height: 200px;
+    }
+  }
+  @media (max-width: 347px) {
+    p {
+      height: 210px;
+    }
   }
 `

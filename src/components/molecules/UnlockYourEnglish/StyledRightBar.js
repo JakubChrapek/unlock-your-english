@@ -2,16 +2,13 @@ import styled from "styled-components"
 
 export const StyledRightBar = styled.div`
   max-width: 591px;
-  transform: translateY(-120px);
+  transform: translateY(-40px);
   padding-left: 49px;
   @media only screen and (max-width: 1304px) {
     padding-left: 19px;
   }
   @media only screen and (max-width: 1222px) {
     padding-left: 0;
-  }
-  @media only screen and (max-width: 600px) {
-    padding: 0 20px;
   }
   @media only screen and (max-width: 1186px) {
     h2 {
@@ -25,6 +22,12 @@ export const StyledRightBar = styled.div`
     transform: translateY(0);
     h3 {
       max-width: 600px;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 0 20px;
+    h3 {
+      font-size: 14px;
     }
   }
 `

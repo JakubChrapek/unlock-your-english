@@ -79,7 +79,9 @@ const UnlockYourEnglish = () => {
               hasdeclaredfontcolor="var(--black)"
               hasdeclaredfontweight="medium"
               hasdeclaredfontfamily="Raleway"
-              hasdeclaredlineheight="1.32em"
+              hasdeclaredlineheight="1.75em"
+              hasdeclaredpadding="24px 0 0 0"
+              hasdeclaredtextalign="justify"
               as="h3"
             >
               Mobilna pracownia językowa „Unlock Your English” to całoroczna

@@ -6,4 +6,5 @@ export const StyledSignUpSection = styled.section`
   height: ${({ defineheight, hidebox }) =>
     hidebox ? `${defineheight}px` : "auto"};
   position: relative;
+  padding-bottom: 30px;
 `

@@ -5,7 +5,7 @@ export const StyledLeftBar = styled.div`
   flex-wrap: wrap;
   width: 555px;
   justify-content: center;
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 768px) {
     width: 340px;
   }
   @media only screen and (max-width: 369px) {

@@ -55,6 +55,7 @@ const HomeHeroSection = () => {
             hasdeclaredfontcolor="var(--white)"
             hasdeclaredbgcolor="var(--red)"
             hasdeclaredfontfamily="Manrope"
+            hasdeclaredfontsize="20px"
           >
             Unlock your english
           </StyledButton>

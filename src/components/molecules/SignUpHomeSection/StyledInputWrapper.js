@@ -31,6 +31,7 @@ export const StyledInputWrapper = styled(motion.div)`
     }
     @media only screen and (max-width: 646px) {
       width: 306px;
+      margin-top: 50px;
     }
     @media only screen and (max-width: 362px) {
       width: 280px;
@@ -60,7 +61,7 @@ export const StyledInputWrapper = styled(motion.div)`
     }
     padding: 14px 12px;
     width: 132px;
-    margin-left: 32px;
+    margin-left: 22px;
     height: 51px;
     align-self: flex-end;
   }

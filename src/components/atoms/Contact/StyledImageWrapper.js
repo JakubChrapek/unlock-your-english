@@ -1,10 +1,15 @@
 import styled from "styled-components"
 
 export const StyledImageWrapper = styled.div`
-  width: 578px;
-  height: 685px;
+  width: 538px;
+  height: 645px;
   transform: translateX(-70px);
   position: relative;
+  @media only screen and (max-width: 1639px) {
+    width: 508px;
+    height: 615px;
+    transform: translateX(-50px);
+  }
   @media only screen and (max-width: 1441px) {
     width: 478px;
     height: 585px;
@@ -36,9 +41,12 @@ export const StyledImageWrapper = styled.div`
     bottom: -15px;
     right: -15px;
     z-index: -2;
+    @media only screen and (max-width: 1639px) {
+      bottom: -3px;
+      height: 87%;
+    }
     @media only screen and (max-width: 1441px) {
       bottom: 4px;
-      height: 87%;
     }
     @media only screen and (max-width: 1249px) {
       bottom: 20px;

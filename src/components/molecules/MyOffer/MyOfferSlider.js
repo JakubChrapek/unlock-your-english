@@ -88,20 +88,21 @@ const MyOfferSlider = ({ slideData, fromAnotherPage }) => {
               <StyledText
                 hasdeclaredfontsize="36px"
                 hasdeclaredfontweight="bold"
-                hasdeclaredlineheight="1.85em"
+                hasdeclaredlineheight="1.35em"
                 hasdeclaredfontcolor="var(--blue)"
                 hasdeclaredpadding="0 0 24px 0"
+                as="h3"
               >
                 {slide.offerTitle}
               </StyledText>
               <StyledText
                 hasdeclaredfontsize="18px"
                 hasdeclaredfontweight="medium"
-                hasdeclaredlineheight="1.64em"
+                hasdeclaredlineheight="1.75em"
                 hasdeclaredfontcolor="var(--black)"
                 hasdeclaredfontfamily="Raleway"
                 hasdeclaredpadding="0 0 24px 0"
-                hasdeclaredheight="180px"
+                hasdeclaredheight="200px"
                 hasoverflow="hidden"
               >
                 {slide.offerTextContent}
@@ -129,7 +130,7 @@ const MyOfferSlider = ({ slideData, fromAnotherPage }) => {
                   hasdeclaredlineheight="1.32em"
                   hasdeclaredfontcolor="var(--red)"
                   hasdeclaredpadding="6px 0"
-                  as="p"
+                  as="h4"
                 >
                   Przeczytaj więcej
                 </StyledOfferLink>

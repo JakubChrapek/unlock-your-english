@@ -3,7 +3,7 @@ import { Formik, Field, ErrorMessage } from "formik"
 import { GoCheck } from "react-icons/go"
 import * as Yup from "yup"
 import { useLocation } from "@reach/router"
-import { AnimatePresence, AnimateSharedLayout } from "framer-motion"
+import { AnimatePresence } from "framer-motion"
 
 import { StyledSignUpSection } from "../../atoms/SignUpHomeSection/StyledSignUpSection"
 import { StyledSignUpWrapper } from "../../molecules/SignUpHomeSection/StyledSignUpWrapper"
@@ -76,10 +76,10 @@ const SignUpHomeSection = () => {
         <StyledText
           hasdeclaredfontsize="18px"
           hasdeclaredfontweight="medium"
-          hasdeclaredlineheight="1.32em"
+          hasdeclaredlineheight="1.85em"
           hasdeclaredfontfamily="Raleway"
           hasdeclaredtextalign="center"
-          hasdeclaredpadding="42px 0 26px 0"
+          hasdeclaredpadding="42px 0 18px 0"
           hasdeclaredfontcolor="var(--white)"
           as="p"
         >

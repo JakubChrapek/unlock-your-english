@@ -26,6 +26,7 @@ const MyOffer = () => {
           hasdeclaredfontsize="48px"
           hasdeclaredfontweight="bold"
           hasdeclaredpadding="0 0 48px 0"
+          as="h2"
         >
           Moja oferta
         </StyledText>

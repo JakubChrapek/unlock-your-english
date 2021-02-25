@@ -6,4 +6,10 @@ export const StyledMyOfferWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
+  > h2 {
+    @media only screen and (max-width: 600px) {
+      padding-bottom: 20px;
+      font-size: 36px;
+    }
+  }
 `

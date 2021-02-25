@@ -107,8 +107,9 @@ const WhatSayAboutMe = () => {
                       hasdeclaredtextalign="center"
                       hasdeclaredfontweight="medium"
                       hasdeclaredfontfamily="Raleway"
-                      hasdeclaredlineheight="1.35em"
+                      hasdeclaredlineheight="1.45em"
                       hasdeclaredpadding="0 20px"
+                      hasdeclaredfontsize="24px"
                       as="p"
                     >
                       {slideItem.whatTheSayAboutMeContent}

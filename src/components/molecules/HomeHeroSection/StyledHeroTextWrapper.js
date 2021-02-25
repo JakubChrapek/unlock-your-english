@@ -5,7 +5,14 @@ export const StyledHeroTextWrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
+  @media only screen and (min-width: 1920px) {
+    h1 {
+      font-size: 82px;
+    }
+    h2 {
+      font-size: 28px;
+    }
+  }
   @media only screen and (max-width: 990px) {
     h1 {
       font-size: 56px;
