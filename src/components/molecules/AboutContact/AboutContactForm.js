@@ -8,9 +8,9 @@ import { StyledAboutContactForm } from "./StyledAboutContactForm"
 import { StyledCheckboxWrapper } from "../../molecules/SignUpHomeSection/StyledCheckboxWrapper"
 import { StyledText } from "../../atoms/Text/StyledText"
 import { StyledButton } from "../../atoms/Button/StyledButton"
-import { AnimateSharedLayout } from "framer-motion"
+import { AnimatePresence } from "framer-motion"
 import { StyledAboutContactFormErrorBox } from "../../atoms/AboutContact/StyledAboutContactFormErrorBox"
-
+import { StyledSendMessageBox } from "../../atoms/AboutContact/StyledSendMessageBox"
 const AboutContactForm = () => {
   let pathname = useLocation().pathname
   const [message, setMessage] = useState("")
@@ -71,7 +71,7 @@ const AboutContactForm = () => {
       onSubmit={handleSubmit}
     >
       {({ values, handleChange, handleBlur }) => (
-        <AnimateSharedLayout animate={{ transition: 0.1 }}>
+        <>
           <StyledAboutContactForm
             method="POST"
             name="ContactForm"
@@ -81,10 +81,9 @@ const AboutContactForm = () => {
           >
             <input type="hidden" name="form-name" value="ContactForm" />
             <input type="hidden" name="bot-field" />
+
             <StyledAboutContactFormErrorBox layout>
               <Field type="text" name="name" placeholder="Imię" />
-            </StyledAboutContactFormErrorBox>
-            <StyledAboutContactFormErrorBox layout>
               <ErrorMessage name="name">
                 {errorMsg => (
                   <StyledText
@@ -98,10 +97,9 @@ const AboutContactForm = () => {
                 )}
               </ErrorMessage>
             </StyledAboutContactFormErrorBox>
+
             <StyledAboutContactFormErrorBox layout>
               <Field type="email" name="email" placeholder="Email" />
-            </StyledAboutContactFormErrorBox>
-            <StyledAboutContactFormErrorBox layout>
               <ErrorMessage name="email">
                 {errorMsg => (
                   <StyledText
@@ -115,6 +113,7 @@ const AboutContactForm = () => {
                 )}
               </ErrorMessage>
             </StyledAboutContactFormErrorBox>
+
             <StyledAboutContactFormErrorBox layout>
               <Field
                 as="textarea"
@@ -125,8 +124,6 @@ const AboutContactForm = () => {
                 rows="1"
                 placeholder="Wiadomość"
               />
-            </StyledAboutContactFormErrorBox>
-            <StyledAboutContactFormErrorBox layout>
               <ErrorMessage name="message">
                 {errorMsg => (
                   <StyledText
@@ -163,7 +160,7 @@ const AboutContactForm = () => {
                 {errorMsg => (
                   <StyledText
                     hasdeclaredfontfamily="Raleway"
-                    hasdeclaredfontsize="18px"
+                    hasdeclaredfontsize="16px"
                     hasdeclaredpadding="18px 0 0 0"
                     hasdeclaredfontcolor="var(--red)"
                   >
@@ -182,16 +179,24 @@ const AboutContactForm = () => {
             >
               Wyślij
             </StyledButton>
+            <AnimatePresence initial={false} transition={{ opacity: 0.8 }}>
+              <StyledSendMessageBox>
+                <StyledText
+                  hasdeclaredfontcolor="var(--red)"
+                  hasdeclaredpadding="24px 0 0 0"
+                  hasdeclaredfontfamily="Raleway"
+                  as="p"
+                  key={message}
+                  initial={{ opacity: 0, x: "-50px" }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0 }}
+                >
+                  {message}
+                </StyledText>
+              </StyledSendMessageBox>
+            </AnimatePresence>
           </StyledAboutContactForm>
-          <StyledText
-            hasdeclaredfontcolor="var(--red)"
-            hasdeclaredpadding="24px 0 0 0"
-            hasdeclaredfontfamily="Raleway"
-            as="p"
-          >
-            {message}
-          </StyledText>
-        </AnimateSharedLayout>
+        </>
       )}
     </Formik>
   )

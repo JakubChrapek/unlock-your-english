@@ -6,6 +6,7 @@ export const StyledAboutContactForm = styled(Form)`
   flex-direction: column;
   align-items: center;
   width: 317px;
+  position: relative;
   @media only screen and (max-width: 767px) {
     margin-top: 38px;
     align-items: center;
@@ -38,9 +39,9 @@ export const StyledAboutContactForm = styled(Form)`
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     resize: none;
     padding: 13px;
+    margin-bottom: 14px;
     font-family: Raleway;
     font-weight: bold;
-    margin-top: 12px;
     &::placeholder {
       font-weight: bold;
     }
@@ -50,7 +51,7 @@ export const StyledAboutContactForm = styled(Form)`
   }
 
   > button {
-    margin-top: 48px;
+    margin-top: 16px;
     width: 290px;
     height: 48px;
   }

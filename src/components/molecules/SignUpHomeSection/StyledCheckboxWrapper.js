@@ -5,7 +5,8 @@ export const StyledCheckboxWrapper = styled(motion.div)`
   display: ${({ hidecheckbox }) => (hidecheckbox ? "none" : "flex")};
   align-items: center;
   justify-content: center;
-  margin-top: 23px;
+  margin-top: 24px;
+  margin-bottom: 12px;
   input {
     display: none;
   }
