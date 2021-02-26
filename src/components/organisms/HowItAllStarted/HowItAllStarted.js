@@ -61,8 +61,10 @@ const HowItAllStarted = () => {
               hasdeclaredfontsize="18px"
               hasdeclaredfontfamily="Raleway"
               hasdeclaredfontweight="medium"
-              hasdeclaredlineheight="1.32em"
+              hasdeclaredlineheight="1.85em"
               hasdeclaredpadding="0 0 34px 0"
+              hasdeclaredtextalign="justify"
+              as="p"
             >
               {paragrpahData.paragraph1}
             </StyledText>
@@ -70,8 +72,10 @@ const HowItAllStarted = () => {
               hasdeclaredfontsize="18px"
               hasdeclaredfontfamily="Raleway"
               hasdeclaredfontweight="medium"
-              hasdeclaredlineheight="1.32em"
+              hasdeclaredlineheight="1.85em"
               hasdeclaredpadding="0 0 34px 0"
+              hasdeclaredtextalign="justify"
+              as="p"
             >
               {paragrpahData.paragraph2}
             </StyledText>
@@ -79,8 +83,10 @@ const HowItAllStarted = () => {
               hasdeclaredfontsize="18px"
               hasdeclaredfontfamily="Raleway"
               hasdeclaredfontweight="medium"
-              hasdeclaredlineheight="1.32em"
+              hasdeclaredlineheight="1.85em"
               hasdeclaredpadding="0 0 34px 0"
+              hasdeclaredtextalign="justify"
+              as="p"
             >
               {paragrpahData.paragraph3}
             </StyledText>
@@ -102,8 +108,9 @@ const HowItAllStarted = () => {
                 hasdeclaredfontsize="18px"
                 hasdeclaredfontfamily="Raleway"
                 hasdeclaredfontweight="medium"
-                hasdeclaredlineheight="1.32em"
+                hasdeclaredlineheight="1.78em"
                 hasdeclaredpadding="0 0 34px 0"
+                hasdeclaredtextalign="justify"
               >
                 {text.ownlanguageschoolparagraph}
               </StyledText>
@@ -127,8 +134,9 @@ const HowItAllStarted = () => {
               hasdeclaredfontsize="18px"
               hasdeclaredfontfamily="Raleway"
               hasdeclaredfontweight="medium"
-              hasdeclaredlineheight="1.32em"
+              hasdeclaredlineheight="1.78em"
               hasdeclaredmaxwidth="447px"
+              hasdeclaredtextalign="justify"
             >
               {contentData.privately}
             </StyledText>

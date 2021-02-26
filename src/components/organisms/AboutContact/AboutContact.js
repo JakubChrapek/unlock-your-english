@@ -26,7 +26,7 @@ const AboutContact = () => {
             hasdeclaredfontweight="medium"
             hasdeclaredfontcolor="var(--black)"
             hasdeclaredfontfamily="Raleway"
-            hasdeclaredlineheight="1.32em"
+            hasdeclaredlineheight="1.78em"
             hasdeclaredmaxwidth="464px"
           >
             Jeśli jeszcze nie czujesz się przekonany, nie przejmuj się. Napisz

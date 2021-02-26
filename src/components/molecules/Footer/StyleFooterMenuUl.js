@@ -19,7 +19,7 @@ export const StyleFooterMenuUl = styled.ul`
         margin-right: ${({ hasmarginright }) =>
           hasmarginright ? "0" : "34px"};
       }
-      @media only screen and (max-width: 767px) {
+      @media only screen and (max-width: 768px) {
         margin: ${({ hasmarginright }) =>
           hasmarginright ? "0" : "0 4px 22px 4px"};
       }

@@ -19,7 +19,7 @@ export const StyledFooterWrapper = styled.div`
   @media only screen and (max-width: 826px) {
     padding: 128px 20px 78px 20px;
   }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 768px) {
     flex-direction: column;
     padding: 58px 20px 40px 20px;
   }

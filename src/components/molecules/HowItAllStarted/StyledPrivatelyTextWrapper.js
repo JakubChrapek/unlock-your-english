@@ -29,6 +29,7 @@ export const StyledPrivatelyTextWrapper = styled.div`
       padding-top: 102px;
       max-width: none;
       padding-right: 28px;
+      font-size: 14px;
     }
   }
 `

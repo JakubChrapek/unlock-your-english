@@ -27,10 +27,10 @@ const OfferSiteItem = ({
       <StyledText
         hasdeclaredfontsize="18px"
         hasdeclaredfontcolor="var(--black)"
-        hasdeclaredpadding="0 0 28px 0"
+        hasdeclaredpadding="0 0 6px 0"
         hasdeclaredfontweight="normal"
         hasdeclaredfontfamily="Raleway"
-        hasdeclaredlineheight="1.32em"
+        hasdeclaredlineheight="1.68em"
         as="h3"
       >
         {offerTextContent}

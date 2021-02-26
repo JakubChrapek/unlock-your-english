@@ -5,8 +5,14 @@ export const StyledOfferContentWrapper = styled.div`
   padding-bottom: 100px;
   @media only screen and (max-width: 767px) {
     p {
-      padding: 30px 0 0 0;
+      line-height: 1.68em;
     }
+    /* h2 {
+      padding-bottom: 30px;
+    }
+    h3 {
+      padding-bottom: 30px;
+    } */
   }
   @media only screen and (max-width: 413px) {
     h2 {

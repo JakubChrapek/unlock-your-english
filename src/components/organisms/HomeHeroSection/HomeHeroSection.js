@@ -41,7 +41,7 @@ const HomeHeroSection = () => {
           hasdeclaredfontcolor="var(--white)"
           hasdeclaredpadding="0 0 44px 0"
           hasdeclaredfontfamily="Raleway"
-          hasdeclaredlineheight="1.32em"
+          hasdeclaredlineheight="1.6em"
           hasdeclaredfontweight="normal"
           as="h2"
         >

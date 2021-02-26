@@ -8,7 +8,7 @@ export const StyledFooterMenuWrapper = styled.div`
   @media only screen and (max-width: 1010px) {
     margin-left: 20px;
   }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 768px) {
     padding-bottom: 24px;
     margin-left: 0;
     ul {

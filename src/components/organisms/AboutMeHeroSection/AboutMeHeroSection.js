@@ -83,7 +83,7 @@ const AboutMeHeroSection = () => {
             hasdeclaredfontweight="medium"
             hasdeclaredfontfamily="Raleway"
             hasdeclaredpadding="0 0 24px 60px"
-            hasdeclaredlineheight="1.41em"
+            hasdeclaredlineheight="1.85em"
           >
             {dataAbout.heroContent}
           </StyledText>
