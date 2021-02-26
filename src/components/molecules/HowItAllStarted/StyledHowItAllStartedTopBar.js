@@ -22,14 +22,16 @@ export const StyledHowItAllStartedTopBar = styled.div`
       margin-top: 60px;
     }
     @media only screen and (max-width: 343px) {
-        font-size: 30px
+      font-size: 30px;
     }
     @media only screen and (max-width: 320px) {
       margin-top: 120px;
     }
-  > p {
+  }
+  p {
     @media only screen and (max-width: 767px) {
-      font-size: 16px;
+      font-size: 14px;
+      line-height: 1.68em;
     }
   }
 `

@@ -14,7 +14,8 @@ export const StyledHowItAllStartedBottomBar = styled.div`
   }
   > p {
     @media only screen and (max-width: 767px) {
-      font-size: 16px;
+      font-size: 14px;
+      line-height: 1.68em;
     }
   }
 `

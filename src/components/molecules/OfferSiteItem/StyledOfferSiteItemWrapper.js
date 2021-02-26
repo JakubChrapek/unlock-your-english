@@ -12,7 +12,7 @@ export const StyledOfferSiteItemWrapper = styled.div`
     align-items: center;
     height: 100%;
     max-height: 100px;
-    margin-bottom: 26px;
+    margin-bottom: 16px;
   }
   > p {
     position: absolute;

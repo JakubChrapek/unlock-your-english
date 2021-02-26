@@ -47,7 +47,7 @@ const HeroOfferSection = () => {
           hasdeclaredfontsize="18px"
           hasdeclaredfontweight="medium"
           hasdeclaredfontfamily="Raleway"
-          hasdeclaredlineheight="1.32em"
+          hasdeclaredlineheight="1.78em"
           hasdeclaredmaxwidth="489px"
           hasdeclaredfontcolor="var(--white)"
         >

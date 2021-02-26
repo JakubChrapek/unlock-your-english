@@ -19,7 +19,7 @@ export const StyledHiAboutMeWrapper = styled.div`
     padding: 100px 42px;
   }
   @media only screen and (max-width: 887px) {
-    padding: 100px 20px;
+    padding: 100px 20px 100px 0;
   }
   @media only screen and (max-width: 767px) {
     padding: 0 20px 80px 20px;

@@ -21,14 +21,18 @@ export const StyledImageWrapper = styled.div`
     width: 384px;
     height: 446px;
   }
-  @media only screen and (max-width: 1005px) {
+  @media only screen and (max-width: 1024px) {
     width: 344px;
     height: 406px;
     margin-top: 0;
   }
-  @media only screen and (max-width: 897px) {
+  @media only screen and (max-width: 969px) {
     width: 297px;
     height: 332px;
+  }
+  @media only screen and (max-width: 893px) {
+    width: 267px;
+    height: 302px;
   }
   @media only screen and (max-width: 340px) {
     width: 277px;
@@ -50,7 +54,7 @@ export const StyledImageWrapper = styled.div`
       height: 95%;
       bottom: 0px;
     }
-    @media only screen and (max-width: 897px) {
+    @media only screen and (max-width: 969px) {
       height: 100%;
       bottom: -20px;
     }

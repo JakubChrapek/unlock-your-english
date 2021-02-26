@@ -43,4 +43,7 @@ export const StyledHeroTextWrapper = styled.div`
       padding-top: 48px;
     }
   }
+  @media only screen and (max-width: 348px) {
+    padding: 16px 24px;
+  }
 `

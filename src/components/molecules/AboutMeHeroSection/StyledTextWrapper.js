@@ -12,7 +12,7 @@ export const StyledTextWrapper = styled.div`
     }
     p {
       font-size: 18px;
-      line-height: 2em;
+      line-height: 1.85em;
     }
   }
   @media only screen and (max-width: 1191px) {
@@ -45,9 +45,9 @@ export const StyledTextWrapper = styled.div`
     }
     p {
       font-size: 18px;
-      line-height: 1.75em;
     }
   }
+
   @media only screen and (max-width: 853px) {
     max-width: 440px;
     padding-top: 40px;
@@ -58,7 +58,6 @@ export const StyledTextWrapper = styled.div`
       font-size: 24px;
     }
     p {
-      line-height: 1.32em;
     }
   }
   @media only screen and (max-width: 819px) {
@@ -81,13 +80,13 @@ export const StyledTextWrapper = styled.div`
       display: none;
     }
     p {
-      padding: 16px 0 0 0;
+      padding: 16px 20px 0 20px;
+      line-height: 1.78em;
     }
   }
   @media only screen and (max-width: 440px) {
     max-width: none;
     p {
-      padding: 16px 14px 0 14px;
       align-self: center;
     }
   }

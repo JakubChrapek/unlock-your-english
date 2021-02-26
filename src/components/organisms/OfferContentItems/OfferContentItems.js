@@ -79,7 +79,7 @@ const OfferContentItems = () => {
                       hasdeclaredpadding="30px 0 20px 20px"
                       hasdeclaredfontweight="medium"
                       hasdeclaredfontfamily="Raleway"
-                      hasdeclaredlineheight="1.32em"
+                      hasdeclaredlineheight="1.78em"
                       as="p"
                     >
                       {itemContent.content}
@@ -92,7 +92,7 @@ const OfferContentItems = () => {
                       hasdeclaredpadding="2px 0 0 20px"
                       hasdeclaredfontweight="medium"
                       hasdeclaredfontfamily="Raleway"
-                      hasdeclaredlineheight="1.32em"
+                      hasdeclaredlineheight="1.78em"
                       as="p"
                     >
                       {itemContent.lineText}

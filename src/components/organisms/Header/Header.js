@@ -20,26 +20,28 @@ const Header = () => {
 
   return (
     <StyledHeader>
-      <StyledHeaderWrapper>
-        <Logo shownav={mobile} pathnameColor={pathname} />
-        <StyledHamburgerButton
-          onClick={() => {
-            setShow(!show)
-            dispatch({ type: actions.TOGGLE_MENU })
-          }}
-        >
-          <StyledHamburgerButtonSpan
-            shownav={mobile}
-            pathnameColor={pathname}
-          />
-          <StyledHamburgerButtonSpan
-            hasdeclaredwidth="75%"
-            shownav={mobile}
-            pathnameColor={pathname}
-          />
-        </StyledHamburgerButton>
-      </StyledHeaderWrapper>
-      <Navigation shownav={mobile} pathnameColor={pathname} />
+      <div>
+        <StyledHeaderWrapper>
+          <Logo shownav={mobile} pathnameColor={pathname} />
+          <StyledHamburgerButton
+            onClick={() => {
+              setShow(!show)
+              dispatch({ type: actions.TOGGLE_MENU })
+            }}
+          >
+            <StyledHamburgerButtonSpan
+              shownav={mobile}
+              pathnameColor={pathname}
+            />
+            <StyledHamburgerButtonSpan
+              hasdeclaredwidth="75%"
+              shownav={mobile}
+              pathnameColor={pathname}
+            />
+          </StyledHamburgerButton>
+        </StyledHeaderWrapper>
+        <Navigation shownav={mobile} pathnameColor={pathname} />
+      </div>
     </StyledHeader>
   )
 }
