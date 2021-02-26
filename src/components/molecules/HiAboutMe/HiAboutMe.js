@@ -65,7 +65,7 @@ const HiAboutMe = () => {
           >
             {getCamilaData.datoCmsHiImCamila.hiImCamilaContent}
           </StyledText>
-          <Link to="about">
+          <Link to="/o-mnie">
             <StyledButton
               hasdeclaredpadding="16px 70px"
               hasdeclaredbgcolor="var(--red)"
