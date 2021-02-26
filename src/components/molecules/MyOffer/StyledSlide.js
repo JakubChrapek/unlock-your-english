@@ -16,38 +16,33 @@ export const StyledSlide = styled.div`
     margin-left: 50px;
   }
 
-  @media (max-width: 600px) {
+  @media only screen and (max-width: 600px) {
     min-width: calc(100vw - 80px);
     padding: 40px 20px 40px 50px;
     &:first-of-type {
       margin-left: 30px;
     }
     h3 {
+      font-size: 28px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  @media only screen and (max-width: 495px) {
+    h3 {
       font-size: 24px;
     }
     p {
       font-size: 14px;
-      height: 140px;
     }
   }
-  @media (max-width: 495px) {
+
+  @media only screen and (max-width: 347px) {
     p {
-      height: 160px;
-    }
-  }
-  @media (max-width: 414px) {
-    p {
-      height: 170px;
-    }
-  }
-  @media (max-width: 383px) {
-    p {
-      height: 200px;
-    }
-  }
-  @media (max-width: 347px) {
-    p {
-      height: 210px;
+      &:nth-child(2) {
+        margin-bottom: 14px;
+      }
     }
   }
 `
