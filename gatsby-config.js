@@ -68,6 +68,13 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: 0,
+        duration: 700,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,

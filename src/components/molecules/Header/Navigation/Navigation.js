@@ -14,7 +14,7 @@ const Navigation = ({ shownav, pathnameColor }) => {
     <StyledNavigationList shownav={shownav} pathnameColor={pathnameColor}>
       <li>
         <StyledLink
-          to="/about"
+          to="/o-mnie"
           hasdeclaredfontfamily="Oswald"
           hasdeclaredfontweight="medium"
           hasdeclaredfontcolor={
@@ -32,7 +32,7 @@ const Navigation = ({ shownav, pathnameColor }) => {
       </li>
       <li>
         <StyledLink
-          to="/offer"
+          to="/oferta"
           hasdeclaredfontfamily="Oswald"
           hasdeclaredfontweight="medium"
           hasdeclaredfontcolor={
@@ -50,7 +50,7 @@ const Navigation = ({ shownav, pathnameColor }) => {
       </li>
       <li>
         <StyledLink
-          to="/contact"
+          to="/kontakt"
           hasdeclaredfontfamily="Oswald"
           hasdeclaredfontweight="medium"
           hasdeclaredfontcolor={

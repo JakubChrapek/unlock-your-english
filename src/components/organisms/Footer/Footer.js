@@ -38,7 +38,7 @@ const Footer = () => {
           <StyleFooterMenuUl>
             <li>
               <StyledLink
-                to="/about"
+                to="/o-mnie"
                 activeClassName="active"
                 hasdeclaredfontsize="14px"
                 hasdeclaredfontweight="bold"
@@ -50,7 +50,7 @@ const Footer = () => {
             </li>
             <li>
               <StyledLink
-                to="/offer"
+                to="/oferta"
                 activeClassName="active"
                 hasdeclaredfontsize="14px"
                 hasdeclaredfontweight="bold"
@@ -62,7 +62,7 @@ const Footer = () => {
             </li>
             <li>
               <StyledLink
-                to="/contact"
+                to="/kontakt"
                 activeClassName="active"
                 hasdeclaredfontsize="14px"
                 hasdeclaredfontweight="bold"
@@ -74,7 +74,7 @@ const Footer = () => {
             </li>
             <li>
               <StyledLink
-                to="/privacy-policy"
+                to="/polityka-prywatnosci"
                 activeClassName="active"
                 hasdeclaredfontsize="14px"
                 hasdeclaredfontweight="bold"
@@ -88,19 +88,19 @@ const Footer = () => {
         <StyledFooterMedia>
           <StyleFooterMenuUl hasmarginright={true}>
             <li>
-              <Link to="" rel="noreferrer" target="_blank">
+              <a href="" rel="noreferrer noopener" target="_blank">
                 <FaInstagram size="32px" />
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="" rel="noreferrer" target="_blank">
+              <a href="" rel="noreferrer noopener" target="_blank">
                 <FaFacebook size="32px" />
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="" rel="noreferrer" target="_blank">
+              <a href="" rel="noreferrer noopener" target="_blank">
                 <FaLinkedin size="32px" />
-              </Link>
+              </a>
             </li>
           </StyleFooterMenuUl>
         </StyledFooterMedia>

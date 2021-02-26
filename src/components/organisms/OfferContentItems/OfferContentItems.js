@@ -1,14 +1,14 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import slugify from "slugify"
-import { Element } from "react-scroll"
+import { Element, scroller as scroll } from "react-scroll"
 
 import { StyledOfferConentItem } from "../../atoms/OfferContentItems/StyledOfferConentItem"
 import { StyledOfferContentWrapper } from "../../molecules/OfferContentItems/StyledOfferContentWrapper"
 import { StyledText } from "../../atoms/Text/StyledText"
 import { StyledOfferTextWrapper } from "../../molecules/OfferContentItems/StyledOfferTextWrapper"
 
-const OfferContentItems = () => {
+const OfferContentItems = ({ hash }) => {
   const offerContentItemsData = useStaticQuery(graphql`
     query offerContentItemsData {
       allDatoCmsOfferpagecontent {
@@ -37,16 +37,27 @@ const OfferContentItems = () => {
     }
   `)
 
+  useEffect(() => {
+    if (hash !== "") {
+      scroll.scrollTo(hash.replace("#", ""), {
+        duration: 300,
+        delay: 100,
+        smooth: true,
+        containerId: "offerItemsContainer",
+        offset: 0,
+      })
+    }
+  }, [hash])
+
   return (
-    <StyledOfferContentWrapper>
+    <StyledOfferContentWrapper id="offerItemsContainer">
       {offerContentItemsData.allDatoCmsOfferpagecontent.nodes.map(item => (
         <Element
           key={item.offerPageContentTitle}
           name={slugify(item.offerPageContentTitle, { lower: true })}
+          id={slugify(item.offerPageContentTitle, { lower: true })}
         >
-          <StyledOfferConentItem
-            id={slugify(item.offerPageContentTitle, { lower: true })}
-          >
+          <StyledOfferConentItem>
             {item.movieTitlesAndDescriptions.map(itemContent => {
               return (
                 <StyledOfferTextWrapper key={itemContent.id}>

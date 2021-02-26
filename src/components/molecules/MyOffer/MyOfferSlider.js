@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react"
 import { Link } from "react-scroll"
 import slugify from "slugify"
 import { navigate } from "@reach/router"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 import useWindowSize from "../../../utils/getWindowSize"
 import { translateXForElement } from "../../../utils/getTranslateXForElement"
@@ -88,53 +89,72 @@ const MyOfferSlider = ({ slideData, fromAnotherPage }) => {
               <StyledText
                 hasdeclaredfontsize="36px"
                 hasdeclaredfontweight="bold"
-                hasdeclaredlineheight="1.35em"
+                hasdeclaredlineheight="1.85em"
                 hasdeclaredfontcolor="var(--blue)"
                 hasdeclaredpadding="0 0 24px 0"
-                as="h3"
               >
                 {slide.offerTitle}
               </StyledText>
               <StyledText
                 hasdeclaredfontsize="18px"
                 hasdeclaredfontweight="medium"
-                hasdeclaredlineheight="1.75em"
+                hasdeclaredlineheight="1.64em"
                 hasdeclaredfontcolor="var(--black)"
                 hasdeclaredfontfamily="Raleway"
                 hasdeclaredpadding="0 0 24px 0"
-                hasdeclaredheight="200px"
+                hasdeclaredheight="180px"
                 hasoverflow="hidden"
               >
                 {slide.offerTextContent}
               </StyledText>
-              <Link
-                to={slugify(slide.offerPageContentTitle, {
-                  lower: true,
-                })}
-                smooth={true}
-                duration={400}
-                onClick={
-                  fromAnotherPage
-                    ? () =>
-                        navigate(
-                          `/offer/#${slugify(slide.offerPageContentTitle, {
-                            lower: true,
-                          })}`
-                        )
-                    : () => {}
-                }
-              >
-                <StyledOfferLink
-                  hasdeclaredfontsize="18px"
-                  hasdeclaredfontweight="bold"
-                  hasdeclaredlineheight="1.32em"
-                  hasdeclaredfontcolor="var(--red)"
-                  hasdeclaredpadding="6px 0"
-                  as="h4"
+              {fromAnotherPage ? (
+                <AnchorLink
+                  to={`/oferta#${slugify(slide.offerPageContentTitle, {
+                    lower: true,
+                  })}`}
+                  title={slide.offerPageContentTitle}
                 >
-                  Przeczytaj więcej
-                </StyledOfferLink>
-              </Link>
+                  <StyledOfferLink
+                    hasdeclaredfontsize="18px"
+                    hasdeclaredfontweight="bold"
+                    hasdeclaredlineheight="1.32em"
+                    hasdeclaredfontcolor="var(--red)"
+                    hasdeclaredpadding="6px 0"
+                    as="p"
+                  >
+                    Przeczytaj więcej
+                  </StyledOfferLink>
+                </AnchorLink>
+              ) : (
+                <Link
+                  to={slugify(slide.offerPageContentTitle, {
+                    lower: true,
+                  })}
+                  smooth={true}
+                  duration={400}
+                  onClick={
+                    fromAnotherPage
+                      ? () =>
+                          navigate(
+                            `/oferta/#${slugify(slide.offerPageContentTitle, {
+                              lower: true,
+                            })}`
+                          )
+                      : () => {}
+                  }
+                >
+                  <StyledOfferLink
+                    hasdeclaredfontsize="18px"
+                    hasdeclaredfontweight="bold"
+                    hasdeclaredlineheight="1.32em"
+                    hasdeclaredfontcolor="var(--red)"
+                    hasdeclaredpadding="6px 0"
+                    as="p"
+                  >
+                    Przeczytaj więcej
+                  </StyledOfferLink>
+                </Link>
+              )}
             </StyledSlide>
           ))}
         </StyledSlidesWrapper>
