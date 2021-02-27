@@ -16,6 +16,7 @@ import { StyledError } from "../../molecules/Error/StyledError"
 import { StyledInputWrapper } from "../../molecules/SignUpHomeSection/StyledInputWrapper"
 import { StyledSavedCorrectly } from "../../atoms/SignUpHomeSection/StyledSavedCorrectly"
 import { StyledErrorCheckbox } from "../../atoms/SignUpHomeSection/StyledErrorCheckbox"
+import { StyledLink } from "../../atoms/Link/StyledLink"
 
 const SignUpHomeSection = () => {
   const [hideBox, setHideBox] = useState(false)
@@ -163,7 +164,18 @@ const SignUpHomeSection = () => {
                       hasdeclaredfontalign="center"
                       as="p"
                     >
-                      zgoda na przetwarzanie twoich danych osobowych
+                      Zgadzając się na przetwarzanie Twoich danych osobowych,
+                      akceptujesz{" "}
+                      <StyledLink
+                        hasdeclaredfontsize="13px"
+                        hasdeclaredfontcolor="var(--white)"
+                        hasdeclaredbgcolor="var(--white)"
+                        hasdeclaredbgbottomposition="-6px"
+                        to="/polityka-prywatnosci"
+                      >
+                        politykę prywatności
+                      </StyledLink>
+                      .
                     </StyledText>
                     <GoCheck size="24px" />
                   </label>

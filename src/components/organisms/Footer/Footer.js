@@ -88,17 +88,29 @@ const Footer = () => {
         <StyledFooterMedia>
           <StyleFooterMenuUl hasmarginright={true}>
             <li>
-              <a href="" rel="noreferrer noopener" target="_blank">
+              <a
+                href="https://www.instagram.com/unlock_your_english_kamila_z/"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
                 <FaInstagram size="32px" />
               </a>
             </li>
             <li>
-              <a href="" rel="noreferrer noopener" target="_blank">
+              <a
+                href="https://www.facebook.com/unlockyourenglishpl/"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
                 <FaFacebook size="32px" />
               </a>
             </li>
             <li>
-              <a href="" rel="noreferrer noopener" target="_blank">
+              <a
+                href="https://www.facebook.com/unlockyourenglishpl/"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
                 <FaLinkedin size="32px" />
               </a>
             </li>

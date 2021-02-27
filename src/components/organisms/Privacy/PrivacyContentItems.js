@@ -8,28 +8,28 @@ import { StyledOfferContentWrapper } from "../../molecules/OfferContentItems/Sty
 import { StyledText } from "../../atoms/Text/StyledText"
 import { StyledOfferTextWrapper } from "../../molecules/OfferContentItems/StyledOfferTextWrapper"
 
-const OfferContentItems = ({ hash }) => {
-  const offerContentItemsData = useStaticQuery(graphql`
-    query offerContentItemsData {
-      allDatoCmsOfferpagecontent {
+const OfferContentItems = () => {
+  const privacyContentItemsData = useStaticQuery(graphql`
+    query privacyContentItemsData {
+      allDatoCmsPrivacyPageContent {
         nodes {
-          offerPageContentTitle
-          offerParagraphs {
+          privacyPageContentTitle
+          privacyParagraphBlock {
             ... on DatoCmsListItem {
               id
               lineText
             }
-            ... on DatoCmsOfferItemContent {
+            ... on DatoCmsPrivacyItemFirstLine {
+              id
+              privacyTitleFirstLine
+            }
+            ... on DatoCmsPrivacyItemContent {
               id
               content
             }
-            ... on DatoCmsOfferItemTitleSecondLine {
+            ... on DatoCmsPrivacyItemSecondLine {
               id
-              secondLine
-            }
-            ... on DatoCmsOfferItemTitleFirstLine {
-              id
-              firstLine
+              privacyTitleSecondLine
             }
           }
         }
@@ -37,31 +37,19 @@ const OfferContentItems = ({ hash }) => {
     }
   `)
 
-  useEffect(() => {
-    if (hash !== "") {
-      scroll.scrollTo(hash.replace("#", ""), {
-        duration: 300,
-        delay: 100,
-        smooth: true,
-        containerId: "offerItemsContainer",
-        offset: 0,
-      })
-    }
-  }, [hash])
-
   return (
-    <StyledOfferContentWrapper id="offerItemsContainer">
-      {offerContentItemsData.allDatoCmsOfferpagecontent.nodes.map(item => (
+    <StyledOfferContentWrapper id="privacyItemsContainer">
+      {privacyContentItemsData.allDatoCmsPrivacyPageContent.nodes.map(item => (
         <Element
-          key={item.offerPageContentTitle}
-          name={slugify(item.offerPageContentTitle, { lower: true })}
-          id={slugify(item.offerPageContentTitle, { lower: true })}
+          key={item.privacyPageContentTitle}
+          name={slugify(item.privacyPageContentTitle, { lower: true })}
+          id={slugify(item.privacyPageContentTitle, { lower: true })}
         >
           <StyledOfferConentItem>
-            {item.offerParagraphs.map(itemContent => {
+            {item.privacyParagraphBlock.map(itemContent => {
               return (
                 <StyledOfferTextWrapper key={itemContent.id}>
-                  {itemContent.firstLine && (
+                  {itemContent.privacyTitleFirstLine && (
                     <StyledText
                       hasdeclaredfontsize="36px"
                       hasdeclaredfontcolor="var(--blue)"
@@ -69,10 +57,10 @@ const OfferContentItems = ({ hash }) => {
                       hasdeclaredfontweight="bold"
                       as="h2"
                     >
-                      {itemContent.firstLine}
+                      {itemContent.privacyTitleFirstLine}
                     </StyledText>
                   )}
-                  {itemContent.secondLine && (
+                  {itemContent.privacyTitleSecondLine && (
                     <StyledText
                       hasdeclaredfontsize="24px"
                       hasdeclaredfontcolor="var(--blue)"
@@ -80,7 +68,7 @@ const OfferContentItems = ({ hash }) => {
                       hasdeclaredfontweight="bold"
                       as="h3"
                     >
-                      {itemContent.secondLine}
+                      {itemContent.privacyTitleSecondLine}
                     </StyledText>
                   )}
                   {itemContent.content && (
@@ -91,6 +79,7 @@ const OfferContentItems = ({ hash }) => {
                       hasdeclaredfontweight="medium"
                       hasdeclaredfontfamily="Raleway"
                       hasdeclaredlineheight="1.78em"
+                      hasdeclaredtextalign="justify"
                       as="p"
                     >
                       {itemContent.content}

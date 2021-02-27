@@ -42,10 +42,12 @@ export const StyledLink = styled(Link)`
   &:after {
     content: "";
     position: absolute;
-    bottom: 0px;
+    bottom: ${({ hasdeclaredbgbottomposition }) =>
+      hasdeclaredbgbottomposition ? hasdeclaredbgbottomposition : "0px"};
     left: 0px;
     height: 1px;
-    background-color: var(--red);
+    background-color: ${({ hasdeclaredbgcolor }) =>
+      hasdeclaredbgcolor ? hasdeclaredbgcolor : "var(--red)"};
     width: 100%;
     transform: scale(0, 0);
     transform-origin: center bottom;

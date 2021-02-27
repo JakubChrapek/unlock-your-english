@@ -7,7 +7,7 @@ import { StyledHerroOfferWrapper } from "./StyledHerroOfferWrapper"
 import { StyledHerroImage } from "../../atoms/Offer/StyledHerroImage"
 import { StyledText } from "../../atoms/Text/StyledText"
 
-const HeroOfferSection = () => {
+const HeroOfferSection = ({ sectionTitle, sectionTitleParagraph }) => {
   const offerData = useStaticQuery(graphql`
     query heroOfferImage {
       datoCmsHerooffersectionimage {
@@ -41,7 +41,7 @@ const HeroOfferSection = () => {
           hasdeclaredfontcolor="var(--white)"
           hasdeclaredpadding="0 0 32px 0"
         >
-          Oferta
+          {sectionTitle}
         </StyledText>
         <StyledText
           hasdeclaredfontsize="18px"
@@ -51,9 +51,7 @@ const HeroOfferSection = () => {
           hasdeclaredmaxwidth="489px"
           hasdeclaredfontcolor="var(--white)"
         >
-          Mobilna pracownia językowa „Unlock Your English” to całoroczna
-          działalność edukacyjna, zajmującą się przede wszystkim nauką języka
-          angielskiego
+          {sectionTitleParagraph}
         </StyledText>
       </StyledHerroOfferWrapper>
     </StyledHerroOfferSection>

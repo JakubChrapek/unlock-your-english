@@ -11,6 +11,8 @@ import { StyledButton } from "../../atoms/Button/StyledButton"
 import { AnimatePresence } from "framer-motion"
 import { StyledAboutContactFormErrorBox } from "../../atoms/AboutContact/StyledAboutContactFormErrorBox"
 import { StyledSendMessageBox } from "../../atoms/AboutContact/StyledSendMessageBox"
+import { Link } from "gatsby"
+import { StyledLink } from "../../atoms/Link/StyledLink"
 const AboutContactForm = () => {
   let pathname = useLocation().pathname
   const [message, setMessage] = useState("")
@@ -51,18 +53,10 @@ const AboutContactForm = () => {
     email: Yup.string().email("Błędny adres email").required("Email wmagany"),
     name: Yup.string().min(3, "Imię za krótkie").required("Imię wymagane"),
     message: Yup.string()
-      .min(10, "Wiadomość za krótka")
+      .min(5, "Wiadomość za krótka")
       .required("Wiadomość wymagana"),
     privacy: Yup.boolean().oneOf([true], "Wymagana akceptacja"),
   })
-
-  useEffect(() => {
-    const script = document.createElement("script")
-    script.src = "https://www.google.com/recaptcha/api.js"
-    script.async = true
-    script.defer = true
-    document.body.appendChild(script)
-  }, [])
 
   return (
     <Formik
@@ -75,7 +69,6 @@ const AboutContactForm = () => {
           <StyledAboutContactForm
             method="POST"
             name="ContactForm"
-            action="/thank-you"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
           >
@@ -150,7 +143,17 @@ const AboutContactForm = () => {
                   hasdeclaredfontalign="center"
                   as="p"
                 >
-                  zgoda na przetwarzanie twoich danych osobowych
+                  Zgadzając się na przetwarzanie Twoich danych osobowych,
+                  akceptujesz{" "}
+                  <StyledLink
+                    hasdeclaredfontsize="13px"
+                    to="/polityka-prywatnosci"
+                    hasdeclaredbgcolor="var(--black)"
+                    hasdeclaredbgbottomposition="-6px"
+                  >
+                    politykę prywatności
+                  </StyledLink>
+                  .
                 </StyledText>
                 <GoCheck size="24px" />
               </label>

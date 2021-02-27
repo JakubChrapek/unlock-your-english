@@ -1,4 +1,3 @@
-import { useLocation } from "@reach/router"
 import { motion } from "framer-motion"
 import React from "react"
 
@@ -15,7 +14,12 @@ const Offer = ({ location }) => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <HeroOfferSection />
+      <HeroOfferSection
+        sectionTitle="Oferta"
+        sectionTitleParagraph="Mobilna pracownia językowa „Unlock Your English” to całoroczna
+          działalność edukacyjna, zajmującą się przede wszystkim nauką języka
+          angielskiego"
+      />
       <OfferItemsSection />
       <OfferContentItems hash={location.hash} />
       <SignUpSection />
