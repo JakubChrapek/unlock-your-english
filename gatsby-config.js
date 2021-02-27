@@ -9,16 +9,17 @@ const {
   CONTEXT: NETLIFY_ENV = NODE_ENV,
 } = process.env
 const isNetlifyProduction = NETLIFY_ENV === "production"
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 
 module.exports = {
   siteMetadata: {
     title: "Unlock Your English",
     siteUrl: siteUrl,
-    titleTemplate: "%s · Unlock Your English",
+    titleTemplate: "%s · Mobilna pracownia językowa",
     description:
       "Mobilna pracownia językowa „Unlock Your English” to całoroczna działalność edukacyjna, zajmującą się przede wszystkim nauką języka angielskiego",
     url: "https://www.doe.com", // No trailing slash allowed!
-    defaultImage: "src/images/unlockyourenglish-icon.jpg", // Path to your image you placed in the 'static' folder
+    image: "src/images/unlockyourenglish-icon.jpg", // Path to your image you placed in the 'static' folder
     linkedinUsername: "@unlockyourenglishpl",
     facebookUsername: "@unlockyourenglishpl",
     instagramUsername: "@unlock_your_english_kamila_z",
