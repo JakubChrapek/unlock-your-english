@@ -8,7 +8,7 @@ export const StyledMyOfferWrapper = styled.div`
   margin: 0 auto;
   > h2 {
     @media only screen and (max-width: 600px) {
-      padding-bottom: 20px;
+      padding-bottom: 10px;
       font-size: 36px;
     }
   }

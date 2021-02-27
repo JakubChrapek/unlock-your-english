@@ -8,6 +8,7 @@ export const StyledHowItAllStartedTopBar = styled.div`
       text-align: center;
       transform: translateX(0);
       margin-top: 40px;
+      padding-bottom: 32px;
     }
     @media only screen and (max-width: 412px) {
       margin-top: 0px;

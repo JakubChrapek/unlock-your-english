@@ -18,31 +18,22 @@ export const StyledSlide = styled.div`
 
   @media only screen and (max-width: 600px) {
     min-width: calc(100vw - 80px);
-    padding: 40px 20px 40px 50px;
+    padding: 20px 20px 60px 30px;
     &:first-of-type {
       margin-left: 30px;
     }
+  }
+  @media only screen and (max-width: 347px) {
     h3 {
-      font-size: 28px;
+      font-size: 26px;
     }
     p {
       font-size: 16px;
-    }
-  }
-  @media only screen and (max-width: 495px) {
-    h3 {
-      font-size: 24px;
-    }
-    p {
-      font-size: 14px;
-    }
-  }
-
-  @media only screen and (max-width: 347px) {
-    p {
-      &:nth-child(2) {
-        margin-bottom: 14px;
-      }
+      
+        &:nth-child(2) {
+          margin-bottom: 14px;
+        }
+      
     }
   }
 `

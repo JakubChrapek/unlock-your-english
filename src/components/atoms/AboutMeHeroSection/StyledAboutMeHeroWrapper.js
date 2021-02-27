@@ -22,6 +22,6 @@ export const StyledAboutMeHeroWrapper = styled.div`
   }
   @media only screen and (max-width: 440px) {
     align-items: flex-start;
-    padding: 160px 0 0 0;
+    padding: 150px 0 0 0;
   }
 `

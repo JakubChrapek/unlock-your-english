@@ -7,9 +7,14 @@ export const StyledOfferLink = styled(StyledText)`
   left: 50px;
   padding: 8px 0;
   cursor: pointer;
-  @media (max-width: 767px) {
+  letter-spacing: 0.05em;
+  @media only screen and (max-width: 767px) {
     color: var(--red);
     font-weight: bold;
+  }
+  @media only screen and (max-width: 600px) {
+    left: 30px;
+    bottom: 22px;
   }
 
   &:after {

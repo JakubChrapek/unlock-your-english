@@ -6,6 +6,9 @@ export const StyledContactFormWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  @media only screen and (min-width: 1921px) {
+    margin-right: 120px;
+  }
   @media only screen and (max-width: 1489px) {
     margin-right: 160px;
   }

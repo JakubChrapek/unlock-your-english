@@ -7,6 +7,7 @@ export const StyledHowItAllStartedBottomBar = styled.div`
       transform: translateX(0);
       text-align: right;
       font-size: 36px;
+      padding: 18px 0 46px 0;
     }
     @media only screen and (max-width: 343px) {
       font-size: 30px;

@@ -5,6 +5,9 @@ export const StyledImageWrapper = styled.div`
   height: 645px;
   transform: translateX(-70px);
   position: relative;
+  @media only screen and (min-width: 1921px) {
+    transform: translateX(0);
+  }
   @media only screen and (max-width: 1639px) {
     width: 508px;
     height: 615px;
@@ -24,6 +27,10 @@ export const StyledImageWrapper = styled.div`
     width: 338px;
     height: 455px;
     transform: translateX(-20px);
+  }
+  @media only screen and (max-width: 780px) {
+    width: 328px;
+    height: 425px;
   }
   @media only screen and (max-width: 767px) {
     align-self: flex-start;
@@ -55,6 +62,10 @@ export const StyledImageWrapper = styled.div`
     @media only screen and (max-width: 1033px) {
       bottom: 40px;
       height: 80%;
+    }
+    @media only screen and (max-width: 780px) {
+      bottom: 20px;
+      height: 84%;
     }
     @media only screen and (max-width: 767px) {
       bottom: 37px;

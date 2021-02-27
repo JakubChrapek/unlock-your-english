@@ -65,8 +65,9 @@ const OfferContentItems = ({ hash }) => {
                     <StyledText
                       hasdeclaredfontsize="36px"
                       hasdeclaredfontcolor="var(--blue)"
-                      hasdeclaredpadding="70px 0 15px 0"
+                      hasdeclaredpadding="36px 0 0 0"
                       hasdeclaredfontweight="bold"
+                      hasdeclaredlineheight="1.35em"
                       as="h2"
                     >
                       {itemContent.firstLine}
@@ -76,8 +77,9 @@ const OfferContentItems = ({ hash }) => {
                     <StyledText
                       hasdeclaredfontsize="24px"
                       hasdeclaredfontcolor="var(--blue)"
-                      hasdeclaredpadding="0 0 0 0"
+                      hasdeclaredpadding="10px 0 0 0"
                       hasdeclaredfontweight="bold"
+                      hasdeclaredlineheight="1.35em"
                       as="h3"
                     >
                       {itemContent.secondLine}
@@ -91,6 +93,7 @@ const OfferContentItems = ({ hash }) => {
                       hasdeclaredfontweight="medium"
                       hasdeclaredfontfamily="Raleway"
                       hasdeclaredlineheight="1.78em"
+                      hasdeclaredtextalign="justify"
                       as="p"
                     >
                       {itemContent.content}

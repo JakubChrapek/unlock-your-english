@@ -27,6 +27,9 @@ export const StyledUnlockYourEnglishWrapper = styled.div`
   }
   @media only screen and (max-width: 768px) {
     flex-direction: column;
-    padding-top: 140px;
+    padding: 140px 20px 40px 20px
+  }
+  @media only screen and (max-width: 430px) {
+    padding-top: 70px;
   }
 `

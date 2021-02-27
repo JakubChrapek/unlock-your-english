@@ -13,9 +13,9 @@ export const StyledMobileTextWrapper = styled.div`
     display: block;
   }
   @media only screen and (max-width: 440px) {
-    padding: 0 28px;
+    padding: 0 48px;
     max-width: unset;
-    align-self: center;
+    align-self: left;
     h1 {
       padding-bottom: 8px;
     }
@@ -24,7 +24,8 @@ export const StyledMobileTextWrapper = styled.div`
       padding-bottom: 32px;
     }
   }
-  @media only screen and (max-width: 340px) {
+  @media only screen and (max-width: 376px) {
+    padding: 0 24px;
     h1 {
       font-size: 34px;
     }

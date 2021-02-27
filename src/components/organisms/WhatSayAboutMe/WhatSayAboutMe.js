@@ -64,7 +64,7 @@ const WhatSayAboutMe = () => {
             hasdeclaredfontsize="48px"
             hasdeclaredfontcolor="var(--blue)"
             hasdeclaredfontweight="bold"
-            hasdeclaredpadding="0 0 65px 0"
+            hasdeclaredpadding="0 0 45px 0"
             as="h2"
           >
             Co o mnie mówią
@@ -99,7 +99,7 @@ const WhatSayAboutMe = () => {
                         whileTap={{ scale: 0.9 }}
                         onClick={() => paginate(-1)}
                       >
-                        <IoIosArrowBack />
+                        <IoIosArrowBack size="32px"/>
                       </StyledButtonPagination>
                     </StyledLeftArrow>
                     <StyledText
@@ -123,7 +123,7 @@ const WhatSayAboutMe = () => {
                         whileTap={{ scale: 0.9 }}
                         onClick={() => paginate(1)}
                       >
-                        <IoIosArrowForward />
+                        <IoIosArrowForward size="32px"/>
                       </StyledButtonPagination>
                     </StyledRightArrow>
                   </StyledWrapperWithoutPagination>

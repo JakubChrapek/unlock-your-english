@@ -6,13 +6,8 @@ export const StyledOfferContentWrapper = styled.div`
   @media only screen and (max-width: 767px) {
     p {
       line-height: 1.68em;
+      padding-left: 0;
     }
-    /* h2 {
-      padding-bottom: 30px;
-    }
-    h3 {
-      padding-bottom: 30px;
-    } */
   }
   @media only screen and (max-width: 413px) {
     h2 {
@@ -23,6 +18,11 @@ export const StyledOfferContentWrapper = styled.div`
     }
     p {
       font-size: 16px;
+    }
+  }
+  @media only screen and (max-width: 330px) {
+    h2 {
+      font-size: 28px;
     }
   }
 `

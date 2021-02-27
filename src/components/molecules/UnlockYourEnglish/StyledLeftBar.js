@@ -30,6 +30,10 @@ export const StyledLeftBar = styled.div`
         width: 190px;
         height: 225px;
       }
+      @media only screen and (max-width: 420px) {
+        width: 187px;
+        height: 222px;
+      }
       @media only screen and (max-width: 369px) {
         width: 170px;
         height: 205px;
@@ -54,6 +58,10 @@ export const StyledLeftBar = styled.div`
         height: 178px;
         transform: translate(-20px, 40px);
       }
+      @media only screen and (max-width: 420px) {
+        width: 152px;
+        height: 188px;
+      }
       @media only screen and (max-width: 369px) {
         width: 126px;
         height: 193px;
@@ -77,6 +85,10 @@ export const StyledLeftBar = styled.div`
         width: 150px;
         height: 185px;
         transform: translate(0, -70px);
+      }
+      @media only screen and (max-width: 420px) {
+        width: 140px;
+        height: 175px;
       }
       @media only screen and (max-width: 369px) {
         width: 130px;

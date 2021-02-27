@@ -7,7 +7,7 @@ export const StyledPrivatelyWrapper = styled.div`
   @media only screen and (max-width: 767px) {
     display: flex;
     flex-direction: column-reverse;
-    margin: 54px auto;
+    margin: 38px auto;
     align-items: flex-end;
   }
 

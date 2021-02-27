@@ -85,9 +85,10 @@ const MyOfferSlider = ({ slideData, fromAnotherPage }) => {
               <StyledText
                 hasdeclaredfontsize="36px"
                 hasdeclaredfontweight="bold"
-                hasdeclaredlineheight="1.85em"
+                hasdeclaredlineheight="1.31em"
                 hasdeclaredfontcolor="var(--blue)"
                 hasdeclaredpadding="0 0 24px 0"
+                as="h3"
               >
                 {slide.offerTitle}
               </StyledText>
@@ -158,10 +159,15 @@ const MyOfferSlider = ({ slideData, fromAnotherPage }) => {
           <StyledButtonPagination
             onClick={handlePrevClick}
             hasdeclaredmarginright="42px"
+            whileTap={{ scale: 0.9 }}
+            whileHover={{ scale: 1.2 }}
           >
             <AiOutlineArrowLeft size="32px" color="var(--blue)" />
           </StyledButtonPagination>
-          <StyledButtonPagination onClick={handleNextClick}>
+          <StyledButtonPagination onClick={handleNextClick} 
+            whileTap={{ scale: 0.9 }}
+            whileHover={{ scale: 1.2 }}
+          >
             <AiOutlineArrowRight size="32px" color="var(--blue)" />
           </StyledButtonPagination>
         </StyledSliderArrowWrapper>

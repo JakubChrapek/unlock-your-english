@@ -3,5 +3,5 @@ import Img from "gatsby-image"
 
 export const StyledEnglishImage = styled(Img)`
   object-fit: contain;
-  border-radius: 15px;
+  border-radius: 7px;
 `

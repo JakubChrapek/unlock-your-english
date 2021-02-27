@@ -51,7 +51,7 @@ const HomeHeroSection = () => {
         </StyledText>
         <Link to="unlock-your-english" smooth={true} duration={500}>
           <StyledButton
-            hasdeclaredpadding="16px 42px"
+            hasdeclaredpadding="18px 62px"
             hasdeclaredfontcolor="var(--white)"
             hasdeclaredbgcolor="var(--red)"
             hasdeclaredfontfamily="Manrope"

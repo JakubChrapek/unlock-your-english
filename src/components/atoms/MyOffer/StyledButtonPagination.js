@@ -10,4 +10,8 @@ export const StyledButtonPagination = styled(motion.button)`
   cursor: pointer;
   margin-right: ${({ hasdeclaredmarginright }) =>
     hasdeclaredmarginright ? hasdeclaredmarginright : "0"};
+
+  &:focus{
+    outline: none;
+  }
 `

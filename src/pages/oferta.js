@@ -5,6 +5,7 @@ import HeroOfferSection from "../components/molecules/Offer/HeroOfferSection"
 import OfferItemsSection from "../components/organisms/Offer/OfferItemsSection"
 import OfferContentItems from "../components/organisms/OfferContentItems/OfferContentItems"
 import SignUpSection from "../components/organisms/SignUpHomeSection/SignUpHomeSection"
+
 const Offer = ({ location }) => {
   return (
     <motion.main

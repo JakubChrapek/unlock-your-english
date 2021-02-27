@@ -67,7 +67,7 @@ const HiAboutMe = () => {
           </StyledText>
           <Link to="/o-mnie">
             <StyledButton
-              hasdeclaredpadding="16px 70px"
+              hasdeclaredpadding="18px 61px"
               hasdeclaredbgcolor="var(--red)"
               hasdeclaredfontsize="20px"
               hasdeclaredfontcolor="var(--white)"

@@ -24,10 +24,19 @@ export const StyledRightBar = styled.div`
       max-width: 600px;
     }
   }
+  @media only screen and (max-width: 767px) {
+    transform: translateY(-30px);
+    h2{
+      padding-bottom: 0;
+    }
+  }
   @media only screen and (max-width: 600px) {
     padding: 0 20px;
     h3 {
       font-size: 14px;
     }
+  }
+  @media only screen and (max-width: 376px) {
+    padding: 0;
   }
 `

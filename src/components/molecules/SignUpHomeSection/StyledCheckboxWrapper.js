@@ -26,6 +26,7 @@ export const StyledCheckboxWrapper = styled(motion.div)`
       left: -44px;
       top: 0;
       box-shadow: 5px 5px 14px -4px rgba(0, 0, 0, 0.2);
+      border-radius: 3px;
     }
     > svg {
       position: absolute;

@@ -16,7 +16,7 @@ export const StyledAboutMeHeroSection = styled.section`
   }
   @media only screen and (max-width: 440px) {
     padding: 10px 0 0 0;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
   }
   @media only screen and (max-width: 375px) {
     padding-top: 10px;

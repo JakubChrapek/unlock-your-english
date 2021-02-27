@@ -10,5 +10,8 @@ export const StyledWrapperWithoutPagination = styled(motion.div)`
       font-size: 14px;
       line-height: 1.85em;
     }
+    @media only screen and (max-width: 430px) {
+      padding: 0 5px;
+    }
   }
 `
