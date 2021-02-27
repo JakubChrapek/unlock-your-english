@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { Formik, Field, ErrorMessage } from "formik"
 import { useLocation } from "@reach/router"
 import * as Yup from "yup"
@@ -11,8 +11,8 @@ import { StyledButton } from "../../atoms/Button/StyledButton"
 import { AnimatePresence } from "framer-motion"
 import { StyledAboutContactFormErrorBox } from "../../atoms/AboutContact/StyledAboutContactFormErrorBox"
 import { StyledSendMessageBox } from "../../atoms/AboutContact/StyledSendMessageBox"
-import { Link } from "gatsby"
 import { StyledLink } from "../../atoms/Link/StyledLink"
+
 const AboutContactForm = () => {
   let pathname = useLocation().pathname
   const [message, setMessage] = useState("")

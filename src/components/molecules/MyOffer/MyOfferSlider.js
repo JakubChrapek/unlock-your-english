@@ -23,10 +23,6 @@ const MyOfferSlider = ({ slideData, fromAnotherPage }) => {
   const [containerWidth, setContainerWidth] = useState(undefined)
   const [slidesWidth, setSlidesWidth] = useState(undefined)
   const [singleSlideWidth, setSingleSlideWidth] = useState(undefined)
-  const [buttonsDisabledState, setButtonsDisabledState] = useState([
-    false,
-    false,
-  ])
   const containerRef = useRef()
   const width = useWindowSize()
   const animation = useAnimation()

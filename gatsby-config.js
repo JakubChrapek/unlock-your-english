@@ -4,25 +4,24 @@ require("dotenv").config({
 
 const {
   NODE_ENV,
-  URL: NETLIFY_SITE_URL = "https://www.example.com",
+  URL: NETLIFY_SITE_URL = "https://www.unlockyourenglish.pl",
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
   CONTEXT: NETLIFY_ENV = NODE_ENV,
 } = process.env
 const isNetlifyProduction = NETLIFY_ENV === "production"
-const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 
 module.exports = {
   siteMetadata: {
-    title: "UnlockYourEnglish",
-    siteUrl: `https://www.example.com`,
-    titleTemplate: "%s · The Real Hero",
+    title: "Unlock Your English",
+    siteUrl: siteUrl,
+    titleTemplate: "%s · Unlock Your English",
     description:
-      "Hogwarts Potions master, Head of Slytherin house and former Death Eater.",
+      "Mobilna pracownia językowa „Unlock Your English” to całoroczna działalność edukacyjna, zajmującą się przede wszystkim nauką języka angielskiego",
     url: "https://www.doe.com", // No trailing slash allowed!
-    image: "/images/snape.jpg", // Path to your image you placed in the 'static' folder
-    linkedinUsername: "@occlumency",
-    facebookUsername: "@occlumency",
-    instagramUsername: "@occlumency",
+    defaultImage: "src/images/unlockyourenglish-icon.jpg", // Path to your image you placed in the 'static' folder
+    linkedinUsername: "@unlockyourenglishpl",
+    facebookUsername: "@unlockyourenglishpl",
+    instagramUsername: "@unlock_your_english_kamila_z",
   },
   plugins: [
     "gatsby-plugin-styled-components",
@@ -101,6 +100,27 @@ module.exports = {
             file: "https://fonts.googleapis.com/css2?family=Manrope",
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Unlock Your English`,
+        short_name: `unlockyourenglish`,
+        start_url: `/`,
+        background_color: `#1D3E84`,
+        theme_color: `#CE152B`,
+        display: `standalone`,
+        icon: "src/images/unlockyourenglish-icon.jpg",
+        cache_busting_mode: "none",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-offline",
+      options: {
+        workboxConfig: {
+          globPatterns: ["**/icon-path*"],
+        },
       },
     },
   ],

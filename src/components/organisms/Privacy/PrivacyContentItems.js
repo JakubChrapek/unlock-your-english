@@ -1,7 +1,7 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import slugify from "slugify"
-import { Element, scroller as scroll } from "react-scroll"
+import { Element } from "react-scroll"
 
 import { StyledOfferConentItem } from "../../atoms/OfferContentItems/StyledOfferConentItem"
 import { StyledOfferContentWrapper } from "../../molecules/OfferContentItems/StyledOfferContentWrapper"

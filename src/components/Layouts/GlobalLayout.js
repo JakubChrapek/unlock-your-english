@@ -4,7 +4,6 @@ import GlobalStyle from "../../styles/GlobalStyle"
 import Header from "../organisms/Header/Header"
 import Footer from "../organisms/Footer/Footer"
 import SEO from "../../seo/seo"
-import { AnimatePresence } from "framer-motion"
 
 const GlobalLayout = ({ children }) => {
   return (
