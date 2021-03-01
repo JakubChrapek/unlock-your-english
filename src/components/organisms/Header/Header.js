@@ -16,13 +16,13 @@ const Header = () => {
   const { show: mobile } = useMenuState()
   const [show, setShow] = useState(false)
   const dispatch = useMenuDispatch()
-  let pathname = useLocation().pathname
+  const { pathname } = useLocation()
 
   return (
     <StyledHeader>
       <div>
         <StyledHeaderWrapper>
-          <Logo shownav={mobile} pathnameColor={pathname} />
+          <Logo shownav={mobile} pathnameColor={pathname ? pathname : "/"} />
           <StyledHamburgerButton
             onClick={() => {
               setShow(!show)
@@ -31,16 +31,19 @@ const Header = () => {
           >
             <StyledHamburgerButtonSpan
               shownav={mobile}
-              pathnameColor={pathname}
+              pathnameColor={pathname ? pathname : "/"}
             />
             <StyledHamburgerButtonSpan
               hasdeclaredwidth="75%"
               shownav={mobile}
-              pathnameColor={pathname}
+              pathnameColor={pathname ? pathname : "/"}
             />
           </StyledHamburgerButton>
         </StyledHeaderWrapper>
-        <Navigation shownav={mobile} pathnameColor={pathname} />
+        <Navigation
+          shownav={mobile}
+          pathnameColor={pathname ? pathname : "/"}
+        />
       </div>
     </StyledHeader>
   )
