@@ -19,7 +19,7 @@ module.exports = {
     description:
       "Mobilna pracownia językowa „Unlock Your English” to całoroczna działalność edukacyjna, zajmującą się przede wszystkim nauką języka angielskiego",
     url: "https://www.doe.com", // No trailing slash allowed!
-    image: "src/images/unlockyourenglish-icon.jpg", // Path to your image you placed in the 'static' folder
+    image: "src/images/unlock-your-english-icon.png", // Path to your image you placed in the 'static' folder
     linkedinUsername: "@unlockyourenglishpl",
     facebookUsername: "@unlockyourenglishpl",
     instagramUsername: "@unlock_your_english_kamila_z",
@@ -112,7 +112,7 @@ module.exports = {
         background_color: `#1D3E84`,
         theme_color: `#CE152B`,
         display: `standalone`,
-        icon: "src/images/unlockyourenglish-icon.jpg",
+        icon: "src/images/unlock-your-english-icon.png",
         cache_busting_mode: "none",
       },
     },
