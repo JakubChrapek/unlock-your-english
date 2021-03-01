@@ -8,6 +8,10 @@ export const StyledOfferLink = styled(StyledText)`
   padding: 8px 0;
   cursor: pointer;
   letter-spacing: 0.05em;
+  @media (max-width: 1366px) {
+    bottom: 32px;
+    left: 40px;
+  }
   @media only screen and (max-width: 767px) {
     color: var(--red);
     font-weight: bold;

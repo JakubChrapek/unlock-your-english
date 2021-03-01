@@ -30,7 +30,10 @@ const AboutContact = () => {
             hasdeclaredmaxwidth="464px"
           >
             Jeśli jeszcze nie czujesz się przekonany, nie przejmuj się. Napisz
-            lub zadzwoń, a myślę że wtedy twoje wszystkie wątpliwości znikną ;)
+            lub zadzwoń, a myślę że wtedy twoje wszystkie wątpliwości znikną{" "}
+            <span role="img" aria-label="smiling emoji">
+              🙂
+            </span>
             Kamila
           </StyledText>
         </StyledAboutContactLeftBar>

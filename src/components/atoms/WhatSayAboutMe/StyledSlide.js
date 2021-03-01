@@ -6,4 +6,5 @@ export const StyledSlide = styled(motion.div)`
   max-width: 948px;
   margin: 0 auto;
   position: relative;
+  padding: 0 8px;
 `

@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
 import { graphql, useStaticQuery } from "gatsby"
-import { AnimatePresence } from "framer-motion"
+import { AnimatePresence, AnimateSharedLayout } from "framer-motion"
 import { wrap } from "@popmotion/popcorn"
 import { IoIosArrowForward } from "react-icons/io"
 import { IoIosArrowBack } from "react-icons/io"
@@ -59,111 +59,122 @@ const WhatSayAboutMe = () => {
         <img src={aboutSpiral} alt="spiral" />
       </StyledMyOfferSpiral>
       <StyledWhatSayAboutMeWrapper>
-        <StyledSliderWrapper>
-          <StyledText
-            hasdeclaredfontsize="48px"
-            hasdeclaredfontcolor="var(--blue)"
-            hasdeclaredfontweight="bold"
-            hasdeclaredpadding="0 0 45px 0"
-            as="h2"
-          >
-            Co o mnie mówią
-          </StyledText>
-
-          <AnimatePresence initial={false} custom={direction}>
-            {allDatoData.nodes
-              .filter((_, iterator) => iterator === slideIndex)
-              .map(slideItem => (
-                <StyledSlide
-                  transition={{
-                    type: "spring",
-                    duration: 0.8,
-                  }}
-                >
-                  <StyledWrapperWithoutPagination
-                    key={`${slide}-wrapper`}
+        <AnimateSharedLayout type="crossfade">
+          <StyledSliderWrapper>
+            <StyledText
+              hasdeclaredfontsize="48px"
+              hasdeclaredfontcolor="var(--blue)"
+              hasdeclaredfontweight="bold"
+              hasdeclaredpadding="0 0 45px 0"
+              as="h2"
+            >
+              Co o mnie mówią
+            </StyledText>
+            <AnimatePresence initial={false} exitBeforeEnter custom={direction}>
+              {allDatoData.nodes
+                .filter((_, iterator) => iterator === slideIndex)
+                .map(slideItem => (
+                  <StyledSlide
+                    key={slideItem.customerName}
+                    layout
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{
-                      type: "spring",
-                      duration: 0.8,
+                      duration: 0.3,
                     }}
                   >
-                    <StyledLeftArrow>
-                      <StyledButtonPagination
-                        whileHover={{
-                          scale: 1.2,
-                          transition: { duration: 0.5 },
-                        }}
-                        whileTap={{ scale: 0.9 }}
-                        onClick={() => paginate(-1)}
-                      >
-                        <IoIosArrowBack size="32px"/>
-                      </StyledButtonPagination>
-                    </StyledLeftArrow>
-                    <StyledText
-                      hasdeclaredmaxwidth="780px"
-                      hasdeclaredtextalign="center"
-                      hasdeclaredfontweight="medium"
-                      hasdeclaredfontfamily="Raleway"
-                      hasdeclaredlineheight="1.45em"
-                      hasdeclaredpadding="0 20px"
-                      hasdeclaredfontsize="24px"
-                      as="p"
+                    <StyledWrapperWithoutPagination
+                      key={`${slide}-wrapper`}
+                      layout
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{
+                        type: "spring",
+                        duration: 0.3,
+                      }}
                     >
-                      {slideItem.whatTheSayAboutMeContent}
-                    </StyledText>
-                    <StyledRightArrow>
-                      <StyledButtonPagination
-                        whileHover={{
-                          scale: 1.2,
-                          transition: { duration: 0.5 },
-                        }}
-                        whileTap={{ scale: 0.9 }}
-                        onClick={() => paginate(1)}
+                      <StyledLeftArrow>
+                        <StyledButtonPagination
+                          whileHover={{
+                            scale: 1.2,
+                            transition: { duration: 0.5 },
+                          }}
+                          whileTap={{ scale: 0.9 }}
+                          onClick={() => paginate(-1)}
+                          layout
+                        >
+                          <IoIosArrowBack size="32px" />
+                        </StyledButtonPagination>
+                      </StyledLeftArrow>
+                      <StyledText
+                        layout
+                        hasdeclaredmaxwidth="780px"
+                        hasdeclaredtextalign="center"
+                        hasdeclaredfontweight="medium"
+                        hasdeclaredfontfamily="Raleway"
+                        hasdeclaredlineheight="1.45em"
+                        hasdeclaredpadding="0 20px"
+                        hasdeclaredfontsize="24px"
+                        as="p"
                       >
-                        <IoIosArrowForward size="32px"/>
-                      </StyledButtonPagination>
-                    </StyledRightArrow>
-                  </StyledWrapperWithoutPagination>
-                  <StyledUserWrapper
-                    key={`${slide}-user`}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{
-                      type: "spring",
-                      duration: 0.8,
-                      delay: 0.1,
-                    }}
-                  >
-                    <StyledUserImage>
-                      <StyledUserImageImg
-                        fluid={slideItem.customerPhoto.fluid}
-                      />
-                    </StyledUserImage>
-                    <StyledText
-                      hasdeclaredfontcolor="#23242A"
-                      hasdeclaredfontweight="bold"
-                      hasdeclaredfontsize="30px"
-                      hasdeclaredpadding="0 0 0 27px"
+                        {slideItem.whatTheSayAboutMeContent}
+                      </StyledText>
+                      <StyledRightArrow>
+                        <StyledButtonPagination
+                          whileHover={{
+                            scale: 1.2,
+                            transition: { duration: 0.5 },
+                          }}
+                          whileTap={{ scale: 0.9 }}
+                          onClick={() => paginate(1)}
+                        >
+                          <IoIosArrowForward size="32px" />
+                        </StyledButtonPagination>
+                      </StyledRightArrow>
+                    </StyledWrapperWithoutPagination>
+                    <StyledUserWrapper
+                      layout
+                      key={`${slide}-user`}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{
+                        type: "spring",
+                        duration: 0.3,
+                        delay: 0.1,
+                      }}
                     >
-                      {slideItem.customerName}
-                    </StyledText>
-                  </StyledUserWrapper>
-                </StyledSlide>
-              ))}
-          </AnimatePresence>
-        </StyledSliderWrapper>
-        <StyledPagination>
-          {allDatoData.nodes.map((slideItem, iterator) => (
-            <StyledSpanPagination
-              active={iterator === slideIndex}
-              onClick={() => handleSetSlide(iterator)}
-            ></StyledSpanPagination>
-          ))}
-        </StyledPagination>
+                      <StyledUserImage layout>
+                        <StyledUserImageImg
+                          fluid={slideItem.customerPhoto.fluid}
+                        />
+                      </StyledUserImage>
+                      <StyledText
+                        layout
+                        hasdeclaredfontcolor="#23242A"
+                        hasdeclaredfontweight="bold"
+                        hasdeclaredfontsize="30px"
+                        hasdeclaredlineheight="1.3"
+                        hasdeclaredpadding="0 0 0 27px"
+                      >
+                        {slideItem.customerName}
+                      </StyledText>
+                    </StyledUserWrapper>
+                  </StyledSlide>
+                ))}
+            </AnimatePresence>
+          </StyledSliderWrapper>
+          <StyledPagination layout>
+            {allDatoData.nodes.map((slideItem, iterator) => (
+              <StyledSpanPagination
+                active={iterator === slideIndex}
+                onClick={() => handleSetSlide(iterator)}
+              ></StyledSpanPagination>
+            ))}
+          </StyledPagination>
+        </AnimateSharedLayout>
       </StyledWhatSayAboutMeWrapper>
     </StyledWhatSayAboutMeSection>
   )

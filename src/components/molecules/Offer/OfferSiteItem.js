@@ -5,18 +5,20 @@ import { StyledOfferLink } from "../../atoms/MyOffer/StyledOfferLink"
 import { StyledOfferSiteItemWrapper } from "../../molecules/OfferSiteItem/StyledOfferSiteItemWrapper"
 import slugify from "slugify"
 import { Link } from "react-scroll"
+import useWindowSize from "../../../utils/getWindowSize"
 
 const OfferSiteItem = ({
   offerTitle,
   offerTextContent,
   offerPageContentTitle,
 }) => {
+  const width = useWindowSize()
   return (
     <StyledOfferSiteItemWrapper>
       <div>
         <StyledText
           as="h2"
-          hasdeclaredfontsize="36px"
+          hasdeclaredfontsize={width < 1200 ? "32px" : "36px"}
           hasdeclaredfontcolor="var(--blue)"
           hasdeclaredfontweight="bold"
           hasdeclaredlineheight="1.45em"

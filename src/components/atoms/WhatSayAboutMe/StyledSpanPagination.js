@@ -10,4 +10,8 @@ export const StyledSpanPagination = styled.span`
   display: block;
   margin-right: 12px;
   cursor: pointer;
+  transition: transform 0.2s ease;
+  &:hover {
+    transform: scale(1.2);
+  }
 `
