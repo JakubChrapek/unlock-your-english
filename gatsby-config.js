@@ -18,14 +18,14 @@ module.exports = {
     titleTemplate: "%s · Mobilna pracownia językowa",
     description:
       "Mobilna pracownia językowa „Unlock Your English” to całoroczna działalność edukacyjna, zajmującą się przede wszystkim nauką języka angielskiego",
-    url: "https://www.doe.com", // No trailing slash allowed!
+    url: "https://www.unlockyourenglish.pl", // No trailing slash allowed!
     image: "src/images/unlock-your-english-icon.png", // Path to your image you placed in the 'static' folder
     linkedinUsername: "@unlockyourenglishpl",
     facebookUsername: "@unlockyourenglishpl",
     instagramUsername: "@unlock_your_english_kamila_z",
   },
   plugins: [
-    "gatsby-plugin-styled-components",
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
