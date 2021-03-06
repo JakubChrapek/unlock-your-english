@@ -11,7 +11,7 @@ import { StyledOfferTextWrapper } from "../../molecules/OfferContentItems/Styled
 const OfferContentItems = ({ hash }) => {
   const offerContentItemsData = useStaticQuery(graphql`
     query offerContentItemsData {
-      allDatoCmsOfferpagecontent {
+      allDatoCmsOfferpagecontent(sort: { fields: number }) {
         nodes {
           offerPageContentTitle
           offerParagraphs {
@@ -107,6 +107,7 @@ const OfferContentItems = ({ hash }) => {
                       hasdeclaredfontweight="medium"
                       hasdeclaredfontfamily="Raleway"
                       hasdeclaredlineheight="1.78em"
+                      hasdeclaredtextalign="justify"
                       as="p"
                     >
                       {itemContent.lineText}

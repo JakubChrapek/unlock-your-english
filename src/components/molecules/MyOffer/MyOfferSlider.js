@@ -59,7 +59,6 @@ const MyOfferSlider = ({ slideData, fromAnotherPage }) => {
     setSlidesWidth(slidesWidth)
     setContainerWidth(slider.clientWidth)
     setSingleSlideWidth(slider.children[0].clientWidth)
-    // const constraint = slider.clientWidth - slidesWidth
   }, [width])
 
   return (
@@ -164,7 +163,8 @@ const MyOfferSlider = ({ slideData, fromAnotherPage }) => {
           >
             <AiOutlineArrowLeft size="32px" color="var(--blue)" />
           </StyledButtonPagination>
-          <StyledButtonPagination onClick={handleNextClick} 
+          <StyledButtonPagination
+            onClick={handleNextClick}
             whileTap={{ scale: 0.9 }}
             whileHover={{ scale: 1.2 }}
           >

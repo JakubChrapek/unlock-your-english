@@ -32,8 +32,8 @@ const AboutContact = () => {
             Jeśli jeszcze nie czujesz się przekonany, nie przejmuj się. Napisz
             lub zadzwoń, a myślę że wtedy twoje wszystkie wątpliwości znikną{" "}
             <span role="img" aria-label="smiling emoji">
-              🙂
-            </span>
+              🙂.
+            </span>{" "}
             Kamila
           </StyledText>
         </StyledAboutContactLeftBar>

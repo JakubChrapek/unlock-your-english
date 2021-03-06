@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { useLocation } from "@reach/router"
 
 import { useMenuState, useMenuDispatch } from "../../../context/menuContext"
@@ -39,7 +39,7 @@ const Header = () => {
             <StyledHamburgerButtonSpan
               hasdeclaredwidth="75%"
               shownav={mobile}
-              pathnameColor={location.pahname ? location.pahname : "/"}
+              pathnameColor={location.pathname ? location.pathname : "/"}
             />
           </StyledHamburgerButton>
         </StyledHeaderWrapper>

@@ -11,7 +11,7 @@ const OfferItemsSection = () => {
   const width = useWindowSize()
   const offerItemsData = useStaticQuery(graphql`
     query getOfferItemsData {
-      allDatoCmsOfferItem {
+      allDatoCmsOfferItem(sort: { fields: number }) {
         nodes {
           offerTitle
           offerTextContent

@@ -169,6 +169,7 @@ const WhatSayAboutMe = () => {
           <StyledPagination layout>
             {allDatoData.nodes.map((slideItem, iterator) => (
               <StyledSpanPagination
+                key={`pagination-${iterator}`}
                 active={iterator === slideIndex}
                 onClick={() => handleSetSlide(iterator)}
               ></StyledSpanPagination>

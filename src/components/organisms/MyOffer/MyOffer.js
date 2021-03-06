@@ -9,7 +9,7 @@ import MyOfferSlider from "../../molecules/MyOffer/MyOfferSlider"
 const MyOffer = () => {
   const slides = useStaticQuery(graphql`
     query getSlides {
-      allDatoCmsOfferItem {
+      allDatoCmsOfferItem(sort: { fields: number }) {
         nodes {
           offerTitle
           offerTextContent
