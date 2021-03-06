@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 
 import { useMenuState, useMenuDispatch } from "../../../../context/menuContext"
 import actions from "../../../../context/actions"
