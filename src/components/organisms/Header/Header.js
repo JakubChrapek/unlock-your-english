@@ -12,11 +12,10 @@ import { StyledHeader } from "../../atoms/Header/StyledHeader"
 import { StyledHeaderWrapper } from "../../atoms/Header/StyledHeaderWrapper"
 import { StyledHamburgerButtonSpan } from "../../atoms/HamburgerButton/StyledHamburgerButtonSpan"
 
-const Header = () => {
+const Header = ({ location }) => {
   const { show: mobile } = useMenuState()
   const [show, setShow] = useState(false)
   const dispatch = useMenuDispatch()
-  const location = useLocation()
 
   useEffect(() => {
     console.log(location)

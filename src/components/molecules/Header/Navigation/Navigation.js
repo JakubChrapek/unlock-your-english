@@ -6,12 +6,16 @@ import actions from "../../../../context/actions"
 import { StyledNavigationList } from "../../../molecules/Navigation/StyledNavigationList"
 import { StyledLink } from "../../../atoms/Link/StyledLink"
 
-const Navigation = ({ shownav, pathnameColor }) => {
+const Navigation = ({ shownav, pathnameColor, className }) => {
   const { show } = useMenuState()
   const dispatch = useMenuDispatch()
 
   return (
-    <StyledNavigationList shownav={shownav} pathnameColor={pathnameColor}>
+    <StyledNavigationList
+      className={className}
+      shownav={shownav}
+      pathnameColor={pathnameColor}
+    >
       <li>
         <StyledLink
           to="/o-mnie"
