@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 
 import { useMenuState, useMenuDispatch } from "../../../../context/menuContext"
 import actions from "../../../../context/actions"
@@ -9,6 +9,10 @@ import { StyledLink } from "../../../atoms/Link/StyledLink"
 const Navigation = ({ shownav, pathnameColor, className }) => {
   const { show } = useMenuState()
   const dispatch = useMenuDispatch()
+
+  useEffect(() => {
+    console.log(pathnameColor)
+  }, [pathnameColor])
 
   return (
     <StyledNavigationList
