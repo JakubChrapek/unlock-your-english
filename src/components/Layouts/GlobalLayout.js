@@ -12,9 +12,11 @@ const GlobalLayout = ({ children }) => {
     <MenuProvider>
       <SEO />
       <GlobalStyle />
-      <Header location={location} />
-      {children}
-      <Footer />
+      <>
+        <Header location={location} />
+        {children}
+        <Footer />
+      </>
     </MenuProvider>
   )
 }

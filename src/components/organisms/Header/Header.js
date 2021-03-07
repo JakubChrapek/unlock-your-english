@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react"
-import { useLocation } from "@reach/router"
 
 import { useMenuState, useMenuDispatch } from "../../../context/menuContext"
 import actions from "../../../context/actions"
@@ -16,10 +15,6 @@ const Header = ({ location }) => {
   const { show: mobile } = useMenuState()
   const [show, setShow] = useState(false)
   const dispatch = useMenuDispatch()
-
-  useEffect(() => {
-    console.log(location)
-  }, [location])
 
   return (
     <StyledHeader>
