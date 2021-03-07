@@ -21,8 +21,7 @@ const Navigation = ({ shownav, pathnameColor, className }) => {
           to="/o-mnie"
           hasDeclaredFontFamily="Oswald"
           hasDeclaredFontWeight="medium"
-          // hasDeclaredFontColor={pathnameColor}
-          hasDeclaredFontColor="var(--white)"
+          hasDeclaredFontColor={pathnameColor}
           hasDeclaredFontSize="14px "
           activeClassName="active"
           hasDeclaredPadding="4px 8px"
