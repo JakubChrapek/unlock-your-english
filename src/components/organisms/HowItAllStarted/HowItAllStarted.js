@@ -48,43 +48,43 @@ const HowItAllStarted = () => {
         <StyledHowItAllStartedWrapper>
           <StyledHowItAllStartedTopBar>
             <StyledText
-              hasdeclaredfontsize="64px"
-              hasdeclaredfontcolor="var(--blue)"
-              hasdeclaredfontweight="bold"
-              hasdeclaredpadding="0 0 54px 0"
+              hasDeclaredFontSize="64px"
+              hasDeclaredFontColor="var(--blue)"
+              hasDeclaredFontWeight="bold"
+              hasDeclaredPadding="0 0 54px 0"
               as="h2"
             >
               Jak to się zaczęło?
             </StyledText>
 
             <StyledText
-              hasdeclaredfontsize="18px"
-              hasdeclaredfontfamily="Raleway"
-              hasdeclaredfontweight="medium"
+              hasDeclaredFontSize="18px"
+              hasDeclaredFontFamily="Raleway"
+              hasDeclaredFontWeight="medium"
               hasdeclaredlineheight="1.85em"
-              hasdeclaredpadding="0 0 34px 0"
+              hasDeclaredPadding="0 0 34px 0"
               hasdeclaredtextalign="justify"
               as="p"
             >
               {paragrpahData.paragraph1}
             </StyledText>
             <StyledText
-              hasdeclaredfontsize="18px"
-              hasdeclaredfontfamily="Raleway"
-              hasdeclaredfontweight="medium"
+              hasDeclaredFontSize="18px"
+              hasDeclaredFontFamily="Raleway"
+              hasDeclaredFontWeight="medium"
               hasdeclaredlineheight="1.85em"
-              hasdeclaredpadding="0 0 34px 0"
+              hasDeclaredPadding="0 0 34px 0"
               hasdeclaredtextalign="justify"
               as="p"
             >
               {paragrpahData.paragraph2}
             </StyledText>
             <StyledText
-              hasdeclaredfontsize="18px"
-              hasdeclaredfontfamily="Raleway"
-              hasdeclaredfontweight="medium"
+              hasDeclaredFontSize="18px"
+              hasDeclaredFontFamily="Raleway"
+              hasDeclaredFontWeight="medium"
               hasdeclaredlineheight="1.85em"
-              hasdeclaredpadding="0 0 34px 0"
+              hasDeclaredPadding="0 0 34px 0"
               hasdeclaredtextalign="justify"
               as="p"
             >
@@ -93,11 +93,11 @@ const HowItAllStarted = () => {
           </StyledHowItAllStartedTopBar>
           <StyledHowItAllStartedBottomBar>
             <StyledText
-              hasdeclaredfontsize="48px"
-              hasdeclaredfontcolor="var(--red)"
+              hasDeclaredFontSize="48px"
+              hasDeclaredFontColor="var(--red)"
               hasdeclaredtextalign="right"
-              hasdeclaredfontweight="bold"
-              hasdeclaredpadding="34px 0 54px 0"
+              hasDeclaredFontWeight="bold"
+              hasDeclaredPadding="34px 0 54px 0"
               as="h3"
             >
               A może własna szkoła językowa?
@@ -105,11 +105,11 @@ const HowItAllStarted = () => {
             {howItAllStartedData.allDatoCmsOwnlanguageschool.nodes.map(text => (
               <StyledText
                 key={text.ownlanguageschoolparagraph}
-                hasdeclaredfontsize="18px"
-                hasdeclaredfontfamily="Raleway"
-                hasdeclaredfontweight="medium"
+                hasDeclaredFontSize="18px"
+                hasDeclaredFontFamily="Raleway"
+                hasDeclaredFontWeight="medium"
                 hasdeclaredlineheight="1.78em"
-                hasdeclaredpadding="0 0 34px 0"
+                hasDeclaredPadding="0 0 34px 0"
                 hasdeclaredtextalign="justify"
               >
                 {text.ownlanguageschoolparagraph}
@@ -122,18 +122,18 @@ const HowItAllStarted = () => {
         <StyledPrivatelyWrapper>
           <StyledPrivatelyTextWrapper>
             <StyledText
-              hasdeclaredfontsize="64px"
-              hasdeclaredfontcolor="var(--blue)"
-              hasdeclaredfontweight="bold"
-              hasdeclaredpadding="0 0 88px 0"
+              hasDeclaredFontSize="64px"
+              hasDeclaredFontColor="var(--blue)"
+              hasDeclaredFontWeight="bold"
+              hasDeclaredPadding="0 0 88px 0"
               as="h3"
             >
               A prywatnie...
             </StyledText>
             <StyledText
-              hasdeclaredfontsize="18px"
-              hasdeclaredfontfamily="Raleway"
-              hasdeclaredfontweight="medium"
+              hasDeclaredFontSize="18px"
+              hasDeclaredFontFamily="Raleway"
+              hasDeclaredFontWeight="medium"
               hasdeclaredlineheight="1.78em"
               hasdeclaredmaxwidth="447px"
               hasdeclaredtextalign="justify"
@@ -148,10 +148,10 @@ const HowItAllStarted = () => {
             />
           </StyledPrivatelyImageWrapper>
           <StyledText
-            hasdeclaredfontsize="64px"
-            hasdeclaredfontcolor="var(--blue)"
-            hasdeclaredfontweight="bold"
-            hasdeclaredpadding="0 0 88px 0"
+            hasDeclaredFontSize="64px"
+            hasDeclaredFontColor="var(--blue)"
+            hasDeclaredFontWeight="bold"
+            hasDeclaredPadding="0 0 88px 0"
             as="h3"
           >
             A prywatnie...

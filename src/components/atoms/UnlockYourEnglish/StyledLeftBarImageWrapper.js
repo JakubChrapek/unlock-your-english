@@ -5,8 +5,8 @@ export const StyledLeftBarImageWrapper = styled.div`
     hasdeclaredwidth ? hasdeclaredwidth : "0"};
   height: ${({ hasdeclaredheight }) =>
     hasdeclaredheight ? hasdeclaredheight : "0"};
-  padding: ${({ hasdeclaredpadding }) =>
-    hasdeclaredpadding ? hasdeclaredpadding : "0"};
+  padding: ${({ hasDeclaredPadding }) =>
+    hasDeclaredPadding ? hasDeclaredPadding : "0"};
   margin: ${({ hasdeclaredmargin }) =>
     hasdeclaredmargin ? hasdeclaredmargin : "0"};
 

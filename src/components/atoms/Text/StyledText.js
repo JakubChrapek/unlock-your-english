@@ -2,18 +2,18 @@ import styled from "styled-components"
 import { motion } from "framer-motion"
 
 export const StyledText = styled(motion.p)`
-  font-size: ${({ hasdeclaredfontsize }) =>
-    hasdeclaredfontsize ? hasdeclaredfontsize : "16px"};
-  font-weight: ${({ hasdeclaredfontweight }) =>
-    hasdeclaredfontweight ? hasdeclaredfontweight : "normal"};
-  color: ${({ hasdeclaredfontcolor }) =>
-    hasdeclaredfontcolor ? hasdeclaredfontcolor : "var(--black)"};
+  font-size: ${({ hasDeclaredFontSize }) =>
+    hasDeclaredFontSize ? hasDeclaredFontSize : "16px"};
+  font-weight: ${({ hasDeclaredFontWeight }) =>
+    hasDeclaredFontWeight ? hasDeclaredFontWeight : "normal"};
+  color: ${({ hasDeclaredFontColor }) =>
+    hasDeclaredFontColor ? hasDeclaredFontColor : "var(--black)"};
   letter-spacing: ${({ hasdeclaredletterspacing }) =>
     hasdeclaredletterspacing ? hasdeclaredletterspacing : "0"};
   line-height: ${({ hasdeclaredlineheight }) =>
     hasdeclaredlineheight ? hasdeclaredlineheight : "1"};
-  font-family: ${({ hasdeclaredfontfamily }) =>
-    hasdeclaredfontfamily ? hasdeclaredfontfamily : "Oswald, sans-serif;"};
+  font-family: ${({ hasDeclaredFontFamily }) =>
+    hasDeclaredFontFamily ? hasDeclaredFontFamily : "Oswald, sans-serif;"};
   text-decoration: ${({ hasdeclaredtextdecoration }) =>
     hasdeclaredtextdecoration ? hasdeclaredtextdecoration : "none"};
   display: ${({ hasdeclareddisplay }) =>
@@ -24,8 +24,8 @@ export const StyledText = styled(motion.p)`
     hasdeclaredtransform ? hasdeclaredtransform : "translate(0,0)"};
   text-align: ${({ hasdeclaredtextalign }) =>
     hasdeclaredtextalign ? hasdeclaredtextalign : "left"};
-  padding: ${({ hasdeclaredpadding }) =>
-    hasdeclaredpadding ? hasdeclaredpadding : "0"};
+  padding: ${({ hasDeclaredPadding }) =>
+    hasDeclaredPadding ? hasDeclaredPadding : "0"};
   margin: ${({ hasdeclaredmargin }) =>
     hasdeclaredmargin ? hasdeclaredmargin : "0"};
   max-width: ${({ hasdeclaredmaxwidth }) =>

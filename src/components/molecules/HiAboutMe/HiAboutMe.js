@@ -37,41 +37,41 @@ const HiAboutMe = () => {
         </StyledLeftBar>
         <StyledRightBar>
           <StyledText
-            hasdeclaredfontsize="64px"
-            hasdeclaredfontweight="bold"
-            hasdeclaredfontcolor="var(--red)"
+            hasDeclaredFontSize="64px"
+            hasDeclaredFontWeight="bold"
+            hasDeclaredFontColor="var(--red)"
             hasdeclaredlineheight="1.35em"
             as="h2"
           >
             {getCamilaData.datoCmsHiImCamila.titleFirstLine}
           </StyledText>
           <StyledText
-            hasdeclaredfontsize="48px"
-            hasdeclaredfontweight="bold"
-            hasdeclaredfontcolor="var(--blue)"
-            hasdeclaredpadding="0 0 40px 0"
+            hasDeclaredFontSize="48px"
+            hasDeclaredFontWeight="bold"
+            hasDeclaredFontColor="var(--blue)"
+            hasDeclaredPadding="0 0 40px 0"
             as="h3"
           >
             {getCamilaData.datoCmsHiImCamila.titleSecondLine}
           </StyledText>
           <StyledText
-            hasdeclaredfontsize="18px"
-            hasdeclaredfontweight="medium"
-            hasdeclaredfontcolor="var(--black)"
-            hasdeclaredfontfamily="Raleway"
+            hasDeclaredFontSize="18px"
+            hasDeclaredFontWeight="medium"
+            hasDeclaredFontColor="var(--black)"
+            hasDeclaredFontFamily="Raleway"
             hasdeclaredlineheight="1.85em"
-            hasdeclaredpadding="0 0 40px 0"
+            hasDeclaredPadding="0 0 40px 0"
             hasdeclaredtextalign="justify"
           >
             {getCamilaData.datoCmsHiImCamila.hiImCamilaContent}
           </StyledText>
           <Link to="/o-mnie">
             <StyledButton
-              hasdeclaredpadding="18px 61px"
+              hasDeclaredPadding="18px 61px"
               hasdeclaredbgcolor="var(--red)"
-              hasdeclaredfontsize="20px"
-              hasdeclaredfontcolor="var(--white)"
-              hasdeclaredfontfamily="Manrope"
+              hasDeclaredFontSize="20px"
+              hasDeclaredFontColor="var(--white)"
+              hasDeclaredFontFamily="Manrope"
             >
               Więcej o mnie
             </StyledButton>

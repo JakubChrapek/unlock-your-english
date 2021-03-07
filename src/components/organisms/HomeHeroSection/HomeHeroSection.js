@@ -26,10 +26,10 @@ const HomeHeroSection = () => {
       <StyledHeroTextWrapper>
         <StyledText
           hasdeclaredtextalign="center"
-          hasdeclaredfontweight="bold"
-          hasdeclaredfontsize="72px"
-          hasdeclaredfontcolor="var(--white)"
-          hasdeclaredpadding="0 0 27px 0"
+          hasDeclaredFontWeight="bold"
+          hasDeclaredFontSize="72px"
+          hasDeclaredFontColor="var(--white)"
+          hasDeclaredPadding="0 0 27px 0"
           as="h1"
         >
           Unlock Your English
@@ -37,12 +37,12 @@ const HomeHeroSection = () => {
         <StyledText
           hasdeclaredmaxwidth="726px"
           hasdeclaredtextalign="center"
-          hasdeclaredfontsize="20px"
-          hasdeclaredfontcolor="var(--white)"
-          hasdeclaredpadding="0 0 44px 0"
-          hasdeclaredfontfamily="Raleway"
+          hasDeclaredFontSize="20px"
+          hasDeclaredFontColor="var(--white)"
+          hasDeclaredPadding="0 0 44px 0"
+          hasDeclaredFontFamily="Raleway"
           hasdeclaredlineheight="1.6em"
-          hasdeclaredfontweight="normal"
+          hasDeclaredFontWeight="normal"
           as="h2"
         >
           Mobilna pracownia językowa „Unlock Your English” to całoroczna
@@ -51,11 +51,11 @@ const HomeHeroSection = () => {
         </StyledText>
         <Link to="unlock-your-english" smooth={true} duration={500}>
           <StyledButton
-            hasdeclaredpadding="18px 62px"
-            hasdeclaredfontcolor="var(--white)"
+            hasDeclaredPadding="18px 62px"
+            hasDeclaredFontColor="var(--white)"
             hasdeclaredbgcolor="var(--red)"
-            hasdeclaredfontfamily="Manrope"
-            hasdeclaredfontsize="20px"
+            hasDeclaredFontFamily="Manrope"
+            hasDeclaredFontSize="20px"
           >
             Unlock your english
           </StyledButton>

@@ -35,19 +35,19 @@ const AboutMeHeroSection = () => {
         <StyledMobileTextWrapper>
           <StyledText
             as="h1"
-            hasdeclaredfontsize="64px"
-            hasdeclaredfontcolor="var(--red)"
-            hasdeclaredfontweight="1.85em"
-            hasdeclaredpadding="0 0 24px 0"
+            hasDeclaredFontSize="64px"
+            hasDeclaredFontColor="var(--red)"
+            hasDeclaredFontWeight="1.85em"
+            hasDeclaredPadding="0 0 24px 0"
           >
             {dataAbout.heroTitle}
           </StyledText>
           <StyledText
             as="h2"
-            hasdeclaredfontsize="48px"
-            hasdeclaredfontcolor="var(--blue)"
-            hasdeclaredfontweight="1.85em"
-            hasdeclaredpadding="0 0 24px 60px"
+            hasDeclaredFontSize="48px"
+            hasDeclaredFontColor="var(--blue)"
+            hasDeclaredFontWeight="1.85em"
+            hasDeclaredPadding="0 0 24px 60px"
           >
             {dataAbout.heroTitleSecondLine}
           </StyledText>
@@ -60,29 +60,29 @@ const AboutMeHeroSection = () => {
         <StyledTextWrapper>
           <StyledText
             as="h1"
-            hasdeclaredfontsize="64px"
-            hasdeclaredfontcolor="var(--red)"
-            hasdeclaredfontweight="1.85em"
-            hasdeclaredpadding="0 0 24px 0"
+            hasDeclaredFontSize="64px"
+            hasDeclaredFontColor="var(--red)"
+            hasDeclaredFontWeight="1.85em"
+            hasDeclaredPadding="0 0 24px 0"
           >
             {dataAbout.heroTitle}
           </StyledText>
           <StyledText
             as="h2"
-            hasdeclaredfontsize="48px"
-            hasdeclaredfontcolor="var(--blue)"
-            hasdeclaredfontweight="1.85em"
-            hasdeclaredpadding="0 0 24px 60px"
+            hasDeclaredFontSize="48px"
+            hasDeclaredFontColor="var(--blue)"
+            hasDeclaredFontWeight="1.85em"
+            hasDeclaredPadding="0 0 24px 60px"
           >
             {dataAbout.heroTitleSecondLine}
           </StyledText>
           <StyledText
             as="p"
-            hasdeclaredfontsize="22px"
-            hasdeclaredfontcolor="var(--black)"
-            hasdeclaredfontweight="medium"
-            hasdeclaredfontfamily="Raleway"
-            hasdeclaredpadding="0 0 24px 60px"
+            hasDeclaredFontSize="22px"
+            hasDeclaredFontColor="var(--black)"
+            hasDeclaredFontWeight="medium"
+            hasDeclaredFontFamily="Raleway"
+            hasDeclaredPadding="0 0 24px 60px"
             hasdeclaredlineheight="1.85em"
           >
             {dataAbout.heroContent}

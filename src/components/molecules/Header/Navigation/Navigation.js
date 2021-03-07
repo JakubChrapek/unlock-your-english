@@ -10,10 +10,6 @@ const Navigation = ({ shownav, pathnameColor, className }) => {
   const { show } = useMenuState()
   const dispatch = useMenuDispatch()
 
-  useEffect(() => {
-    console.log(pathnameColor)
-  }, [pathnameColor])
-
   return (
     <StyledNavigationList
       className={className}
@@ -23,14 +19,15 @@ const Navigation = ({ shownav, pathnameColor, className }) => {
       <li>
         <StyledLink
           to="/o-mnie"
-          hasdeclaredfontfamily="Oswald"
-          hasdeclaredfontweight="medium"
-          hasdeclaredfontcolor={pathnameColor}
-          hasdeclaredfontsize="14px "
+          hasDeclaredFontFamily="Oswald"
+          hasDeclaredFontWeight="medium"
+          // hasDeclaredFontColor={pathnameColor}
+          hasDeclaredFontColor="var(--white)"
+          hasDeclaredFontSize="14px "
           activeClassName="active"
-          hasdeclaredpadding="4px 8px"
-          headerlink="true"
-          mobilemenulink="true"
+          hasDeclaredPadding="4px 8px"
+          headerLink="true"
+          mobileMenuLink="true"
           onClick={() => show && dispatch({ type: actions.TOGGLE_MENU })}
         >
           O mnie
@@ -39,14 +36,14 @@ const Navigation = ({ shownav, pathnameColor, className }) => {
       <li>
         <StyledLink
           to="/oferta"
-          hasdeclaredfontfamily="Oswald"
-          hasdeclaredfontweight="medium"
-          hasdeclaredfontcolor={pathnameColor}
-          hasdeclaredfontsize="14px "
+          hasDeclaredFontFamily="Oswald"
+          hasDeclaredFontWeight="medium"
+          hasDeclaredFontColor={pathnameColor}
+          hasDeclaredFontSize="14px "
           activeClassName="active"
-          hasdeclaredpadding="4px 8px"
-          headerlink="true"
-          mobilemenulink="true"
+          hasDeclaredPadding="4px 8px"
+          headerLink="true"
+          mobileMenuLink="true"
           onClick={() => show && dispatch({ type: actions.TOGGLE_MENU })}
         >
           Oferta
@@ -55,14 +52,14 @@ const Navigation = ({ shownav, pathnameColor, className }) => {
       <li>
         <StyledLink
           to="/kontakt"
-          hasdeclaredfontfamily="Oswald"
-          hasdeclaredfontweight="medium"
-          hasdeclaredfontcolor={pathnameColor}
-          hasdeclaredfontsize="14px "
+          hasDeclaredFontFamily="Oswald"
+          hasDeclaredFontWeight="medium"
+          hasDeclaredFontColor={pathnameColor}
+          hasDeclaredFontSize="14px "
           activeClassName="active"
-          hasdeclaredpadding="4px 8px"
-          headerlink="true"
-          mobilemenulink="true"
+          hasDeclaredPadding="4px 8px"
+          headerLink="true"
+          mobileMenuLink="true"
           onClick={() => show && dispatch({ type: actions.TOGGLE_MENU })}
         >
           Kontakt

@@ -80,9 +80,9 @@ const AboutContactForm = () => {
               <ErrorMessage name="name">
                 {errorMsg => (
                   <StyledText
-                    hasdeclaredfontcolor="var(--red)"
-                    hasdeclaredpadding="8px 0 0 0"
-                    hasdeclaredfontfamily="Raleway"
+                    hasDeclaredFontColor="var(--red)"
+                    hasDeclaredPadding="8px 0 0 0"
+                    hasDeclaredFontFamily="Raleway"
                     as="p"
                   >
                     {errorMsg}
@@ -96,9 +96,9 @@ const AboutContactForm = () => {
               <ErrorMessage name="email">
                 {errorMsg => (
                   <StyledText
-                    hasdeclaredfontcolor="var(--red)"
-                    hasdeclaredpadding="8px 0 0 0"
-                    hasdeclaredfontfamily="Raleway"
+                    hasDeclaredFontColor="var(--red)"
+                    hasDeclaredPadding="8px 0 0 0"
+                    hasDeclaredFontFamily="Raleway"
                     as="p"
                   >
                     {errorMsg}
@@ -120,9 +120,9 @@ const AboutContactForm = () => {
               <ErrorMessage name="message">
                 {errorMsg => (
                   <StyledText
-                    hasdeclaredfontcolor="var(--red)"
-                    hasdeclaredpadding="8px 0 0 0"
-                    hasdeclaredfontfamily="Raleway"
+                    hasDeclaredFontColor="var(--red)"
+                    hasDeclaredPadding="8px 0 0 0"
+                    hasDeclaredFontFamily="Raleway"
                     as="p"
                   >
                     {errorMsg}
@@ -134,19 +134,19 @@ const AboutContactForm = () => {
               <Field type="checkbox" name="privacy" id="accept-newsletter" />
               <label htmlFor="accept-newsletter" name="privacy">
                 <StyledText
-                  hasdeclaredfontsize="13px"
-                  hasdeclaredfontcolor="var(--black)"
-                  hasdeclaredfontfamily="Raleway"
-                  hasdeclaredfontweight="medium"
+                  hasDeclaredFontSize="13px"
+                  hasDeclaredFontColor="var(--black)"
+                  hasDeclaredFontFamily="Raleway"
+                  hasDeclaredFontWeight="medium"
                   hasdeclaredlineheight="1.32em"
-                  hasdeclaredpadding="5px 0 3px 0"
+                  hasDeclaredPadding="5px 0 3px 0"
                   hasdeclaredfontalign="center"
                   as="p"
                 >
                   Zgadzając się na przetwarzanie Twoich danych osobowych,
                   akceptujesz{" "}
                   <StyledLink
-                    hasdeclaredfontsize="13px"
+                    hasDeclaredFontSize="13px"
                     to="/polityka-prywatnosci"
                     hasdeclaredbgcolor="var(--black)"
                     hasdeclaredbgbottomposition="-6px"
@@ -162,10 +162,10 @@ const AboutContactForm = () => {
               <ErrorMessage name="privacy">
                 {errorMsg => (
                   <StyledText
-                    hasdeclaredfontfamily="Raleway"
-                    hasdeclaredfontsize="16px"
-                    hasdeclaredpadding="18px 0 0 0"
-                    hasdeclaredfontcolor="var(--red)"
+                    hasDeclaredFontFamily="Raleway"
+                    hasDeclaredFontSize="16px"
+                    hasDeclaredPadding="18px 0 0 0"
+                    hasDeclaredFontColor="var(--red)"
                   >
                     {errorMsg}
                   </StyledText>
@@ -175,9 +175,9 @@ const AboutContactForm = () => {
             <StyledButton
               type="submit"
               hasdeclaredbgcolor="var(--red)"
-              hasdeclaredfontcolor="var(--white)"
-              hasdeclaredfontfamily="Manrope"
-              hasdeclaredfontsize="20px"
+              hasDeclaredFontColor="var(--white)"
+              hasDeclaredFontFamily="Manrope"
+              hasDeclaredFontSize="20px"
               layout
             >
               Wyślij
@@ -185,9 +185,9 @@ const AboutContactForm = () => {
             <AnimatePresence initial={false} transition={{ opacity: 0.8 }}>
               <StyledSendMessageBox>
                 <StyledText
-                  hasdeclaredfontcolor="var(--red)"
-                  hasdeclaredpadding="24px 0 0 0"
-                  hasdeclaredfontfamily="Raleway"
+                  hasDeclaredFontColor="var(--red)"
+                  hasDeclaredPadding="24px 0 0 0"
+                  hasDeclaredFontFamily="Raleway"
                   as="p"
                   key={message}
                   initial={{ opacity: 0, x: "-50px" }}

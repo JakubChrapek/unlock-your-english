@@ -3,18 +3,18 @@ import { motion } from "framer-motion"
 
 export const StyledButton = styled(motion.button)`
   display: ${({ hideCheckbox }) => (hideCheckbox ? "none" : "block")};
-  padding: ${({ hasdeclaredpadding }) =>
-    hasdeclaredpadding ? hasdeclaredpadding : "0"};
+  padding: ${({ hasDeclaredPadding }) =>
+    hasDeclaredPadding ? hasDeclaredPadding : "0"};
   margin: ${({ hasdeclaredmargin }) =>
     hasdeclaredmargin ? hasdeclaredmargin : "0"};
-  font-family: ${({ hasdeclaredfontfamily }) =>
-    hasdeclaredfontfamily ? hasdeclaredfontfamily : "Releway, sans-serif;"};
-  color: ${({ hasdeclaredfontcolor }) =>
-    hasdeclaredfontcolor ? hasdeclaredfontcolor : "var(--black)"};
+  font-family: ${({ hasDeclaredFontFamily }) =>
+    hasDeclaredFontFamily ? hasDeclaredFontFamily : "Releway, sans-serif;"};
+  color: ${({ hasDeclaredFontColor }) =>
+    hasDeclaredFontColor ? hasDeclaredFontColor : "var(--black)"};
   background-color: ${({ hasdeclaredbgcolor }) =>
     hasdeclaredbgcolor ? hasdeclaredbgcolor : "var(--white)"};
-  font-size: ${({ hasdeclaredfontsize }) =>
-    hasdeclaredfontsize ? hasdeclaredfontsize : "14px"};
+  font-size: ${({ hasDeclaredFontSize }) =>
+    hasDeclaredFontSize ? hasDeclaredFontSize : "14px"};
   text-transform: ${({ hasdeclaredtexttransform }) =>
     hasdeclaredtexttransform ? hasdeclaredtexttransform : ""};
   border-radius: 25px;

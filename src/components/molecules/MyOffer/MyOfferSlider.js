@@ -82,22 +82,22 @@ const MyOfferSlider = ({ slideData, fromAnotherPage }) => {
           {slideData.nodes.map(slide => (
             <StyledSlide key={slide.offerTitle}>
               <StyledText
-                hasdeclaredfontsize="36px"
-                hasdeclaredfontweight="bold"
+                hasDeclaredFontSize="36px"
+                hasDeclaredFontWeight="bold"
                 hasdeclaredlineheight="1.31em"
-                hasdeclaredfontcolor="var(--blue)"
-                hasdeclaredpadding="0 0 24px 0"
+                hasDeclaredFontColor="var(--blue)"
+                hasDeclaredPadding="0 0 24px 0"
                 as="h3"
               >
                 {slide.offerTitle}
               </StyledText>
               <StyledText
-                hasdeclaredfontsize="18px"
-                hasdeclaredfontweight="medium"
+                hasDeclaredFontSize="18px"
+                hasDeclaredFontWeight="medium"
                 hasdeclaredlineheight="1.64em"
-                hasdeclaredfontcolor="var(--black)"
-                hasdeclaredfontfamily="Raleway"
-                hasdeclaredpadding="0 0 24px 0"
+                hasDeclaredFontColor="var(--black)"
+                hasDeclaredFontFamily="Raleway"
+                hasDeclaredPadding="0 0 24px 0"
                 hasdeclaredheight="180px"
                 hasoverflow="hidden"
               >
@@ -111,11 +111,11 @@ const MyOfferSlider = ({ slideData, fromAnotherPage }) => {
                   title={slide.offerPageContentTitle}
                 >
                   <StyledOfferLink
-                    hasdeclaredfontsize="18px"
-                    hasdeclaredfontweight="bold"
+                    hasDeclaredFontSize="18px"
+                    hasDeclaredFontWeight="bold"
                     hasdeclaredlineheight="1.32em"
-                    hasdeclaredfontcolor="var(--red)"
-                    hasdeclaredpadding="6px 0"
+                    hasDeclaredFontColor="var(--red)"
+                    hasDeclaredPadding="6px 0"
                     as="p"
                   >
                     Przeczytaj więcej
@@ -140,11 +140,11 @@ const MyOfferSlider = ({ slideData, fromAnotherPage }) => {
                   }
                 >
                   <StyledOfferLink
-                    hasdeclaredfontsize="18px"
-                    hasdeclaredfontweight="bold"
+                    hasDeclaredFontSize="18px"
+                    hasDeclaredFontWeight="bold"
                     hasdeclaredlineheight="1.32em"
-                    hasdeclaredfontcolor="var(--red)"
-                    hasdeclaredpadding="6px 0"
+                    hasDeclaredFontColor="var(--red)"
+                    hasDeclaredPadding="6px 0"
                     as="p"
                   >
                     Przeczytaj więcej
