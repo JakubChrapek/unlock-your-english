@@ -9,3 +9,9 @@ exports.wrapPageElement = ({ element, props }) => {
     </AnimatePresence>
   )
 }
+
+exports.onRenderBody = ({ setBodyAttributes }) => {
+  setBodyAttributes({
+    className: "no-js",
+  })
+}
