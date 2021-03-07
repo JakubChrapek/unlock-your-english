@@ -21,9 +21,7 @@ const Navigation = ({ shownav, pathnameColor, className }) => {
           to="/o-mnie"
           hasdeclaredfontfamily="Oswald"
           hasdeclaredfontweight="medium"
-          hasdeclaredfontcolor={
-            pathnameColor === "/" ? "var(--white)" : "var(--black)"
-          }
+          hasdeclaredfontcolor={pathnameColor}
           hasdeclaredfontsize="14px "
           activeClassName="active"
           hasdeclaredpadding="4px 8px"
@@ -39,9 +37,7 @@ const Navigation = ({ shownav, pathnameColor, className }) => {
           to="/oferta"
           hasdeclaredfontfamily="Oswald"
           hasdeclaredfontweight="medium"
-          hasdeclaredfontcolor={
-            pathnameColor === "/" ? "var(--white)" : "var(--black)"
-          }
+          hasdeclaredfontcolor={pathnameColor}
           hasdeclaredfontsize="14px "
           activeClassName="active"
           hasdeclaredpadding="4px 8px"
@@ -57,9 +53,7 @@ const Navigation = ({ shownav, pathnameColor, className }) => {
           to="/kontakt"
           hasdeclaredfontfamily="Oswald"
           hasdeclaredfontweight="medium"
-          hasdeclaredfontcolor={
-            pathnameColor === "/" ? "var(--white)" : "var(--black)"
-          }
+          hasdeclaredfontcolor={pathnameColor}
           hasdeclaredfontsize="14px "
           activeClassName="active"
           hasdeclaredpadding="4px 8px"

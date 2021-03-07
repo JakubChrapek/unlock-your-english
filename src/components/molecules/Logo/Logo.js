@@ -36,12 +36,12 @@ const Logo = ({ pathnameColor, shownav }) => {
         <StyledLogo to="/" shownav={`${shownav}--logo`}>
           <Img
             fluid={
-              pathnameColor === "/" && shownav !== true
+              pathnameColor === "var(--white)" && shownav !== true
                 ? logoImage.datoCmsHeader.headerLogo.fluid
                 : logoImage.datoCmsHeader.headerLogoColor.fluid
             }
             alt={
-              pathnameColor === "/" && shownav !== true
+              pathnameColor === "var(--white)" && shownav !== true
                 ? logoImage.datoCmsHeader.headerLogo.alt
                 : logoImage.datoCmsHeader.headerLogoColor.alt
             }

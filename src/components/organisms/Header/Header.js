@@ -23,9 +23,7 @@ const Header = ({ location }) => {
           <Logo
             shownav={mobile}
             pathnameColor={
-              location.pathname && location.pathname !== "/"
-                ? location.pathname
-                : "/"
+              location.pathname === "/" ? "var(--white)" : "var(--black)"
             }
           />
           <StyledHamburgerButton
@@ -37,18 +35,14 @@ const Header = ({ location }) => {
             <StyledHamburgerButtonSpan
               shownav={mobile}
               pathnameColor={
-                location.pathname && location.pathname !== "/"
-                  ? location.pathname
-                  : "/"
+                location.pathname === "/" ? "var(--white)" : "var(--black)"
               }
             />
             <StyledHamburgerButtonSpan
               hasdeclaredwidth="75%"
               shownav={mobile}
               pathnameColor={
-                location.pathname && location.pathname !== "/"
-                  ? location.pathname
-                  : "/"
+                location.pathname === "/" ? "var(--white)" : "var(--black)"
               }
             />
           </StyledHamburgerButton>
@@ -56,9 +50,7 @@ const Header = ({ location }) => {
         <Navigation
           shownav={mobile}
           pathnameColor={
-            location.pathname && location.pathname !== "/"
-              ? location.pathname
-              : "/"
+            location.pathname === "/" ? "var(--white)" : "var(--black)"
           }
         />
       </div>
