@@ -19,7 +19,7 @@ const Footer = () => {
         headerLogoColor {
           alt
           fluid {
-            ...GatsbyDatoCmsFluid
+            ...GatsbyDatoCmsFluid_noBase64
           }
         }
       }

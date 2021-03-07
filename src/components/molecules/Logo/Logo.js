@@ -12,13 +12,13 @@ const Logo = ({ pathnameColor, shownav }) => {
         headerLogo {
           alt
           fluid {
-            ...GatsbyDatoCmsFluid
+            ...GatsbyDatoCmsFluid_noBase64
           }
         }
         headerLogoColor {
           alt
           fluid {
-            ...GatsbyDatoCmsFluid
+            ...GatsbyDatoCmsFluid_noBase64
           }
         }
       }
