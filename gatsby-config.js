@@ -25,12 +25,12 @@ module.exports = {
     instagramUsername: "@unlock_your_english_kamila_z",
   },
   plugins: [
-    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-advanced-sitemap`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {

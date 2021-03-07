@@ -33,7 +33,7 @@ const Logo = ({ pathnameColor, shownav }) => {
         transition={{ duration: 0.1 }}
         key={shownav}
       >
-        <StyledLogo to="/" shownav={`${shownav}--logo`}>
+        <StyledLogo to="/">
           <Img
             fluid={
               pathnameColor === "var(--white)" && shownav !== true

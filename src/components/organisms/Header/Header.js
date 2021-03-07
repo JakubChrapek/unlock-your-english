@@ -11,7 +11,7 @@ import { StyledHeader } from "../../atoms/Header/StyledHeader"
 import { StyledHeaderWrapper } from "../../atoms/Header/StyledHeaderWrapper"
 import { StyledHamburgerButtonSpan } from "../../atoms/HamburgerButton/StyledHamburgerButtonSpan"
 
-const Header = ({ location }) => {
+const Header = ({ theme }) => {
   const { show: mobile } = useMenuState()
   const [show, setShow] = useState(false)
   const dispatch = useMenuDispatch()
@@ -22,9 +22,7 @@ const Header = ({ location }) => {
         <StyledHeaderWrapper>
           <Logo
             shownav={mobile}
-            pathnameColor={
-              location.pathname === "/" ? "var(--white)" : "var(--black)"
-            }
+            pathnameColor={theme === "dark" ? "var(--black)" : "var(--white)"}
           />
           <StyledHamburgerButton
             onClick={() => {
@@ -34,24 +32,18 @@ const Header = ({ location }) => {
           >
             <StyledHamburgerButtonSpan
               shownav={mobile}
-              pathnameColor={
-                location.pathname === "/" ? "var(--white)" : "var(--black)"
-              }
+              pathnameColor={theme === "dark" ? "var(--black)" : "var(--white)"}
             />
             <StyledHamburgerButtonSpan
               hasdeclaredwidth="75%"
               shownav={mobile}
-              pathnameColor={
-                location.pathname === "/" ? "var(--white)" : "var(--black)"
-              }
+              pathnameColor={theme === "dark" ? "var(--black)" : "var(--white)"}
             />
           </StyledHamburgerButton>
         </StyledHeaderWrapper>
         <Navigation
           shownav={mobile}
-          pathnameColor={
-            location.pathname === "/" ? "var(--white)" : "var(--black)"
-          }
+          pathnameColor={theme === "dark" ? "var(--black)" : "var(--white)"}
         />
       </div>
     </StyledHeader>
