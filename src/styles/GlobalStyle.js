@@ -10,6 +10,13 @@ const Style = createGlobalStyle`
         --blue: #1D3E84;
         --white: #FFF;
     }
+
+    body {
+      &.no-js {
+        visibility: hidden;
+      }
+    }
+    
     *{
         margin: 0;
         padding: 0;
