@@ -2,18 +2,18 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 export const StyledLink = styled(Link)`
-  font-size: ${({ hasDeclaredFontSize }) =>
-    hasDeclaredFontSize ? hasDeclaredFontSize : "16px"};
-  font-weight: ${({ hasDeclaredFontWeight }) =>
-    hasDeclaredFontWeight ? hasDeclaredFontWeight : "normal"};
-  color: ${({ hasDeclaredFontColor }) =>
-    hasDeclaredFontColor ? hasDeclaredFontColor : "var(--white)"};
+  font-size: ${({ hasdeclaredfontsize }) =>
+    hasdeclaredfontsize ? hasdeclaredfontsize : "16px"};
+  font-weight: ${({ hasdeclaredfontweight }) =>
+    hasdeclaredfontweight ? hasdeclaredfontweight : "normal"};
+  color: ${({ hasdeclaredfontcolor }) =>
+    hasdeclaredfontcolor ? hasdeclaredfontcolor : "var(--white)"};
   letter-spacing: ${({ hasdeclaredletterspacing }) =>
     hasdeclaredletterspacing ? hasdeclaredletterspacing : "0"};
   line-height: ${({ hasdeclaredlineheight }) =>
     hasdeclaredlineheight ? hasdeclaredlineheight : "1.3em"};
-  font-family: ${({ hasDeclaredFontFamily }) =>
-    hasDeclaredFontFamily ? hasDeclaredFontFamily : "Oswald, sans-serif;"};
+  font-family: ${({ hasdeclaredfontfamily }) =>
+    hasdeclaredfontfamily ? hasdeclaredfontfamily : "Oswald, sans-serif;"};
   text-decoration: ${({ hasdeclaredtextdecoration }) =>
     hasdeclaredtextdecoration ? hasdeclaredtextdecoration : "none"};
   display: ${({ hasdeclareddisplay }) =>
@@ -24,8 +24,8 @@ export const StyledLink = styled(Link)`
     hasdeclaredtransform ? hasdeclaredtransform : "translate(0,0)"};
   text-align: ${({ hasdeclaredtextalign }) =>
     hasdeclaredtextalign ? hasdeclaredtextalign : "left"};
-  padding: ${({ hasDeclaredPadding }) =>
-    hasDeclaredPadding ? hasDeclaredPadding : "0"};
+  padding: ${({ hasdeclaredpadding }) =>
+    hasdeclaredpadding ? hasdeclaredpadding : "0"};
   margin: ${({ hasdeclaredmargin }) =>
     hasdeclaredmargin ? hasdeclaredmargin : "0"};
   max-width: ${({ hasdeclaredmaxwidth }) =>
@@ -33,11 +33,11 @@ export const StyledLink = styled(Link)`
   position: relative;
   cursor: pointer;
   @media only screen and (min-width: 1920px) {
-    font-size: ${({ headerLink }) => (headerLink ? "22px" : "16px")};
+    font-size: ${({ headerlink }) => (headerlink ? "22px" : "16px")};
   }
   @media only screen and (max-width: 767px) {
-    color: ${({ mobileMenuLink }) =>
-      mobileMenuLink ? "var(--black)" : "var(--white)"};
+    color: ${({ mobilemenulink }) =>
+      mobilemenulink ? "var(--black)" : "var(--white)"};
   }
   &:after {
     content: "";

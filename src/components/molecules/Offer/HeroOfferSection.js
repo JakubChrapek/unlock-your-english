@@ -36,20 +36,20 @@ const HeroOfferSection = ({ sectionTitle, sectionTitleParagraph }) => {
       <StyledHerroOfferWrapper>
         <StyledText
           as="h1"
-          hasDeclaredFontSize="72px"
-          hasDeclaredFontWeight="bold"
-          hasDeclaredFontColor="var(--white)"
-          hasDeclaredPadding="0 0 32px 0"
+          hasdeclaredfontsize="72px"
+          hasdeclaredfontweight="bold"
+          hasdeclaredfontcolor="var(--white)"
+          hasdeclaredpadding="0 0 32px 0"
         >
           {sectionTitle}
         </StyledText>
         <StyledText
-          hasDeclaredFontSize="18px"
-          hasDeclaredFontWeight="medium"
-          hasDeclaredFontFamily="Raleway"
+          hasdeclaredfontsize="18px"
+          hasdeclaredfontweight="medium"
+          hasdeclaredfontfamily="Raleway"
           hasdeclaredlineheight="1.78em"
           hasdeclaredmaxwidth="489px"
-          hasDeclaredFontColor="var(--white)"
+          hasdeclaredfontcolor="var(--white)"
         >
           {sectionTitleParagraph}
         </StyledText>

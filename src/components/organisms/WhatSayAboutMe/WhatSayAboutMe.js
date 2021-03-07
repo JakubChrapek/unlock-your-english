@@ -62,10 +62,10 @@ const WhatSayAboutMe = () => {
         <AnimateSharedLayout type="crossfade">
           <StyledSliderWrapper>
             <StyledText
-              hasDeclaredFontSize="48px"
-              hasDeclaredFontColor="var(--blue)"
-              hasDeclaredFontWeight="bold"
-              hasDeclaredPadding="0 0 45px 0"
+              hasdeclaredfontsize="48px"
+              hasdeclaredfontcolor="var(--blue)"
+              hasdeclaredfontweight="bold"
+              hasdeclaredpadding="0 0 45px 0"
               as="h2"
             >
               Co o mnie mówią
@@ -112,11 +112,11 @@ const WhatSayAboutMe = () => {
                         layout
                         hasdeclaredmaxwidth="780px"
                         hasdeclaredtextalign="center"
-                        hasDeclaredFontWeight="medium"
-                        hasDeclaredFontFamily="Raleway"
+                        hasdeclaredfontweight="medium"
+                        hasdeclaredfontfamily="Raleway"
                         hasdeclaredlineheight="1.45em"
-                        hasDeclaredPadding="0 20px"
-                        hasDeclaredFontSize="24px"
+                        hasdeclaredpadding="0 20px"
+                        hasdeclaredfontsize="24px"
                         as="p"
                       >
                         {slideItem.whatTheSayAboutMeContent}
@@ -153,11 +153,11 @@ const WhatSayAboutMe = () => {
                       </StyledUserImage>
                       <StyledText
                         layout
-                        hasDeclaredFontColor="#23242A"
-                        hasDeclaredFontWeight="bold"
-                        hasDeclaredFontSize="30px"
+                        hasdeclaredfontcolor="#23242A"
+                        hasdeclaredfontweight="bold"
+                        hasdeclaredfontsize="30px"
                         hasdeclaredlineheight="1.3"
-                        hasDeclaredPadding="0 0 0 27px"
+                        hasdeclaredpadding="0 0 0 27px"
                       >
                         {slideItem.customerName}
                       </StyledText>

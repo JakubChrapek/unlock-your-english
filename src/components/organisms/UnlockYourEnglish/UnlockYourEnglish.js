@@ -66,21 +66,21 @@ const UnlockYourEnglish = () => {
           </StyledLeftBar>
           <StyledRightBar>
             <StyledText
-              hasDeclaredFontSize="48px"
-              hasDeclaredFontColor="var(--blue)"
-              hasDeclaredFontWeight="bold"
-              hasDeclaredPadding="0 0 17px 0"
+              hasdeclaredfontsize="48px"
+              hasdeclaredfontcolor="var(--blue)"
+              hasdeclaredfontweight="bold"
+              hasdeclaredpadding="0 0 17px 0"
               as="h2"
             >
               Unlock Your English!
             </StyledText>
             <StyledText
-              hasDeclaredFontSize="18px"
-              hasDeclaredFontColor="var(--black)"
-              hasDeclaredFontWeight="medium"
-              hasDeclaredFontFamily="Raleway"
+              hasdeclaredfontsize="18px"
+              hasdeclaredfontcolor="var(--black)"
+              hasdeclaredfontweight="medium"
+              hasdeclaredfontfamily="Raleway"
               hasdeclaredlineheight="1.75em"
-              hasDeclaredPadding="24px 0 0 0"
+              hasdeclaredpadding="24px 0 0 0"
               hasdeclaredtextalign="justify"
               as="h3"
             >

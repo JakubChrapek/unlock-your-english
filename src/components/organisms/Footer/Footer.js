@@ -40,10 +40,10 @@ const Footer = () => {
               <StyledLink
                 to="/o-mnie"
                 activeClassName="active"
-                hasDeclaredFontSize="14px"
-                hasDeclaredFontWeight="bold"
+                hasdeclaredfontsize="14px"
+                hasdeclaredfontweight="bold"
                 hasdeclaredmargin="0 80px 0 0"
-                hasDeclaredPadding="4px 0"
+                hasdeclaredpadding="4px 0"
               >
                 O mnie
               </StyledLink>
@@ -52,10 +52,10 @@ const Footer = () => {
               <StyledLink
                 to="/oferta"
                 activeClassName="active"
-                hasDeclaredFontSize="14px"
-                hasDeclaredFontWeight="bold"
+                hasdeclaredfontsize="14px"
+                hasdeclaredfontweight="bold"
                 hasdeclaredmargin="0 80px 0 0"
-                hasDeclaredPadding="4px 0"
+                hasdeclaredpadding="4px 0"
               >
                 Oferta
               </StyledLink>
@@ -64,10 +64,10 @@ const Footer = () => {
               <StyledLink
                 to="/kontakt"
                 activeClassName="active"
-                hasDeclaredFontSize="14px"
-                hasDeclaredFontWeight="bold"
+                hasdeclaredfontsize="14px"
+                hasdeclaredfontweight="bold"
                 hasdeclaredmargin="0 80px 0 0"
-                hasDeclaredPadding="4px 0"
+                hasdeclaredpadding="4px 0"
               >
                 Kontakt
               </StyledLink>
@@ -76,9 +76,9 @@ const Footer = () => {
               <StyledLink
                 to="/polityka-prywatnosci"
                 activeClassName="active"
-                hasDeclaredFontSize="14px"
-                hasDeclaredFontWeight="bold"
-                hasDeclaredPadding="4px 0"
+                hasdeclaredfontsize="14px"
+                hasdeclaredfontweight="bold"
+                hasdeclaredpadding="4px 0"
               >
                 Polityka prywatności
               </StyledLink>

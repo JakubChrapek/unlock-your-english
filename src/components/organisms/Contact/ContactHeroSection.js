@@ -31,18 +31,18 @@ const ContactHeroSection = () => {
       <StyledHeroContactWrapper>
         <StyledSmallLargeBox>
           <StyledText
-            hasDeclaredFontColor="var(--red)"
-            hasDeclaredFontSize="64px"
-            hasDeclaredFontWeight="bold"
+            hasdeclaredfontcolor="var(--red)"
+            hasdeclaredfontsize="64px"
+            hasdeclaredfontweight="bold"
             as="h2"
           >
             Napisz do mnie
           </StyledText>
           <StyledText
-            hasDeclaredFontColor="var(--blue)"
-            hasDeclaredFontSize="48px"
-            hasDeclaredPadding="20px 0 0 20px"
-            hasDeclaredFontWeight="bold"
+            hasdeclaredfontcolor="var(--blue)"
+            hasdeclaredfontsize="48px"
+            hasdeclaredpadding="20px 0 0 20px"
+            hasdeclaredfontweight="bold"
             as="h3"
           >
             a na pewno znajdziemy odpowiedź
@@ -56,18 +56,18 @@ const ContactHeroSection = () => {
         </StyledImageWrapper>
         <StyledContactFormWrapper>
           <StyledText
-            hasDeclaredFontColor="var(--red)"
-            hasDeclaredFontSize="64px"
-            hasDeclaredFontWeight="bold"
+            hasdeclaredfontcolor="var(--red)"
+            hasdeclaredfontsize="64px"
+            hasdeclaredfontweight="bold"
             as="h2"
           >
             Napisz do mnie
           </StyledText>
           <StyledText
-            hasDeclaredFontColor="var(--blue)"
-            hasDeclaredFontSize="48px"
-            hasDeclaredPadding="20px 0 40px 20px"
-            hasDeclaredFontWeight="bold"
+            hasdeclaredfontcolor="var(--blue)"
+            hasdeclaredfontsize="48px"
+            hasdeclaredpadding="20px 0 40px 20px"
+            hasdeclaredfontweight="bold"
             as="h3"
           >
             a na pewno znajdziemy odpowiedź

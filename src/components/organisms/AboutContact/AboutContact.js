@@ -13,19 +13,19 @@ const AboutContact = () => {
       <StyledAboutContactWrapper>
         <StyledAboutContactLeftBar>
           <StyledText
-            hasDeclaredFontSize="48px"
-            hasDeclaredFontWeight="bold"
-            hasDeclaredFontColor="var(--black)"
-            hasDeclaredPadding="0 0 34px 0"
+            hasdeclaredfontsize="48px"
+            hasdeclaredfontweight="bold"
+            hasdeclaredfontcolor="var(--black)"
+            hasdeclaredpadding="0 0 34px 0"
             as="h3"
           >
             Pogadajmy!
           </StyledText>
           <StyledText
-            hasDeclaredFontSize="18px"
-            hasDeclaredFontWeight="medium"
-            hasDeclaredFontColor="var(--black)"
-            hasDeclaredFontFamily="Raleway"
+            hasdeclaredfontsize="18px"
+            hasdeclaredfontweight="medium"
+            hasdeclaredfontcolor="var(--black)"
+            hasdeclaredfontfamily="Raleway"
             hasdeclaredlineheight="1.78em"
             hasdeclaredmaxwidth="464px"
           >

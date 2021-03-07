@@ -18,20 +18,20 @@ const OfferSiteItem = ({
       <div>
         <StyledText
           as="h2"
-          hasDeclaredFontSize={width < 1200 ? "32px" : "36px"}
-          hasDeclaredFontColor="var(--blue)"
-          hasDeclaredFontWeight="bold"
+          hasdeclaredfontsize={width < 1200 ? "32px" : "36px"}
+          hasdeclaredfontcolor="var(--blue)"
+          hasdeclaredfontweight="bold"
           hasdeclaredlineheight="1.45em"
         >
           {offerTitle}
         </StyledText>
       </div>
       <StyledText
-        hasDeclaredFontSize="18px"
-        hasDeclaredFontColor="var(--black)"
-        hasDeclaredPadding="0 0 6px 0"
-        hasDeclaredFontWeight="normal"
-        hasDeclaredFontFamily="Raleway"
+        hasdeclaredfontsize="18px"
+        hasdeclaredfontcolor="var(--black)"
+        hasdeclaredpadding="0 0 6px 0"
+        hasdeclaredfontweight="normal"
+        hasdeclaredfontfamily="Raleway"
         hasdeclaredlineheight="1.68em"
         as="h3"
       >
@@ -43,10 +43,10 @@ const OfferSiteItem = ({
         duration={400}
       >
         <StyledOfferLink
-          hasDeclaredFontSize="18px"
-          hasDeclaredFontColor="var(--red)"
-          hasDeclaredFontWeight="bold"
-          hasDeclaredPadding="0 0 4px 0"
+          hasdeclaredfontsize="18px"
+          hasdeclaredfontcolor="var(--red)"
+          hasdeclaredfontweight="bold"
+          hasdeclaredpadding="0 0 4px 0"
           as="p"
         >
           Przeczytaj więcej

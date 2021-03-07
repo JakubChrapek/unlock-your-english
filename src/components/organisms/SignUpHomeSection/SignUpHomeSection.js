@@ -65,23 +65,23 @@ const SignUpHomeSection = () => {
     >
       <StyledSignUpWrapper hidebox={hideBox}>
         <StyledText
-          hasDeclaredFontSize="48px"
-          hasDeclaredFontWeight="bold"
+          hasdeclaredfontsize="48px"
+          hasdeclaredfontweight="bold"
           hasdeclaredlineheight="1.85em"
           hasdeclaredtextalign="center"
-          hasDeclaredFontColor="var(--white)"
+          hasdeclaredfontcolor="var(--white)"
           as="h2"
         >
           Zapisz się na próbną lekcję
         </StyledText>
         <StyledText
-          hasDeclaredFontSize="18px"
-          hasDeclaredFontWeight="medium"
+          hasdeclaredfontsize="18px"
+          hasdeclaredfontweight="medium"
           hasdeclaredlineheight="1.85em"
-          hasDeclaredFontFamily="Raleway"
+          hasdeclaredfontfamily="Raleway"
           hasdeclaredtextalign="center"
-          hasDeclaredPadding="42px 0 18px 0"
-          hasDeclaredFontColor="var(--white)"
+          hasdeclaredpadding="42px 0 18px 0"
+          hasdeclaredfontcolor="var(--white)"
           as="p"
         >
           Zobacz jak prowadzę lekcję, na co zwracam uwagę, co tydzien organizuję
@@ -119,10 +119,10 @@ const SignUpHomeSection = () => {
                           exit={{ opacity: 0 }}
                         >
                           <StyledText
-                            hasDeclaredFontFamily="Raleway"
-                            hasDeclaredFontSize="18px"
-                            hasDeclaredPadding="7px 45px"
-                            hasDeclaredFontColor="var(--red)"
+                            hasdeclaredfontfamily="Raleway"
+                            hasdeclaredfontsize="18px"
+                            hasdeclaredpadding="7px 45px"
+                            hasdeclaredfontcolor="var(--red)"
                           >
                             {errorMsg}
                           </StyledText>
@@ -138,9 +138,9 @@ const SignUpHomeSection = () => {
                 </div>
                 <StyledButton
                   hasdeclaredbgcolor="var(--gray)"
-                  hasDeclaredFontColor="var(--white)"
-                  hasDeclaredFontFamily="Raleway"
-                  hasDeclaredFontSize="18px"
+                  hasdeclaredfontcolor="var(--white)"
+                  hasdeclaredfontfamily="Raleway"
+                  hasdeclaredfontsize="18px"
                   type="submit"
                   disabled={isSubmitting}
                   hideCheckbox={hideBox}
@@ -155,20 +155,20 @@ const SignUpHomeSection = () => {
                   />
                   <label htmlFor="accept-newsletter" name="privacy">
                     <StyledText
-                      hasDeclaredFontSize="13px"
-                      hasDeclaredFontColor="var(--white)"
-                      hasDeclaredFontFamily="Raleway"
-                      hasDeclaredFontWeight="medium"
+                      hasdeclaredfontsize="13px"
+                      hasdeclaredfontcolor="var(--white)"
+                      hasdeclaredfontfamily="Raleway"
+                      hasdeclaredfontweight="medium"
                       hasdeclaredlineheight="1.32em"
-                      hasDeclaredPadding="5px 0 3px 0"
+                      hasdeclaredpadding="5px 0 3px 0"
                       hasdeclaredfontalign="center"
                       as="p"
                     >
                       Zgadzając się na przetwarzanie Twoich danych osobowych,
                       akceptujesz{" "}
                       <StyledLink
-                        hasDeclaredFontSize="13px"
-                        hasDeclaredFontColor="var(--white)"
+                        hasdeclaredfontsize="13px"
+                        hasdeclaredfontcolor="var(--white)"
                         hasdeclaredbgcolor="var(--white)"
                         hasdeclaredbgbottomposition="-6px"
                         to="/polityka-prywatnosci"
@@ -190,10 +190,10 @@ const SignUpHomeSection = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        hasDeclaredFontFamily="Raleway"
-                        hasDeclaredFontSize="18px"
-                        hasDeclaredPadding="7px 45px"
-                        hasDeclaredFontColor="var(--red)"
+                        hasdeclaredfontfamily="Raleway"
+                        hasdeclaredfontsize="18px"
+                        hasdeclaredpadding="7px 45px"
+                        hasdeclaredfontcolor="var(--red)"
                       >
                         {errorMsg}
                       </StyledText>
@@ -212,9 +212,9 @@ const SignUpHomeSection = () => {
           transition={{ opacity: 0.6 }}
         >
           <StyledText
-            hasDeclaredFontFamily="Raleway"
-            hasDeclaredFontSize="18px"
-            hasDeclaredFontColor="var(--white)"
+            hasdeclaredfontfamily="Raleway"
+            hasdeclaredfontsize="18px"
+            hasdeclaredfontcolor="var(--white)"
           >
             Gratulacje zapisałeś się poprawnie!
           </StyledText>

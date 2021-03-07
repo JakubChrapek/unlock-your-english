@@ -22,10 +22,10 @@ const MyOffer = () => {
     <StyledMyOfferSection>
       <StyledMyOfferWrapper>
         <StyledText
-          hasDeclaredFontColor="var(--red)"
-          hasDeclaredFontSize="48px"
-          hasDeclaredFontWeight="bold"
-          hasDeclaredPadding="0 0 48px 0"
+          hasdeclaredfontcolor="var(--red)"
+          hasdeclaredfontsize="48px"
+          hasdeclaredfontweight="bold"
+          hasdeclaredpadding="0 0 48px 0"
           as="h2"
         >
           Moja oferta

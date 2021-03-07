@@ -63,10 +63,10 @@ const OfferContentItems = ({ hash }) => {
                 <StyledOfferTextWrapper key={itemContent.id}>
                   {itemContent.firstLine && (
                     <StyledText
-                      hasDeclaredFontSize="36px"
-                      hasDeclaredFontColor="var(--blue)"
-                      hasDeclaredPadding="36px 0 0 0"
-                      hasDeclaredFontWeight="bold"
+                      hasdeclaredfontsize="36px"
+                      hasdeclaredfontcolor="var(--blue)"
+                      hasdeclaredpadding="36px 0 0 0"
+                      hasdeclaredfontweight="bold"
                       hasdeclaredlineheight="1.35em"
                       as="h2"
                     >
@@ -75,10 +75,10 @@ const OfferContentItems = ({ hash }) => {
                   )}
                   {itemContent.secondLine && (
                     <StyledText
-                      hasDeclaredFontSize="24px"
-                      hasDeclaredFontColor="var(--blue)"
-                      hasDeclaredPadding="10px 0 0 0"
-                      hasDeclaredFontWeight="bold"
+                      hasdeclaredfontsize="24px"
+                      hasdeclaredfontcolor="var(--blue)"
+                      hasdeclaredpadding="10px 0 0 0"
+                      hasdeclaredfontweight="bold"
                       hasdeclaredlineheight="1.35em"
                       as="h3"
                     >
@@ -87,11 +87,11 @@ const OfferContentItems = ({ hash }) => {
                   )}
                   {itemContent.content && (
                     <StyledText
-                      hasDeclaredFontSize="18px"
-                      hasDeclaredFontColor="var(--black)"
-                      hasDeclaredPadding="30px 0 20px 20px"
-                      hasDeclaredFontWeight="medium"
-                      hasDeclaredFontFamily="Raleway"
+                      hasdeclaredfontsize="18px"
+                      hasdeclaredfontcolor="var(--black)"
+                      hasdeclaredpadding="30px 0 20px 20px"
+                      hasdeclaredfontweight="medium"
+                      hasdeclaredfontfamily="Raleway"
                       hasdeclaredlineheight="1.78em"
                       hasdeclaredtextalign="justify"
                       as="p"
@@ -101,11 +101,11 @@ const OfferContentItems = ({ hash }) => {
                   )}
                   {itemContent.lineText && (
                     <StyledText
-                      hasDeclaredFontSize="18px"
-                      hasDeclaredFontColor="var(--black)"
-                      hasDeclaredPadding="2px 0 0 20px"
-                      hasDeclaredFontWeight="medium"
-                      hasDeclaredFontFamily="Raleway"
+                      hasdeclaredfontsize="18px"
+                      hasdeclaredfontcolor="var(--black)"
+                      hasdeclaredpadding="2px 0 0 20px"
+                      hasdeclaredfontweight="medium"
+                      hasdeclaredfontfamily="Raleway"
                       hasdeclaredlineheight="1.78em"
                       hasdeclaredtextalign="justify"
                       as="p"

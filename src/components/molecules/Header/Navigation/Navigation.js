@@ -20,14 +20,14 @@ const Navigation = ({ shownav, pathnameColor, className }) => {
       <li>
         <StyledLink
           to="/o-mnie"
-          hasDeclaredFontFamily="Oswald"
-          hasDeclaredFontWeight="medium"
-          hasDeclaredFontColor={pathnameColor}
-          hasDeclaredFontSize="14px "
+          hasdeclaredfontfamily="Oswald"
+          hasdeclaredfontweight="medium"
+          hasdeclaredfontcolor={pathnameColor}
+          hasdeclaredfontsize="14px "
           activeClassName="active"
-          hasDeclaredPadding="4px 8px"
-          headerLink="true"
-          mobileMenuLink="true"
+          hasdeclaredpadding="4px 8px"
+          headerlink="true"
+          mobilemenulink="true"
           onClick={() => show && dispatch({ type: actions.TOGGLE_MENU })}
         >
           O mnie
@@ -36,14 +36,14 @@ const Navigation = ({ shownav, pathnameColor, className }) => {
       <li>
         <StyledLink
           to="/oferta"
-          hasDeclaredFontFamily="Oswald"
-          hasDeclaredFontWeight="medium"
-          hasDeclaredFontColor={pathnameColor}
-          hasDeclaredFontSize="14px "
+          hasdeclaredfontfamily="Oswald"
+          hasdeclaredfontweight="medium"
+          hasdeclaredfontcolor={pathnameColor}
+          hasdeclaredfontsize="14px "
           activeClassName="active"
-          hasDeclaredPadding="4px 8px"
-          headerLink="true"
-          mobileMenuLink="true"
+          hasdeclaredpadding="4px 8px"
+          headerlink="true"
+          mobilemenulink="true"
           onClick={() => show && dispatch({ type: actions.TOGGLE_MENU })}
         >
           Oferta
@@ -52,14 +52,14 @@ const Navigation = ({ shownav, pathnameColor, className }) => {
       <li>
         <StyledLink
           to="/kontakt"
-          hasDeclaredFontFamily="Oswald"
-          hasDeclaredFontWeight="medium"
-          hasDeclaredFontColor={pathnameColor}
-          hasDeclaredFontSize="14px "
+          hasdeclaredfontfamily="Oswald"
+          hasdeclaredfontweight="medium"
+          hasdeclaredfontcolor={pathnameColor}
+          hasdeclaredfontsize="14px "
           activeClassName="active"
-          hasDeclaredPadding="4px 8px"
-          headerLink="true"
-          mobileMenuLink="true"
+          hasdeclaredpadding="4px 8px"
+          headerlink="true"
+          mobilemenulink="true"
           onClick={() => show && dispatch({ type: actions.TOGGLE_MENU })}
         >
           Kontakt
