@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { useLocation } from "@reach/router"
 
 import { useMenuState, useMenuDispatch } from "../../../context/menuContext"
@@ -18,13 +18,21 @@ const Header = () => {
   const dispatch = useMenuDispatch()
   const location = useLocation()
 
+  useEffect(() => {
+    console.log(location)
+  }, [location])
+
   return (
     <StyledHeader>
       <div>
         <StyledHeaderWrapper>
           <Logo
             shownav={mobile}
-            pathnameColor={location.pathname ? location.pathname : "/"}
+            pathnameColor={
+              location.pathname && location.pathname !== "/"
+                ? location.pathname
+                : "/"
+            }
           />
           <StyledHamburgerButton
             onClick={() => {
@@ -34,18 +42,30 @@ const Header = () => {
           >
             <StyledHamburgerButtonSpan
               shownav={mobile}
-              pathnameColor={location.pathname ? location.pathname : "/"}
+              pathnameColor={
+                location.pathname && location.pathname !== "/"
+                  ? location.pathname
+                  : "/"
+              }
             />
             <StyledHamburgerButtonSpan
               hasdeclaredwidth="75%"
               shownav={mobile}
-              pathnameColor={location.pathname ? location.pathname : "/"}
+              pathnameColor={
+                location.pathname && location.pathname !== "/"
+                  ? location.pathname
+                  : "/"
+              }
             />
           </StyledHamburgerButton>
         </StyledHeaderWrapper>
         <Navigation
           shownav={mobile}
-          pathnameColor={location.pathname ? location.pathname : "/"}
+          pathnameColor={
+            location.pathname && location.pathname !== "/"
+              ? location.pathname
+              : "/"
+          }
         />
       </div>
     </StyledHeader>
