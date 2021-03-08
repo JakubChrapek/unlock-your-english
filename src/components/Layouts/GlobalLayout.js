@@ -5,13 +5,15 @@ import Header from "../organisms/Header/Header"
 import Footer from "../organisms/Footer/Footer"
 import SEO from "../../seo/seo"
 
-const GlobalLayout = ({ children, location }) => {
+import { useLocation } from "@reach/router"
+
+const GlobalLayout = ({ children }) => {
   return (
     <>
       <MenuProvider>
         <GlobalStyle />
         <SEO />
-        <Header theme={location.pathname === "/" ? "light" : "dark"} />
+        <Header theme={useLocation().pathname === "/" ? "light" : "dark"} />
         {children}
         <Footer />
       </MenuProvider>
