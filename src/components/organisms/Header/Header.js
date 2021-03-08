@@ -19,7 +19,6 @@ const Header = ({ theme }) => {
   return (
     <StyledHeader>
       <div>
-        {console.log("Header", theme)}
         <StyledHeaderWrapper>
           <Logo
             shownav={mobile}

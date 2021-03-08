@@ -16,7 +16,6 @@ const Navigation = ({ shownav, pathnameColor, className }) => {
       shownav={shownav}
       pathnameColor={pathnameColor}
     >
-      {console.log("Navigation: ", pathnameColor)}
       <li>
         <StyledLink
           to="/o-mnie"

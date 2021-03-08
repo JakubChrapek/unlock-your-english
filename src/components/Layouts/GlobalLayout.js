@@ -11,8 +11,7 @@ const GlobalLayout = ({ children, location }) => {
       <MenuProvider>
         <GlobalStyle />
         <SEO />
-        <Header theme={location.pathname !== "/" ? "dark" : "light"} />
-        {console.log("Layout: ", location.pathname)}
+        <Header theme={location.pathname == "/" ? "light" : "dark"} />
         {children}
         <Footer />
       </MenuProvider>
