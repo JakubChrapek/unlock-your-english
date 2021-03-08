@@ -1,0 +1,16 @@
+mend
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Mon Mar 8 23:31:27 2021 +0100
+#
+# On branch develop
+# Your branch is ahead of 'origin/develop' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#	modified:   package-lock.json
+#	modified:   src/components/molecules/Header/Navigation/Navigation.js
+#	modified:   src/components/molecules/Navigation/StyledNavigationList.js
+#
