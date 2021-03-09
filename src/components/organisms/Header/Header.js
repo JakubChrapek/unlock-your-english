@@ -43,7 +43,7 @@ const Header = ({ theme }) => {
         </StyledHeaderWrapper>
         <Navigation
           shownav={mobile}
-          pathnameColor={theme === "dark" ? "var(--black)" : "var(--white)"}
+          pathnameColor={theme === "light" ? "var(--white)" : "var(--black)"}
         />
       </div>
     </StyledHeader>
