@@ -44,7 +44,8 @@ const Header = ({ theme }) => {
             />
           </StyledHamburgerButton>
         </StyledHeaderWrapper>
-        {pathname == "/" ? <WhiteNavigation shownav={mobile}/> : <Navigation
+        {console.log(pathname)}
+        {pathname === "/" ? <WhiteNavigation shownav={mobile}/> : <Navigation
           shownav={mobile}
           pathnameColor={theme === "light" ? "var(--white)" : "var(--black)"}
         />}
