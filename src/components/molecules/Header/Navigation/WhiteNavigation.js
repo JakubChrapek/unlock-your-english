@@ -14,12 +14,12 @@ const WhiteNavigation = ({ shownav }) => {
     <StyledNavigationList
       shownav={shownav}
     >
+        {console.log("White navigation")}
       <li>
         <StyledLink
           to="/o-mnie"
           hasdeclaredfontfamily="Oswald"
           hasdeclaredfontweight="medium"
-          hasdeclaredfontcolor="var(--white)"
           hasdeclaredfontsize="14px "
           activeClassName="active"
           hasdeclaredpadding="4px 8px"
@@ -35,7 +35,6 @@ const WhiteNavigation = ({ shownav }) => {
           to="/oferta"
           hasdeclaredfontfamily="Oswald"
           hasdeclaredfontweight="medium"
-          hasdeclaredfontcolor="var(--white)"
           hasdeclaredfontsize="14px "
           activeClassName="active"
           hasdeclaredpadding="4px 8px"
@@ -51,7 +50,6 @@ const WhiteNavigation = ({ shownav }) => {
           to="/kontakt"
           hasdeclaredfontfamily="Oswald"
           hasdeclaredfontweight="medium"
-          hasdeclaredfontcolor="var(--white)"
           hasdeclaredfontsize="14px "
           activeClassName="active"
           hasdeclaredpadding="4px 8px"
