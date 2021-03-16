@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 
 import { useMenuState, useMenuDispatch } from "../../../context/menuContext"
 import actions from "../../../context/actions"
@@ -13,7 +13,6 @@ import { StyledHeader } from "../../atoms/Header/StyledHeader"
 import { StyledHeaderWrapper } from "../../atoms/Header/StyledHeaderWrapper"
 import { StyledHamburgerButtonSpan } from "../../atoms/HamburgerButton/StyledHamburgerButtonSpan"
 import WhiteNavigation from "../../molecules/Header/Navigation/WhiteNavigation"
-import { StyledWhiteHamburgerButton } from "../../atoms/HamburgerButton/StyledWhiteHamburgerButton"
 
 const Header = ({ theme }) => {
   const { show: mobile } = useMenuState()
@@ -28,36 +27,24 @@ const Header = ({ theme }) => {
             shownav={mobile}
             pathnameColor={theme === "dark" ? "var(--black)" : "var(--white)"}
           />
-          {
-            pathname === "/" ? 
-            <StyledWhiteHamburgerButton
-            onClick={() => {
-              setShow(!show)
-              dispatch({ type: actions.TOGGLE_MENU })
-            }}
-            shownav={mobile}
-            hasdeclaredwidth={true}
-            >
-              <span></span>
-              <span></span>
-            </StyledWhiteHamburgerButton> : 
-          <StyledHamburgerButton
-            onClick={() => {
-              setShow(!show)
-              dispatch({ type: actions.TOGGLE_MENU })
-            }}
-          >
-            <StyledHamburgerButtonSpan
-              shownav={mobile}
-              pathnameColor={theme === "dark" ? "var(--black)" : "var(--white)"}
-            />
-            <StyledHamburgerButtonSpan
-              hasdeclaredwidth="75%"
-              shownav={mobile}
-              pathnameColor={theme === "dark" ? "var(--black)" : "var(--white)"}
-            />
-          </StyledHamburgerButton>
-          }
+          
+              <StyledHamburgerButton
+                onClick={() => {
+                  setShow(!show)
+                  dispatch({ type: actions.TOGGLE_MENU })
+                }}
+              >
+                <StyledHamburgerButtonSpan
+                  shownav={mobile}
+                  pathnameColor={theme === "dark" ? "var(--black)" : "var(--white)"}
+                />
+                <StyledHamburgerButtonSpan
+                  hasdeclaredwidth="75%"
+                  shownav={mobile}
+                  pathnameColor={theme === "dark" ? "var(--black)" : "var(--white)"}
+                />
+              </StyledHamburgerButton>
+          
         </StyledHeaderWrapper>
         {pathname === "/" ? <WhiteNavigation shownav={mobile}/> : <Navigation
           shownav={mobile}

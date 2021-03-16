@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { MenuProvider } from "../../context/menuContext"
 import GlobalStyle from "../../styles/GlobalStyle"
 import Header from "../organisms/Header/Header"
