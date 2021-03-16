@@ -17,7 +17,6 @@ const Navigation = ({ shownav, pathnameColor, className }) => {
       pathnameColor={pathnameColor}
     >
       <li>
-        {console.log("Normalna navigacja")}
         <StyledLink
           to="/o-mnie"
           hasdeclaredfontfamily="Oswald"

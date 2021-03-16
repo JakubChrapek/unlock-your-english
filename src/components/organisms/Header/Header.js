@@ -13,6 +13,7 @@ import { StyledHeader } from "../../atoms/Header/StyledHeader"
 import { StyledHeaderWrapper } from "../../atoms/Header/StyledHeaderWrapper"
 import { StyledHamburgerButtonSpan } from "../../atoms/HamburgerButton/StyledHamburgerButtonSpan"
 import WhiteNavigation from "../../molecules/Header/Navigation/WhiteNavigation"
+import { StyledWhiteHamburgerButton } from "../../atoms/HamburgerButton/StyledWhiteHamburgerButton"
 
 const Header = ({ theme }) => {
   const { show: mobile } = useMenuState()
@@ -27,6 +28,19 @@ const Header = ({ theme }) => {
             shownav={mobile}
             pathnameColor={theme === "dark" ? "var(--black)" : "var(--white)"}
           />
+          {
+            pathname === "/" ? 
+            <StyledWhiteHamburgerButton
+            onClick={() => {
+              setShow(!show)
+              dispatch({ type: actions.TOGGLE_MENU })
+            }}
+            shownav={mobile}
+            hasdeclaredwidth={true}
+            >
+              <span></span>
+              <span></span>
+            </StyledWhiteHamburgerButton> : 
           <StyledHamburgerButton
             onClick={() => {
               setShow(!show)
@@ -43,8 +57,8 @@ const Header = ({ theme }) => {
               pathnameColor={theme === "dark" ? "var(--black)" : "var(--white)"}
             />
           </StyledHamburgerButton>
+          }
         </StyledHeaderWrapper>
-        {console.log(pathname)}
         {pathname === "/" ? <WhiteNavigation shownav={mobile}/> : <Navigation
           shownav={mobile}
           pathnameColor={theme === "light" ? "var(--white)" : "var(--black)"}

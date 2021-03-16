@@ -16,6 +16,7 @@ const WhiteNavigation = ({ shownav }) => {
       shownav={shownav}
     >
       <li>
+          <StyledText hasdeclaredfontcolor="#fff">
             <StyledLink
             to="/o-mnie"
             hasdeclaredfontfamily="Oswald"
@@ -30,6 +31,7 @@ const WhiteNavigation = ({ shownav }) => {
             >
                 O mnie
             </StyledLink>
+          </StyledText>
       </li>
       <li>
           <StyledText hasdeclaredfontcolor="#fff">
@@ -45,9 +47,8 @@ const WhiteNavigation = ({ shownav }) => {
             onClick={() => show && dispatch({ type: actions.TOGGLE_MENU })}
             >
                 Oferta
-            </StyledLink>
+            </StyledLink>  
           </StyledText>
-        
       </li>
       <li>
           <StyledText hasdeclaredfontcolor="#fff">
