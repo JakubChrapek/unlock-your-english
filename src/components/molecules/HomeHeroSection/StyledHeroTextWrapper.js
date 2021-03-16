@@ -37,14 +37,16 @@ export const StyledHeroTextWrapper = styled.div`
       line-height: 2em;
     }
   }
+  @media only screen and (max-width: 388px) {
+    button{
+      padding: 16px 38px;
+    }
+  }
   @media only screen and (max-width: 348px) {
     padding: 16px 24px;
     h1 {
       font-size: 28px;
       padding-top: 48px;
-    }
-    button{
-      padding: 16px 38px;
     }
   }
 `
