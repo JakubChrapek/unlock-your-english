@@ -1,10 +1,11 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 
 import { graphql, useStaticQuery } from "gatsby"
 import { AnimatePresence, AnimateSharedLayout } from "framer-motion"
 import { wrap } from "@popmotion/popcorn"
 import { IoIosArrowForward } from "react-icons/io"
 import { IoIosArrowBack } from "react-icons/io"
+import useWindowSize from "../../../utils/getWindowSize"
 
 import { StyledUserImageImg } from "../../atoms/WhatSayAboutMe/StyledUserImage"
 import { StyledText } from "../../atoms/Text/StyledText"
@@ -44,15 +45,18 @@ const WhatSayAboutMe = () => {
       }
     }
   `)
-  const allDatoData = whatSayAboutMeContent.allDatoCmsWhatTheySayAboutMe
+  const allDatoData = whatSayAboutMeContent.allDatoCmsWhatTheySayAboutMe.nodes
+  let width = useWindowSize()
   const [[slide, direction], setSlide] = useState([0, 0])
-  const slideIndex = wrap(0, allDatoData.nodes.length, slide)
+  const slideIndex = wrap(0, width <= 495 ? allDatoData.slice(0,5).length : allDatoData.length , slide)
   const paginate = newDirection => {
     setSlide([slide + newDirection, newDirection])
   }
   const handleSetSlide = iterator => {
     setSlide([iterator, iterator])
   }
+
+  let data = width <= 495 ? allDatoData.slice(0,5) : allDatoData
   return (
     <StyledWhatSayAboutMeSection>
       <StyledMyOfferSpiral>
@@ -71,7 +75,7 @@ const WhatSayAboutMe = () => {
               Co o mnie mówią
             </StyledText>
             <AnimatePresence initial={false} exitBeforeEnter custom={direction}>
-              {allDatoData.nodes
+              {data
                 .filter((_, iterator) => iterator === slideIndex)
                 .map(slideItem => (
                   <StyledSlide
@@ -167,7 +171,7 @@ const WhatSayAboutMe = () => {
             </AnimatePresence>
           </StyledSliderWrapper>
           <StyledPagination layout>
-            {allDatoData.nodes.map((slideItem, iterator) => (
+            {data.map((slideItem, iterator) => (
               <StyledSpanPagination
                 key={`pagination-${iterator}`}
                 active={iterator === slideIndex}
