@@ -57,7 +57,7 @@ const HomeHeroSection = () => {
             hasdeclaredfontfamily="Manrope"
             hasdeclaredfontsize="20px"
           >
-            Unlock your english
+            Unlock Your English
           </StyledButton>
         </Link>
       </StyledHeroTextWrapper>
