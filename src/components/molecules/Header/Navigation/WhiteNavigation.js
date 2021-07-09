@@ -7,16 +7,8 @@ import { StyledNavigationList } from "../../../molecules/Navigation/StyledNaviga
 import { StyledLink } from "../../../atoms/Link/StyledLink"
 import { StyledText } from "../../../atoms/Text/StyledText"
 import styled from "styled-components"
-
-const PhoneContactLink = styled(StyledLink)`
-  background-color: var(--red);
-  color: var(--white);
-  font-weight: bold;
-  border-radius: 25px;
-  &:after {
-    content: none;
-  }
-`
+import { FaPhone } from "react-icons/fa"
+import { PhoneContactLink } from "./PhoneContactLink"
 
 const WhiteNavigation = ({ shownav }) => {
   const { show } = useMenuState()
@@ -83,8 +75,7 @@ const WhiteNavigation = ({ shownav }) => {
             hasdeclaredfontweight="medium"
             hasdeclaredfontcolor="#fff"
             hasdeclaredfontsize="13px "
-            hasdeclaredpadding="6px 20px"
-            headerlink="true"
+            hasdeclaredpadding="0.3em 1em"
             mobilemenulink="true"
             noBefore
             onClick={() => show && dispatch({ type: actions.TOGGLE_MENU })}
@@ -92,6 +83,7 @@ const WhiteNavigation = ({ shownav }) => {
             href="tel:884889471"
           >
             884 889 471
+            <FaPhone size="20px" color="var(--white)" />
           </PhoneContactLink>
         </StyledText>
       </li>

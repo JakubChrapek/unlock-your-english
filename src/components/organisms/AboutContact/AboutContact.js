@@ -8,6 +8,8 @@ import { StyledAboutContactRightBar } from "../../atoms/AboutContact/StyledAbout
 import { StyledText } from "../../atoms/Text/StyledText"
 import useWindowSize from "../../../utils/getWindowSize"
 import styled from "styled-components"
+import { PhoneContactLink } from "../../molecules/Header/Navigation/PhoneContactLink"
+import { FaPhone } from "react-icons/fa"
 
 const ContactText = styled(StyledText)`
   align-self: flex-start;
@@ -52,19 +54,22 @@ const AboutContact = () => {
               🙂
             </span>{" "}
             Kamila
+            <PhoneContactLink
+              hasdeclaredfontfamily="Oswald"
+              hasdeclaredfontweight="medium"
+              hasdeclaredfontcolor="#fff"
+              hasdeclaredfontsize="13px "
+              hasdeclaredpadding="0.3em 1em"
+              hasdeclaredmargin="0 0 0 0.6em"
+              mobilemenulink="true"
+              noBefore
+              as="a"
+              href="tel:884889471"
+            >
+              884 889 471
+              <FaPhone size="20px" color="var(--white)" />
+            </PhoneContactLink>
           </StyledText>
-          <ContactText
-            hasdeclaredfontsize="18px"
-            hasdeclaredfontweight="medium"
-            hasdeclaredfontcolor="var(--black)"
-            hasdeclaredfontfamily="Raleway"
-            hasdeclaredlineheight="1.78em"
-            hasdeclaredmaxwidth="464px"
-            hasdeclaredmargin="12px 0 0"
-          >
-            Zapraszam do kontaktu, {width < 1024 && <br />}
-            <a href="tel:884889471">884 889 471</a>
-          </ContactText>
         </StyledAboutContactLeftBar>
         <StyledAboutContactRightBar>
           <AboutContactForm />
