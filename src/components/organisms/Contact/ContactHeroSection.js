@@ -11,8 +11,25 @@ import { StyledImageWrapper } from "../../atoms/Contact/StyledImageWrapper"
 import { StyledText } from "../../atoms/Text/StyledText"
 import { StyledSmallLargeBox } from "../../molecules/Contact/StyledSmallLargeBox"
 import { StyledContactFormWrapper } from "../../molecules/Contact/StyledContactFormWrapper"
+import styled from "styled-components"
+import useWindowSize from "../../../utils/getWindowSize"
+
+const ContactText = styled(StyledText)`
+  align-self: flex-start;
+  @media (max-width: 767px) {
+    align-self: center;
+    text-align: center;
+  }
+  a {
+    color: inherit;
+    text-decoration-color: var(--red);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
+`
 
 const ContactHeroSection = () => {
+  const width = useWindowSize()
   const contactPageData = useStaticQuery(graphql`
     query contactPageData {
       datoCmsContactPageContent {
@@ -73,6 +90,18 @@ const ContactHeroSection = () => {
             a na pewno znajdziemy odpowiedź
           </StyledText>
           <AboutContactForm />
+          <ContactText
+            hasdeclaredfontsize="18px"
+            hasdeclaredfontweight="medium"
+            hasdeclaredfontcolor="var(--black)"
+            hasdeclaredfontfamily="Raleway"
+            hasdeclaredlineheight="1.78em"
+            hasdeclaredmargin="48px 0 0"
+          >
+            Jeśli wolisz zadzwonić, porozmawiamy&nbsp;tutaj{" "}
+            {width < 880 && <br />}
+            <a href="tel:884889471">884 889 471</a>
+          </ContactText>
         </StyledContactFormWrapper>
       </StyledHeroContactWrapper>
     </StyledHeroContactSection>

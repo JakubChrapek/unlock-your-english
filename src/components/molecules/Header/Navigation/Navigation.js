@@ -64,6 +64,22 @@ const Navigation = ({ shownav, pathnameColor, className }) => {
           Kontakt
         </StyledLink>
       </li>
+      <li>
+        <StyledLink
+          hasdeclaredfontfamily="Oswald"
+          hasdeclaredfontweight="medium"
+          hasdeclaredfontcolor={pathnameColor}
+          hasdeclaredfontsize="14px "
+          hasdeclaredpadding="4px 8px"
+          headerlink="true"
+          mobilemenulink="true"
+          onClick={() => show && dispatch({ type: actions.TOGGLE_MENU })}
+          as="a"
+          href="tel:884889471"
+        >
+          884 889 471
+        </StyledLink>
+      </li>
     </StyledNavigationList>
   )
 }

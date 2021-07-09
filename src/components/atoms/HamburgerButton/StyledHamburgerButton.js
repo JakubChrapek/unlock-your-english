@@ -8,7 +8,8 @@ export const StyledHamburgerButton = styled(motion.button)`
   height: 24px;
   background-color: transparent;
   position: relative;
-  
+  cursor: pointer;
+
   @media only screen and (max-width: 767px) {
     display: flex;
     align-items: flex-end;
