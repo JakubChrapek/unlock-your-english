@@ -54,22 +54,22 @@ const AboutContact = () => {
               🙂
             </span>{" "}
             Kamila
-            <PhoneContactLink
-              hasdeclaredfontfamily="Oswald"
-              hasdeclaredfontweight="medium"
-              hasdeclaredfontcolor="#fff"
-              hasdeclaredfontsize="13px "
-              hasdeclaredpadding="0.3em 1em"
-              hasdeclaredmargin="0 0 0 0.6em"
-              mobilemenulink="true"
-              noBefore
-              as="a"
-              href="tel:884889471"
-            >
-              884 889 471
-              <FaPhone size="20px" color="var(--white)" />
-            </PhoneContactLink>
           </StyledText>
+          <PhoneContactLink
+            hasdeclaredfontfamily="Oswald"
+            hasdeclaredfontweight="medium"
+            hasdeclaredfontcolor="#fff"
+            hasdeclaredfontsize="13px "
+            hasdeclaredpadding="0.3em 1em"
+            hasdeclaredmargin="0.5em 0 0"
+            mobilemenulink="true"
+            noBefore
+            as="a"
+            href="tel:884889471"
+          >
+            884 889 471
+            <FaPhone size="20px" color="var(--white)" />
+          </PhoneContactLink>
         </StyledAboutContactLeftBar>
         <StyledAboutContactRightBar>
           <AboutContactForm />
