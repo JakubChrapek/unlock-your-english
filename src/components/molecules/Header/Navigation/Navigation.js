@@ -5,6 +5,17 @@ import actions from "../../../../context/actions"
 
 import { StyledNavigationList } from "../../../molecules/Navigation/StyledNavigationList"
 import { StyledLink } from "../../../atoms/Link/StyledLink"
+import styled from "styled-components"
+
+const PhoneContactLink = styled(StyledLink)`
+  background-color: var(--red);
+  color: var(--white);
+  font-weight: bold;
+  border-radius: 25px;
+  &:after {
+    content: none;
+  }
+`
 
 const Navigation = ({ shownav, pathnameColor, className }) => {
   const { show } = useMenuState()
@@ -65,20 +76,21 @@ const Navigation = ({ shownav, pathnameColor, className }) => {
         </StyledLink>
       </li>
       <li>
-        <StyledLink
+        <PhoneContactLink
           hasdeclaredfontfamily="Oswald"
           hasdeclaredfontweight="medium"
           hasdeclaredfontcolor={pathnameColor}
-          hasdeclaredfontsize="14px "
-          hasdeclaredpadding="4px 8px"
+          hasdeclaredfontsize="13px "
+          hasdeclaredpadding="6px 20px"
           headerlink="true"
           mobilemenulink="true"
+          noBefore
           onClick={() => show && dispatch({ type: actions.TOGGLE_MENU })}
           as="a"
           href="tel:884889471"
         >
           884 889 471
-        </StyledLink>
+        </PhoneContactLink>
       </li>
     </StyledNavigationList>
   )

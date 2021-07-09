@@ -40,7 +40,7 @@ export const StyledLink = styled(Link)`
       mobilemenulink ? "var(--black)" : "var(--white)"};
   }
   &:after {
-    content: "";
+    content: ${({ noBefore }) => (noBefore ? "none" : "")};
     position: absolute;
     bottom: ${({ hasdeclaredbgbottomposition }) =>
       hasdeclaredbgbottomposition ? hasdeclaredbgbottomposition : "0px"};
